@@ -64,12 +64,11 @@ document.addEventListener("DOMContentLoaded", function () {
   // Dynamic status ticker with playful studio messages
   var statusTicker = document.querySelector("[data-status-ticker]");
   var statusMessages = [
-    "Mapping the shortest route from local coffee to happy tourist.",
-    "Teaching the robot to fold souvenir shirts. Results: adorably mixed.",
-    "Checking that the rare sneaker is a sneaker—not ambitious bubble wrap.",
-    "Adding one more tiny adventure to the family journey.",
-    "Helping local makers become the most memorable part of the map.",
-    "Verifying that single-origin cocoa was harvested with love, not prompt injection."
+    "Finding the next small discovery around the corner.",
+    "Turning a favorite trip memory into a T-shirt idea.",
+    "Making room for one more family adventure.",
+    "Helping a handmade piece carry its maker’s story.",
+    "Exploring a little help from a friendly tabletop robot."
   ];
 
   if (statusTicker && !prefersReducedMotion) {
@@ -87,7 +86,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // Interactive 1: Tourist Design Studio Souvenir Stamp & Color Switcher
   var shirtScene = document.querySelector("[data-shirt-stamp]");
   if (shirtScene) {
-    var stamps = ["🎨", "☕", "👟", "🤖", "🏔️", "✨", "🧶", "🚀"];
+    var stamps = ["🎨", "☕", "🏺", "🤖", "🏔️", "✨", "🧶", "🚀"];
     var stampIndex = -1;
     var stampBadge = shirtScene.querySelector(".shirt-interactive-stamp");
     var shirtBody = shirtScene.querySelector(".shirt-body");
@@ -201,6 +200,16 @@ document.addEventListener("DOMContentLoaded", function () {
   // Privacy-friendly contact form mailto handler
   var contactForm = document.getElementById("applicationContactForm");
   if (contactForm) {
+    // Story links can name a scene; accept only the options displayed in the form.
+    var scene = new URLSearchParams(window.location.search).get("scene");
+    var interest = contactForm.querySelector("#interest");
+    if (scene && interest) {
+      Array.prototype.some.call(interest.options, function (option) {
+        if (option.dataset.scene !== scene) return false;
+        interest.value = option.value;
+        return true;
+      });
+    }
     contactForm.addEventListener("submit", function (event) {
       event.preventDefault();
       if (!contactForm.reportValidity()) return;

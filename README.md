@@ -28,7 +28,7 @@ The public story centers on five application worlds:
 1. Digital City
 2. Tourist Design Studio
 3. Family Journey
-4. Rare Shoes
+4. Craft & Collectibles — handicrafts, artisan objects, and treasured finds
 5. Robot Moments
 
 The existing technical and research pages remain in the repository as background material, but they are no longer part of the main public navigation or sitemap.

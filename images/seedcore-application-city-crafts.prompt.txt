@@ -1,0 +1,5 @@
+Mode: built-in image_gen image edit.
+Source: images/seedcore-application-city.jpg
+Final web asset: images/seedcore-application-city-crafts.jpg
+
+Use case: precise-object-edit. Asset type: existing SeedCore website hero illustration. Input image is the edit target. Replace ONLY the sneaker inside the illuminated glass display case on the right with a tasteful small collection of handmade artisan objects: a hand-glazed teal-and-ochre ceramic vase as the main piece, a small carved wooden bird and a neatly folded handwoven textile beside it. Fit them naturally on the same display plinth and match the miniature scale, warm light, polished handcrafted 3D storybook style and existing palette. Preserve the entire rest of the image: exact 3:2 landscape composition, all buildings, people, map, T-shirt kiosk, robot, trees, canal, architecture, camera angle and cream background. No footwear inside the display case. No added text or logos. Keep the complete city visible with the original margins. Output one final landscape image.

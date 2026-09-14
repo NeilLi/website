@@ -1,27 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="studio-site">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>SeedCore — Applications for places, journeys and real things</title>
   <meta name="description" content="SeedCore is an independent application studio exploring digital cities, tourist journeys, family play, friendly robotics and trusted collecting." />
-  <meta name="theme-color" content="#f7f3ea" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#f7f3ea" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121e1b" media="(prefers-color-scheme: dark)" />
   <link rel="canonical" href="https://seedcore.ai/" />
   <link rel="icon" href="assets/seedcore-logo.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet" />
   <script>document.documentElement.classList.add("js");</script>
-  <link rel="stylesheet" href="css/application-site.css?v=20260819c" />
+  <link rel="stylesheet" href="css/application-site.css?v=20260914d" />
   <meta property="og:title" content="SeedCore — Applications for places, journeys and real things" />
   <meta property="og:description" content="A small application studio exploring playful city discovery, tourist journeys, family creativity, trusted collecting and friendly robotics." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://seedcore.ai/" />
-  <meta property="og:image" content="https://seedcore.ai/images/seedcore-application-city.jpg" />
+  <meta property="og:image" content="https://seedcore.ai/images/seedcore-application-city-crafts.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="SeedCore — Application studio" />
   <meta name="twitter:description" content="Applications for places, journeys and real things." />
-  <meta name="twitter:image" content="https://seedcore.ai/images/seedcore-application-city.jpg" />
+  <meta name="twitter:image" content="https://seedcore.ai/images/seedcore-application-city-crafts.jpg" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
@@ -42,15 +44,15 @@
       <div class="hero-copy" data-reveal>
         <p class="eyebrow"><span></span> Independent application studio</p>
         <h1>I’m building applications for <em>places, journeys</em> and real things.</h1>
-        <p class="hero-lede">SeedCore is where ideas turn into experiences people can actually touch and use—from playful city discovery and destination souvenirs to family quests and trusted handovers of rare collectibles.</p>
+        <p class="hero-lede">SeedCore is where ideas turn into experiences people can actually touch and use—from playful city discovery and destination souvenirs to family quests and the stories behind handmade objects and treasured finds.</p>
         <div class="hero-actions">
           <a class="button button-primary" href="#work">Explore the applications</a>
           <a class="text-link" href="about.html">Why I’m building them <span aria-hidden="true">↘</span></a>
         </div>
-        <p class="status-note" aria-label="Studio status"><span class="status-dot"></span><strong>Status</strong><span class="status-copy" data-status-ticker>Mapping the shortest route from local coffee to happy tourist.</span></p>
+        <p class="status-note" aria-label="Studio status"><span class="status-dot"></span><span class="status-copy" data-status-ticker>Finding the next small discovery around the corner.</span></p>
       </div>
       <figure class="hero-art" data-reveal>
-        <img src="images/seedcore-application-city.jpg" alt="A miniature city where families explore, create souvenirs, collect rare shoes, and work with a friendly robot" />
+        <img src="images/seedcore-application-city-crafts.jpg" width="1536" height="1024" fetchpriority="high" alt="A miniature city where families explore, create souvenirs, discover handmade ceramics, textiles, and wooden objects, and work with a friendly robot" />
         <figcaption>One city, many small moments worth making better.</figcaption>
       </figure>
     </section>
@@ -58,45 +60,46 @@
     <section class="work-section section" id="work">
       <div class="section-heading" data-reveal>
         <p class="section-label">What I’m building</p>
-        <h2>Five application stories, all grounded in a real human moment.</h2>
-        <p>Explore applications designed for local discovery, visitor creativity, family play, trusted collecting and friendly robotics.</p>
+        <h2>Five scenes. Five ways to make a moment better.</h2>
+        <p>The illustration brings together five application ideas I’m developing: a place to discover, a souvenir to make, an adventure to share, an object to treasure, and a robot to help.</p>
       </div>
 
       <div class="project-filters" role="toolbar" aria-label="Filter applications" data-reveal>
         <button class="is-active" type="button" data-filter="all" aria-pressed="true">All</button>
         <button type="button" data-filter="places" aria-pressed="false">Places</button>
         <button type="button" data-filter="families" aria-pressed="false">Families</button>
-        <button type="button" data-filter="collecting" aria-pressed="false">Collecting</button>
+        <button type="button" data-filter="collecting" aria-pressed="false">Craft &amp; objects</button>
       </div>
 
       <div class="project-grid">
         <!-- 01: Digital City -->
-        <article class="project-card project-city" data-category="places" data-reveal>
+        <article id="digital-city" class="project-card project-city" data-category="places" data-reveal>
           <div class="project-topline"><span class="project-number">01</span><span class="stage stage-active">City discovery</span></div>
           <div class="project-scene scene-city" aria-hidden="true">
             <span class="city-block one"></span><span class="city-block two"></span><span class="city-block three"></span><span class="city-path"></span>
             <span class="pin-pulse"></span><span class="scene-pin"></span>
             <div class="city-query-chips">
-              <span class="city-chip is-active">☕ Coffee Lot</span>
-              <span class="city-chip">🧵 Indigo Weave</span>
-              <span class="city-chip">🪵 Teak Workshop</span>
+              <span class="city-chip is-active">☕ Local café</span>
+              <span class="city-chip">🧵 Textile studio</span>
+              <span class="city-chip">🪵 Wood workshop</span>
             </div>
           </div>
           <p class="project-kicker">A city you can ask</p>
           <h3>Digital City</h3>
-          <p class="project-summary">A living guide for discovering local makers, workshops, places, services and stories—useful to both curious travelers and their everyday AI assistants.</p>
-          <p class="playful-note">Will not recommend a tourist trap just because it shouted the loudest.</p>
+          <p class="project-summary">A neighborhood guide that helps visitors find a local café, meet a maker, or choose a small detour worth taking. Start with a question and turn it into a walk.</p>
+          <p class="playful-note">The best stop might be the workshop you nearly walked past.</p>
           <div class="app-tags">
-            <span class="tag-chip">Agent-Native MCP</span>
-            <span class="tag-chip">Local Origin Graph</span>
-            <span class="tag-chip">Privacy-Coarse H3</span>
+            <span class="tag-chip">Local makers</span>
+            <span class="tag-chip">Neighborhood walks</span>
+            <span class="tag-chip">Ask in your language</span>
           </div>
-          <dl><div><dt>For</dt><dd>Visitors, residents and local producers</dd></div><div><dt>The moment</dt><dd>“What is nearby, open, meaningful and genuinely worth visiting?”</dd></div></dl>
-          <details><summary>What the experience feels like</summary><p>Open a map or ask your daily assistant in your own language. Discover an artisan or neighborhood route, see where a claim came from, and carry the verified plan into the real city.</p></details>
+          <dl><div><dt>For</dt><dd>Visitors, residents and local producers</dd></div><div><dt>The moment</dt><dd>“What’s nearby that we’d love to discover?”</dd></div></dl>
+          <details><summary>What the experience feels like</summary><p>Ask for a nearby café or a workshop to visit with the children. Explore a place’s story, check the available opening information, and choose the next stop together.</p></details>
+          <a class="scene-story-link" href="resources/index.html#digital-city">Read the Digital City scene <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- 02: Tourist Design Studio -->
-        <article class="project-card project-tourist" data-category="places families" data-reveal>
+        <article id="tourist-design-studio" class="project-card project-tourist" data-category="places families" data-reveal>
           <div class="project-topline"><span class="project-number">02</span><span class="stage stage-pilot">Visitor creation</span></div>
           <button class="project-scene scene-shirt" type="button" aria-label="Click to change color and stamp the souvenir T-shirt" data-shirt-stamp>
             <span class="shirt-body"></span>
@@ -107,19 +110,20 @@
           </button>
           <p class="project-kicker">Make the memory</p>
           <h3>Tourist Design Studio</h3>
-          <p class="project-summary">A five-minute creative experience where a visitor turns a trip memory into a destination-specific T-shirt they helped design on the spot.</p>
+          <p class="project-summary">A creative stop where visitors turn something they loved about a trip into a T-shirt they help design. Choose a local theme, add a personal touch, and preview the keepsake.</p>
           <p class="playful-note">Kids make the monsters. Grown-ups approve the shirt before it meets the credit card.</p>
           <div class="app-tags">
-            <span class="tag-chip">5-Min Memory Craft</span>
-            <span class="tag-chip">Parental Consent Gate</span>
-            <span class="tag-chip">Destination Linked</span>
+            <span class="tag-chip">Local themes</span>
+            <span class="tag-chip">Preview your design</span>
+            <span class="tag-chip">Adult approval</span>
           </div>
           <dl><div><dt>For</dt><dd>Museums, attractions, resorts and families</dd></div><div><dt>The moment</dt><dd>“I made this on our trip.”</dd></div></dl>
-          <details><summary>What the experience feels like</summary><p>Choose a local theme, make it sillier or more magical, preview the exact shirt, then hand approval and payment to an adult’s phone with zero app download.</p></details>
+          <details><summary>What the experience feels like</summary><p>Choose a landmark, creature, or memory from the visit. Play with colors and details, preview the T-shirt, and let an adult review the design and price before ordering.</p></details>
+          <a class="scene-story-link" href="resources/index.html#tourist-design-studio">Read the Tourist Design Studio scene <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- 03: Family Journey -->
-        <article class="project-card project-kids" data-category="families places" data-reveal>
+        <article id="family-journey" class="project-card project-kids" data-category="families places" data-reveal>
           <div class="project-topline"><span class="project-number">03</span><span class="stage stage-concept">Family play</span></div>
           <div class="project-scene scene-play" aria-hidden="true">
             <span class="play-orbit"></span>
@@ -130,45 +134,45 @@
           </div>
           <p class="project-kicker">Play through the journey</p>
           <h3>Family Journey</h3>
-          <p class="project-summary">A safe, supervised world where children and parents explore a destination through stories, playful choices, creative quests and optional immersive scenes.</p>
+          <p class="project-summary">A shared adventure that gives children and grown-ups a reason to look closer. Follow a story, find a small clue, and make the destination part of the game.</p>
           <p class="playful-note">Small explorers are welcome. Boring grown-up maps may feel slightly jealous.</p>
           <div class="app-tags">
-            <span class="tag-chip">Child-Safe Quests</span>
-            <span class="tag-chip">Zero Data Hoarding</span>
-            <span class="tag-chip">OpenXR Ready</span>
+            <span class="tag-chip">Explore together</span>
+            <span class="tag-chip">Story-led quests</span>
+            <span class="tag-chip">Grown-ups involved</span>
           </div>
           <dl><div><dt>For</dt><dd>Children, parents and visitor venues</dd></div><div><dt>The moment</dt><dd>“Can the journey be part of the adventure?”</dd></div></dl>
-          <details><summary>What the experience feels like</summary><p>Pick a destination theme before the visit, meet a friendly guide on arrival, complete a small creative quest together, and take home a private family memory.</p></details>
+          <details><summary>What the experience feels like</summary><p>Pick a story before the visit, look for clues along the way, and complete a creative challenge together. Parents stay involved in the choices and decide what to keep or share afterward.</p></details>
+          <a class="scene-story-link" href="resources/index.html#family-journey">Read the Family Journey scene <span aria-hidden="true">→</span></a>
         </article>
 
-        <!-- 04: Rare Shoes -->
-        <article class="project-card project-shoes" data-category="collecting" data-reveal>
-          <div class="project-topline"><span class="project-number">04</span><span class="stage stage-focus">Trusted collecting</span></div>
-          <div class="project-scene scene-shoe" aria-hidden="true">
-            <span class="shoe-verified-badge">✓ Verified Pair</span>
-            <span class="shoe-object">
-              <span class="shoe-sole"></span>
-              <span class="shoe-upper"></span>
-              <span class="shoe-lace l1"></span>
-              <span class="shoe-lace l2"></span>
+        <!-- 04: Craft &amp; Collectibles -->
+        <article id="craft-collectibles-application" class="project-card project-craft" data-category="collecting" data-reveal>
+          <div class="project-topline"><span class="project-number">04</span><span class="stage stage-focus">Craft &amp; collecting</span></div>
+          <div class="project-scene scene-craft" aria-hidden="true">
+            <span class="craft-maker-badge">Made by hand</span>
+            <span class="craft-object">
+              <span class="craft-textile"></span>
+              <span class="craft-vase"></span>
+              <span class="craft-bowl"></span>
             </span>
-            <span class="shoe-glow"></span>
           </div>
-          <p class="project-kicker">Know the pair. Follow the handover.</p>
-          <h3>Rare Shoes</h3>
-          <p class="project-summary">A collector experience that keeps a rare pair’s identity, physical condition and handover journey crystal clear from authentication through delivery.</p>
-          <p class="playful-note">Because nobody wants to order a rare sneaker and receive vintage bubble wrap.</p>
+          <p class="project-kicker">Meet the maker. Know the piece.</p>
+          <h3>Craft &amp; Collectibles</h3>
+          <p class="project-summary">A way to discover and care for handmade pieces, artisan objects, and treasured finds. Bring the maker’s story, materials, and care notes together with the journey of the piece.</p>
+          <p class="playful-note">A little irregularity can be the nicest sign that a person made it.</p>
           <div class="app-tags">
-            <span class="tag-chip">Visual Forensic Match</span>
-            <span class="tag-chip">Dynamic NFC Anchor</span>
-            <span class="tag-chip">Zero-Trust PDP</span>
+            <span class="tag-chip">Maker stories</span>
+            <span class="tag-chip">Materials &amp; care</span>
+            <span class="tag-chip">A piece’s journey</span>
           </div>
-          <dl><div><dt>For</dt><dd>Collectors, authenticators and custodians</dd></div><div><dt>The moment</dt><dd>“Is this the exact same pair, and did it arrive untampered?”</dd></div></dl>
-          <details><summary>What the experience feels like</summary><p>Compare the registered pair with handoff and delivery captures, understand any difference in plain language, and see a cryptographic proof of the journey.</p></details>
+          <dl><div><dt>For</dt><dd>Makers, visitors, craft shops and collectors</dd></div><div><dt>The moment</dt><dd>“Who made this, and how do I care for it?”</dd></div></dl>
+          <details><summary>What the experience feels like</summary><p>Discover a hand-thrown vase, a woven textile, or a carved wooden piece. Learn about its maker and materials, keep its care notes, and follow its journey from the workshop to your home.</p></details>
+          <a class="scene-story-link" href="resources/index.html#craft-collectibles">Read the Craft &amp; Collectibles scene <span aria-hidden="true">→</span></a>
         </article>
 
         <!-- 05: Robot Moments -->
-        <article class="project-card project-robot" data-category="families places" data-reveal>
+        <article id="robot-moments" class="project-card project-robot" data-category="families places" data-reveal>
           <div class="project-topline"><span class="project-number">05</span><span class="stage stage-demo">Friendly robotics</span></div>
           <div class="project-scene scene-robot">
             <button class="robot-head" type="button" aria-label="Tap to interact with the robot" data-robot-secret>
@@ -181,15 +185,16 @@
           </div>
           <p class="project-kicker">Friendly help in the room</p>
           <h3>Robot Moments</h3>
-          <p class="project-summary">Small, understandable applications for a friendly desktop robot—conversation, guided activities, visual companionship and one bounded action at a time.</p>
+          <p class="project-summary">A friendly tabletop robot that joins a conversation or guides a small activity. The idea is simple help in a shared space, with people choosing what happens next.</p>
           <p class="playful-note">Still learning to fold souvenir shirts. Already excellent at looking helpful.</p>
           <div class="app-tags">
-            <span class="tag-chip">Reachymini Compatible</span>
-            <span class="tag-chip">Bounded Single Action</span>
-            <span class="tag-chip">Live Companion</span>
+            <span class="tag-chip">Tabletop companion</span>
+            <span class="tag-chip">Guided activities</span>
+            <span class="tag-chip">People in control</span>
           </div>
           <dl><div><dt>For</dt><dd>Families, classrooms and live demos</dd></div><div><dt>The moment</dt><dd>“Can a robot help without taking over?”</dd></div></dl>
-          <details><summary>What the experience feels like</summary><p>Ask for help, see what the robot plans to do, watch it complete one simple action, and receive a clear, friendly response with bounded authority.</p></details>
+          <details><summary>What the experience feels like</summary><p>Ask the robot to introduce an activity or guide the next step. It explains what it is about to do, leaves room for a person to respond, and keeps the interaction easy to follow.</p></details>
+          <a class="scene-story-link" href="resources/index.html#robot-moments">Read the Robot Moments scene <span aria-hidden="true">→</span></a>
         </article>
       </div>
     </section>
@@ -199,7 +204,7 @@
       <div class="journey-copy" data-reveal>
         <p class="section-label">The visitor journey</p>
         <h2>Before the visit. In the moment. A memory afterward.</h2>
-        <p>A family or traveler can discover the destination before arriving, play and create while they are there, then carry a personal memory home afterward without complex apps or lingering profiles.</p>
+        <p>Imagine a family finding a neighborhood workshop, following a playful clue, and designing a T-shirt inspired by the visit. The city guide, family quest, and souvenir studio each support a different part of the same day.</p>
         <a class="text-link" href="contact.html">Explore a venue pilot <span aria-hidden="true">→</span></a>
       </div>
       <ol class="journey-steps" data-reveal>
@@ -207,66 +212,66 @@
           <span>01</span>
           <div>
             <strong>Discover the place</strong>
-            <p>Choose a theme, neighborhood route or small activity that makes the destination feel authentic and personal.</p>
+            <p>Use Digital City to find a local maker, a café, or a neighborhood walk that fits the day.</p>
           </div>
         </li>
         <li>
           <span>02</span>
           <div>
             <strong>Play and create</strong>
-            <p>Explore a guided story, make creative choices together, or design a custom souvenir in minutes.</p>
+            <p>Follow a Family Journey clue together, then bring a favorite detail into a Tourist Design Studio design.</p>
           </div>
         </li>
         <li>
           <span>03</span>
           <div>
             <strong>Keep what matters</strong>
-            <p>Take home an approved physical object or private recap, while the temporary session quietly resets.</p>
+            <p>Review the keepsake before ordering, and choose which moments to take home as a family.</p>
           </div>
         </li>
       </ol>
     </section>
 
-    <!-- Shoe Feature Section -->
-    <section class="shoe-feature section" id="rare-shoes">
-      <div class="shoe-feature-heading" data-reveal>
+    <!-- Craft Feature Section -->
+    <section class="craft-feature section" id="craft-collectibles">
+      <div class="craft-feature-heading" data-reveal>
         <p class="section-label">Featured application</p>
-        <h2>A rare shoe should arrive with a story you can check.</h2>
-        <p>From origin registration to delivery, the Rare Shoes experience helps collectors identify the pair, follow each handover, and understand the final physical result.</p>
+        <h2>Every handmade piece has a story worth keeping.</h2>
+        <p>A ceramic bowl, woven scarf, or carved keepsake carries something of the person who made it. Craft &amp; Collectibles explores how that story, along with practical care and condition notes, can travel with the piece.</p>
       </div>
-      <div class="shoe-flow" data-reveal>
+      <div class="craft-flow" data-reveal>
         <article>
           <span>1</span>
           <p class="mini-label">At the beginning</p>
-          <h3>Meet the pair</h3>
-          <p>Record visible details, condition, origin material and physical dynamic tag while it is with the verified authenticator.</p>
+          <h3>Meet the maker</h3>
+          <p>Discover the workshop, materials, and techniques behind the piece, with the maker’s own notes and photos as a starting point.</p>
         </article>
         <i aria-hidden="true">→</i>
         <article>
           <span>2</span>
           <p class="mini-label">On the way</p>
-          <h3>Follow the handover</h3>
-          <p>Keep every approved custodian, scan and observed physical state connected to the exact same immutable journey.</p>
+          <h3>Follow the piece</h3>
+          <p>Keep a record of the piece as it moves from a workshop or shop to its new owner, including condition photos when they are useful.</p>
         </article>
         <i aria-hidden="true">→</i>
         <article>
           <span>3</span>
           <p class="mini-label">At the end</p>
-          <h3>Check what arrived</h3>
-          <p>Compare delivery observations with the origin registration and surface a clear match, review or hold outcome in plain language.</p>
+          <h3>Care for what you keep</h3>
+          <p>Check the piece on arrival and keep its care instructions close: how to wash the textile, handle the glaze, or look after the wood.</p>
         </article>
       </div>
-      <p class="plain-note" data-reveal>At every step, the collector sees what happened, what was checked, and whether the pair is ready to continue or needs human attention.</p>
+      <p class="plain-note" data-reveal>From a small travel keepsake to a collectible artwork, the aim is the same: keep the maker’s story and the information that helps someone value and care for the piece.</p>
     </section>
 
     <!-- About Strip Section -->
     <section class="about-strip section" id="about" data-reveal>
       <div>
         <p class="section-label">Application studio</p>
-        <h2>Digital experiences that connect people with places, memories, collections and helpful machines.</h2>
+        <h2>A local discovery. A shared memory. Something worth keeping.</h2>
       </div>
       <div class="about-strip-copy">
-        <p>From city discovery and destination souvenirs to family adventures and rare collectibles, every SeedCore application is built around a clear, tangible moment in the real world.</p>
+        <p>I’m interested in the small moments where an application can help: finding the next stop, making something together, learning about a handmade piece, or getting a little help from a friendly robot.</p>
         <a class="button button-light" href="about.html">Read the studio story</a>
       </div>
     </section>
@@ -274,8 +279,8 @@
     <!-- Closing Section -->
     <section class="closing-section section" data-reveal>
       <p class="section-label">Build with me</p>
-      <h2>Have a place, collection or visitor journey that could become an application?</h2>
-      <p>I’d love to hear the real-world moment you want to make better.</p>
+      <h2>Which scene could come to life in your world?</h2>
+      <p>A neighborhood, museum, family space, craft workshop, or tabletop is a good place to start.</p>
       <a class="button button-coral" href="contact.html">Start a conversation <span aria-hidden="true">↗</span></a>
     </section>
   </main>
@@ -285,6 +290,6 @@
     <div class="footer-links"><a href="#work">Applications</a><a href="about.html">About</a><a href="resources/index.html">Stories</a><a href="contact.html">Contact</a></div>
     <div class="footer-meta"><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html">Terms</a><p>© <span data-current-year></span> Seed Core Limited</p></div>
   </footer>
-  <script src="js/application-site.js?v=20260819c"></script>
+  <script src="js/application-site.js?v=20260914d"></script>
 </body>
 </html>

@@ -1,71 +1,95 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="studio-site">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#f7f3ea" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121e1b" media="(prefers-color-scheme: dark)" />
   <title>SeedCore Stories — Explore the applications</title>
   <meta name="description" content="Explore SeedCore’s digital city, tourist journey, family play, trusted collecting and friendly robotics applications." />
   <link rel="icon" href="../assets/seedcore-logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://seedcore.ai/resources/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet" />
   <script>document.documentElement.classList.add("js");</script>
-  <link rel="stylesheet" href="../css/application-site.css?v=20260819c" />
+  <link rel="stylesheet" href="../css/application-site.css?v=20260914d" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="wordmark" href="../index.html"><span>SeedCore</span><small>Application studio</small></a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu"><b>Menu</b></button>
-    <nav id="site-menu" aria-label="Primary navigation"><a href="../index.html#work">Applications</a><a href="../index.html#journey">Visitor journey</a><a href="../about.html">About</a><a href="index.html">Stories</a><a class="nav-cta" href="../contact.html">Start a conversation</a></nav>
+    <nav id="site-menu" aria-label="Primary navigation"><a href="../index.html#work">Applications</a><a href="../index.html#journey">Visitor journey</a><a href="../about.html">About</a><a href="index.html" aria-current="page">Stories</a><a class="nav-cta" href="../contact.html">Start a conversation</a></nav>
   </header>
   <main class="page-main" id="main">
     <section class="page-hero">
       <div class="page-hero-copy" data-reveal>
-        <p class="section-label">Application stories & field notes</p>
-        <h1>Explore five connected <em>application worlds.</em></h1>
-        <p>Discover how SeedCore brings city discovery, visitor journeys, family creativity, rare collectibles and friendly robots into real-world experiences.</p>
+        <p class="section-label">Scenes from the studio</p>
+        <h1>One small city. <em>Five human stories.</em></h1>
+        <p>The <a href="../index.html#top">homepage illustration</a> is a starting point for the applications I’m developing. These five example scenes show the people, choices, and small outcomes behind each idea.</p>
       </div>
       <aside class="page-hero-aside" data-reveal>
-        <span>Choose your application</span>
-        <p>Walk through an authentic neighborhood, create a trip souvenir, embark on a family quest, follow an authenticated collectible, or work beside a helpful tabletop robot.</p>
+        <span>Picture the moment</span>
+        <p>A map invites a detour. A kiosk invites a design. A family follows a clue. A visitor discovers a handmade piece. A robot joins the table. Choose a scene and imagine it in your own setting.</p>
       </aside>
     </section>
     <section class="page-section">
       <div class="page-section-heading" data-reveal>
-        <p class="section-label">Application field notes</p>
-        <h2>Five worlds, each built around a memorable human moment.</h2>
+        <p class="section-label">The stories behind the scenes</p>
+        <h2>What might a better moment feel like?</h2>
       </div>
-      <div class="note-grid">
-        <article class="note-card" data-reveal>
-          <span>01 · Digital city</span>
-          <h3>A city guide that understands local context.</h3>
-          <p>Local producers, craft workshops, culinary micro-lots and community stories become easy to discover through natural language and verified public proof.</p>
-          <a href="../index.html#work">Explore Digital City →</a>
+      <div class="note-grid application-notes">
+        <article class="note-card" id="digital-city" data-reveal>
+          <span>01 · Digital City</span>
+          <h3>“What’s around the next corner?”</h3>
+          <p>A family has an hour before lunch. They ask for a nearby place to explore and find a small workshop along a walkable route. The maker’s story gives them a reason to stop.</p>
+          <p>The idea: help people turn local curiosity into a visit, with enough context to choose a place for themselves.</p>
+          <div class="note-actions">
+            <a href="../index.html#digital-city">Explore Digital City →</a>
+            <a href="../contact.html?scene=digital-city">Discuss a similar scene ↗</a>
+          </div>
         </article>
-        <article class="note-card" data-reveal>
-          <span>02 · Tourist studio</span>
-          <h3>Turn a five-minute memory into a keepsake.</h3>
-          <p>A visitor chooses a destination theme, makes playful personal tweaks, previews the exact T-shirt and completes the journey with a keepsake they designed.</p>
-          <a href="../index.html#journey">Explore the visitor journey →</a>
+        <article class="note-card" id="tourist-design-studio" data-reveal>
+          <span>02 · Tourist Design Studio</span>
+          <h3>“Can I put our adventure on a T-shirt?”</h3>
+          <p>After a visit, a child chooses a local landmark and adds a creature from their imagination. At the creative kiosk, the family tries a few colors and previews the design together.</p>
+          <p>The idea: make the keepsake part of the experience, with an adult reviewing the design and price before an order.</p>
+          <div class="note-actions">
+            <a href="../index.html#tourist-design-studio">Explore Tourist Design Studio →</a>
+            <a href="../contact.html?scene=tourist-design-studio">Discuss a similar scene ↗</a>
+          </div>
         </article>
-        <article class="note-card" data-reveal>
-          <span>03 · Family journey</span>
-          <h3>Let the adventure begin before arrival.</h3>
-          <p>A family experience connecting pre-trip anticipation, on-site creative play, and a private memory that travels home with zero persistent tracking.</p>
-          <a href="../index.html#journey">Explore Family Journey →</a>
+        <article class="note-card" id="family-journey" data-reveal>
+          <span>03 · Family Journey</span>
+          <h3>“We found the next clue!”</h3>
+          <p>A story gives a family a reason to notice the little things: a pattern on a building, an animal in an exhibit, or a detail along the path. Each small discovery moves the adventure forward.</p>
+          <p>The idea: help children and grown-ups explore together, with choices and challenges connected to the place they are visiting.</p>
+          <div class="note-actions">
+            <a href="../index.html#family-journey">Explore Family Journey →</a>
+            <a href="../contact.html?scene=family-journey">Discuss a similar scene ↗</a>
+          </div>
         </article>
-        <article class="note-card" data-reveal>
-          <span>04 · Rare shoes</span>
-          <h3>Make a collector handover crystal clear.</h3>
-          <p>Meet the authenticated pair, track every physical handover in real time, compare delivery captures with origin data, and see an untampered proof.</p>
-          <a href="../index.html#rare-shoes">Explore Rare Shoes →</a>
+        <article class="note-card" id="craft-collectibles" data-reveal>
+          <span>04 · Craft &amp; Collectibles</span>
+          <h3>“Who made this, and what makes it special?”</h3>
+          <p>A visitor notices a hand-glazed vase beside a woven textile and a carved wooden bird. They learn about the workshop, the materials, and the hands behind each piece before choosing something to take home.</p>
+          <p>The idea: help a maker’s story travel with the object, together with care instructions and useful notes about its condition and journey.</p>
+          <div class="note-actions">
+            <a href="../index.html#craft-collectibles-application">Explore Craft &amp; Collectibles →</a>
+            <a href="../contact.html?scene=craft-collectibles">Discuss a similar scene ↗</a>
+          </div>
         </article>
-        <article class="note-card" data-reveal>
-          <span>05 · Friendly robotics</span>
-          <h3>Share a useful moment with a robot.</h3>
-          <p>A tabletop robot that converses, guides an interactive activity, helps with a simple task, and provides a delightful physical presence with bounded actions.</p>
-          <a href="../index.html#work">Explore Robot Moments →</a>
+        <article class="note-card" id="robot-moments" data-reveal>
+          <span>05 · Robot Moments</span>
+          <h3>“Would you like a little help?”</h3>
+          <p>At a shared table, a small robot introduces a creative activity and waits for a response. It guides one step, then leaves the next choice to the person sitting beside it.</p>
+          <p>The idea: explore friendly, useful interactions that fit into a room and keep people involved.</p>
+          <div class="note-actions">
+            <a href="../index.html#robot-moments">Explore Robot Moments →</a>
+            <a href="../contact.html?scene=robot-moments">Discuss a similar scene ↗</a>
+          </div>
         </article>
       </div>
     </section>
@@ -75,6 +99,6 @@
     <div class="footer-links"><a href="../index.html#work">Applications</a><a href="../about.html">About</a><a href="index.html">Stories</a><a href="../contact.html">Contact</a></div>
     <div class="footer-meta"><a href="../privacy-policy.html">Privacy</a><a href="../terms-of-service.html">Terms</a><p>© <span data-current-year></span> Seed Core Limited</p></div>
   </footer>
-  <script src="../js/application-site.js?v=20260819c"></script>
+  <script src="../js/application-site.js?v=20260914d"></script>
 </body>
 </html>

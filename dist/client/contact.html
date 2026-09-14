@@ -1,34 +1,38 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="studio-site">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="light dark" />
+  <meta name="theme-color" content="#f7f3ea" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#121e1b" media="(prefers-color-scheme: dark)" />
   <title>Contact SeedCore — Start an application conversation</title>
-  <meta name="description" content="Talk with SeedCore about a digital city, tourist journey, family experience, collector application or friendly robot idea." />
+  <meta name="description" content="Talk with SeedCore about a digital city, tourist journey, family experience, craft or collectible application or friendly robot idea." />
   <link rel="icon" href="assets/seedcore-logo.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://seedcore.ai/contact.html" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Newsreader:opsz,wght@6..72,500;6..72,600&amp;display=swap" rel="stylesheet" />
   <script>document.documentElement.classList.add("js");</script>
-  <link rel="stylesheet" href="css/application-site.css?v=20260819c" />
+  <link rel="stylesheet" href="css/application-site.css?v=20260914d" />
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
     <a class="wordmark" href="index.html"><span>SeedCore</span><small>Application studio</small></a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-menu"><b>Menu</b></button>
-    <nav id="site-menu" aria-label="Primary navigation"><a href="index.html#work">Applications</a><a href="index.html#journey">Visitor journey</a><a href="about.html">About</a><a href="resources/index.html">Stories</a><a class="nav-cta" href="contact.html">Start a conversation</a></nav>
+    <nav id="site-menu" aria-label="Primary navigation"><a href="index.html#work">Applications</a><a href="index.html#journey">Visitor journey</a><a href="about.html">About</a><a href="resources/index.html">Stories</a><a class="nav-cta" href="contact.html" aria-current="page">Start a conversation</a></nav>
   </header>
   <main class="page-main" id="main">
     <section class="page-hero">
       <div class="page-hero-copy" data-reveal>
         <p class="section-label">Start a conversation</p>
-        <h1>Tell me the <em>human moment</em> you want to make better.</h1>
-        <p>It might be helping visitors discover an artisan quarter, giving families an engaging trip quest, making a resort keepsake personal, or helping a collector follow a high-value handover.</p>
+        <h1>Which <em>scene</em> feels like yours?</h1>
+        <p>Perhaps you run a neighborhood venue, want families to create a keepsake, make or sell handcrafted pieces, or are exploring a friendly robot activity. Tell me about the people and the moment you have in mind.</p>
       </div>
       <aside class="page-hero-aside" data-reveal>
         <span>Good starting points</span>
-        <p>A real place. A clear audience. One memorable moment. One practical outcome. That is more than enough for a fruitful first conversation.</p>
+        <p>Where would it happen? Who would use it? What should they be able to do or take away? A few sentences are enough to begin.</p>
       </aside>
     </section>
 
@@ -44,22 +48,23 @@
           <div class="field"><label for="name">Your name</label><input id="name" name="name" autocomplete="name" placeholder="Alex Chen" required /></div>
           <div class="field"><label for="email">Your email</label><input id="email" name="email" type="email" autocomplete="email" placeholder="alex@example.com" required /></div>
           <div class="field full">
-            <label for="interest">Which application world is closest?</label>
+            <label for="interest">Which scene would you like to explore?</label>
             <select id="interest" name="interest">
-              <option>Digital city and local producer discovery</option>
-              <option>Tourist design studio (Souvenir printing)</option>
-              <option>Family journey and kids quests</option>
-              <option>Rare shoes and trusted collecting</option>
-              <option>Friendly robotics (Tabletop / Reachymini)</option>
-              <option>Something else</option>
+              <option value="">Choose a scene</option>
+              <option value="Digital City" data-scene="digital-city">Digital City</option>
+              <option value="Tourist Design Studio" data-scene="tourist-design-studio">Tourist Design Studio</option>
+              <option value="Family Journey" data-scene="family-journey">Family Journey</option>
+              <option value="Craft &amp; Collectibles" data-scene="craft-collectibles">Craft &amp; Collectibles</option>
+              <option value="Robot Moments" data-scene="robot-moments">Robot Moments</option>
+              <option>Something else / still exploring</option>
             </select>
           </div>
           <div class="field full">
-            <label for="message">What moment would you like to improve?</label>
-            <textarea id="message" name="message" placeholder="A few sentences are plenty. Who is there, what are they trying to do, and what would a delightful experience feel like?" required></textarea>
+            <label for="message">Tell me about your setting and the people in it.</label>
+            <textarea id="message" name="message" placeholder="For example: We run a small museum and would like families to design a keepsake inspired by an exhibit. Parents would review the design before ordering." required></textarea>
           </div>
           <button class="button button-primary" type="submit">Prepare email</button>
-          <p class="form-note">This opens your default email client with the message pre-filled. No data is stored on this website.</p>
+          <p class="form-note">This prepares a draft in your email app. You can review it before sending; the form does not submit your message to a website server.</p>
         </form>
       </div>
     </section>
@@ -69,6 +74,6 @@
     <div class="footer-links"><a href="index.html#work">Applications</a><a href="about.html">About</a><a href="resources/index.html">Stories</a><a href="contact.html">Contact</a></div>
     <div class="footer-meta"><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html">Terms</a><p>© <span data-current-year></span> Seed Core Limited</p></div>
   </footer>
-  <script src="js/application-site.js?v=20260819c"></script>
+  <script src="js/application-site.js?v=20260914d"></script>
 </body>
 </html>
