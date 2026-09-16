@@ -1,0 +1,58 @@
+/* The Blender render and its percentage anchors share the same 3:2 canvas. */
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; border: 0; }
+.hero.entrance-hero { grid-template-columns: minmax(280px, .7fr) minmax(0, 1.65fr); gap: 20px 12px; min-height: 0; padding: 44px 0 52px; }
+.entrance-hero h1 { max-width: 12ch; font-size: clamp(2.9rem, 4.05vw, 4rem); line-height: 1.1; letter-spacing: -.035em; text-wrap: initial; }
+.entrance-hero .hero-lede { max-width: 35ch; font-size: 1rem; line-height: 1.75; }
+.entrance-hero .hero-actions { gap: 18px; }
+.entrance-invitation { color: var(--muted); font-size: .78rem; line-height: 1.6; margin: 24px 0 0; }
+.entrance-art { min-width: 0; margin: 0; }
+.entrance-scene { position: relative; aspect-ratio: 3 / 2; isolation: isolate; }
+.entrance-scene img { display: block; width: 100%; height: 100%; object-fit: contain; }
+.entrance-art figcaption { margin: 8px 0 0; color: var(--muted); font-size: .72rem; text-align: center; }
+.entrance-pin { position: absolute; left: var(--pin-x); top: var(--pin-y); transform: translate(-50%, -50%); display: flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 9px 15px; white-space: nowrap; color: #284a40; background: #fffcf7; border: 1px solid var(--destination-color, #5e877c); border-radius: 999px; box-shadow: 0 4px 14px #3b38251a; font-size: .75rem; transition: box-shadow .18s ease, background .18s ease; }
+.entrance-number { font-size: .65rem; }
+.pin-arrow { font-size: 1rem; }
+[data-entrance="city"] { --destination-color: #5e877c; }
+[data-entrance="design"] { --destination-color: #c77960; }
+[data-entrance="family"] { --destination-color: #9b81aa; }
+[data-entrance="craft"] { --destination-color: #a68a52; }
+[data-entrance="robot"] { --destination-color: #668592; }
+.entrance-pin:hover, .entrance-pin.is-highlighted { background: #fff0d9; box-shadow: 0 5px 20px #3b382530; }
+.entrance-pin:focus-visible { background: #fff0d9; outline: 3px solid #284a40; outline-offset: 4px; }
+.entrance-destinations { grid-column: 1 / -1; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; margin-top: 5px; }
+.entrance-nav-heading { grid-column: 1 / -1; margin: 0 0 2px; color: var(--muted); font-size: .68rem; font-weight: 600; letter-spacing: .13em; text-transform: uppercase; }
+.entrance-card { display: flex; flex-direction: column; gap: 10px; min-width: 0; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; transition: border-color .18s ease, box-shadow .18s ease; }
+.entrance-card-top { display: flex; justify-content: space-between; align-items: center; gap: 12px; color: var(--teal); font-size: .61rem; letter-spacing: .04em; }
+.entrance-card-top > span:last-child { font-size: 1.2rem; color: var(--destination-color); }
+.entrance-card strong { font-size: .95rem; font-weight: 500; line-height: 1.35; }
+.entrance-card > span:last-child { color: var(--muted); font-size: .75rem; line-height: 1.55; }
+.entrance-card:hover, .entrance-card.is-highlighted, .entrance-card:focus-visible { border-color: var(--destination-color); box-shadow: var(--shadow-sm); }
+.project-card:target { border-color: var(--teal); }
+@media (max-width: 1120px) {
+  .hero.entrance-hero { grid-template-columns: minmax(250px, .75fr) minmax(0, 1.35fr); }
+  .entrance-pin { gap: 5px; padding: 8px 10px; font-size: .68rem; }
+  .entrance-pin .entrance-number { display: none; }
+  .entrance-destinations { gap: 10px; }
+  .entrance-card { padding: 14px; }
+}
+@media (max-width: 900px) {
+  .hero.entrance-hero { grid-template-columns: 1fr; gap: 28px; width: min(100% - 2 * var(--gutter), 740px); padding-top: 36px; }
+  .entrance-hero h1 { max-width: 18ch; font-size: clamp(2.9rem, 7vw, 4rem); }
+  .entrance-hero .hero-lede { max-width: 54ch; }
+  .entrance-invitation { margin-top: 18px; }
+  .entrance-destinations { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .entrance-card:last-child { grid-column: 1 / -1; }
+  .entrance-pin { padding: 9px 14px; font-size: .75rem; }
+}
+@media (max-width: 480px) {
+  .entrance-pin { width: 44px; height: 44px; min-height: 44px; padding: 0; }
+  .entrance-pin .entrance-number { display: inline; font-size: .82rem; font-weight: 600; }
+  .entrance-pin .pin-label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+  .entrance-pin .pin-arrow { display: none; }
+  .entrance-card { gap: 8px; }
+  .entrance-hero h1 { font-size: clamp(2.5rem, 10vw, 3.2rem); }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .entrance-card, .entrance-pin { transition: none; }
+}

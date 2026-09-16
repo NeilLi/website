@@ -32,3 +32,32 @@ The public story centers on five application worlds:
 5. Robot Moments
 
 The existing technical and research pages remain in the repository as background material, but they are no longer part of the main public navigation or sitemap.
+
+## Blender navigation entrance
+
+The homepage uses an original orthographic render from the sibling SeedCore
+project, with four scene hotspots and five application links. All destinations
+open the existing application descriptions; this does not embed the Godot app.
+Links work without JavaScript. With JavaScript, hidden filter results are
+revealed before navigation and keyboard focus moves to the destination heading.
+Small screens use numbered scene pins and full destination cards below them.
+
+- Image: `images/seedcore-blender-entrance.png`
+- Layout: `index.html` and `css/entrance.css`
+- Interactions: `js/application-site.js`
+- Editable Blender source: `../seedcore/apps/neighborhood-guide/assets/blender/neighborhood_entrance.blend`
+
+After re-rendering the Blender source, copy its `assets/illustrations/entrance_render.png`
+to the website image path above. The image uses a 3:2 aspect ratio. If the camera
+or anchors change, update the percentage positions in `index.html` from the
+source project's generated `scripts/entrance_layout.gd` (multiply by 100).
+The website maps textile → Tourist Design Studio and guide → Robot Moments;
+Family Journey remains a separate fifth destination card.
+
+Stage the static website for its existing Sites asset worker:
+
+```bash
+python3 tools/build_site.py
+```
+
+This refreshes `dist/client` and deployment metadata without publishing.

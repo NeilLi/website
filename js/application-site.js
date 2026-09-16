@@ -61,6 +61,58 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Keep native fragment links usable after a category filter hides a card.
+  function revealDestination(hash, focus) {
+    if (!hash || hash.charAt(0) !== "#") return;
+    var card = document.getElementById(hash.slice(1));
+    if (!card || !card.matches(".project-card[data-category]")) return;
+    if (card.classList.contains("is-hidden")) {
+      var allButton = document.querySelector('[data-filter="all"]');
+      if (allButton) allButton.click();
+    }
+    card.classList.add("is-visible");
+    if (focus) {
+      var heading = card.querySelector("h3");
+      if (heading) {
+        heading.setAttribute("tabindex", "-1");
+        heading.focus({ preventScroll: true });
+      }
+    }
+  }
+
+  document.querySelectorAll("[data-entrance-link]").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      // Preserve open-in-new-tab and modified-click browser behavior.
+      if (event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
+      revealDestination(link.hash, true);
+    });
+  });
+  window.addEventListener("hashchange", function () {
+    revealDestination(window.location.hash, false);
+    var destination = document.getElementById(window.location.hash.slice(1));
+    if (destination && destination.matches(".project-card[data-category]")) {
+      destination.scrollIntoView({ block: "start", behavior: prefersReducedMotion ? "instant" : "smooth" });
+    }
+  });
+  revealDestination(window.location.hash, false);
+
+  // The scene pin and its matching destination card highlight together.
+  var entranceLinks = document.querySelectorAll("[data-entrance]");
+  function syncEntranceHighlight() {
+    var active = new Set();
+    entranceLinks.forEach(function (link) {
+      if (link.matches(":hover") || link === document.activeElement) active.add(link.dataset.entrance);
+    });
+    entranceLinks.forEach(function (link) {
+      link.classList.toggle("is-highlighted", active.has(link.dataset.entrance));
+    });
+  }
+  entranceLinks.forEach(function (link) {
+    ["pointerenter", "pointerleave", "focus", "blur"].forEach(function (eventName) {
+      link.addEventListener(eventName, syncEntranceHighlight);
+    });
+  });
+
   // Dynamic status ticker with playful studio messages
   var statusTicker = document.querySelector("[data-status-ticker]");
   var statusMessages = [
