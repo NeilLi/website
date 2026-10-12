@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="42 40 200 200" fill="none" role="img" aria-labelledby="seedcoreTitle seedcoreDesc">
+  <title id="seedcoreTitle">SeedCore logo</title>
+  <desc id="seedcoreDesc">SeedCore orbit mark, cropped from the original logo</desc>
+  <defs>
+    <linearGradient id="haloGrad" x1="34" y1="34" x2="184" y2="188" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#9750FF" />
+      <stop offset="55%" stop-color="#417BFF" />
+      <stop offset="100%" stop-color="#39F0FF" />
+    </linearGradient>
+    <linearGradient id="outerRingGrad" x1="42" y1="44" x2="174" y2="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#AA58FF" />
+      <stop offset="46%" stop-color="#4C78FF" />
+      <stop offset="100%" stop-color="#39EEFF" />
+    </linearGradient>
+    <linearGradient id="topArcGrad" x1="60" y1="92" x2="164" y2="60" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#31E6FF" />
+      <stop offset="100%" stop-color="#57D8FF" />
+    </linearGradient>
+    <linearGradient id="bottomArcGrad" x1="60" y1="140" x2="174" y2="160" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#39F0FF" />
+      <stop offset="100%" stop-color="#35E6C7" />
+    </linearGradient>
+    <radialGradient id="coreGrad" cx="0.38" cy="0.34" r="0.72">
+      <stop offset="0%" stop-color="#DDFEFF" />
+      <stop offset="32%" stop-color="#73F3FF" />
+      <stop offset="100%" stop-color="#1391FF" />
+    </radialGradient>
+    <radialGradient id="coreAura" cx="50%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#69F5FF" stop-opacity="0.55" />
+      <stop offset="100%" stop-color="#69F5FF" stop-opacity="0" />
+    </radialGradient>
+    <clipPath id="orbitClip">
+      <circle cx="100" cy="120" r="59.5" />
+    </clipPath>
+    <filter id="softGlow" x="-80%" y="-80%" width="260%" height="260%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+    <filter id="pinGlow" x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="2" result="blur" />
+      <feMerge>
+        <feMergeNode in="blur" />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+
+  <rect width="960" height="280" fill="transparent" />
+
+  <g transform="translate(42 20)">
+    <g filter="url(#softGlow)" opacity="0.72">
+      <ellipse cx="100" cy="120" rx="82" ry="82" fill="url(#haloGrad)" opacity="0.15" />
+    </g>
+
+    <circle cx="100" cy="120" r="72" fill="#081221" fill-opacity="0.92" />
+    <circle cx="100" cy="120" r="71" stroke="url(#outerRingGrad)" stroke-width="4.4" />
+    <circle cx="100" cy="120" r="63.5" stroke="#6B7DFF" stroke-opacity="0.16" stroke-width="1.2" />
+
+    <circle cx="100" cy="120" r="31" stroke="#53E3FF" stroke-opacity="0.52" stroke-width="2.2" />
+    <circle cx="100" cy="120" r="23" fill="url(#coreAura)" opacity="0.42" />
+
+    <g clip-path="url(#orbitClip)">
+      <path d="M68 99C77 77 101 63 123 66C130 67 135 72 138 80" stroke="url(#topArcGrad)" stroke-width="3.3" stroke-linecap="round" fill="none" />
+      <path d="M59 145C74 160 98 168 123 165C136 163 146 154 151 142" stroke="url(#bottomArcGrad)" stroke-width="3.3" stroke-linecap="round" fill="none" />
+      <path d="M84 88C96 82 110 81 122 84" stroke="#8A82FF" stroke-width="2.2" stroke-linecap="round" fill="none" opacity="0.82" />
+
+      <path d="M74 101L84 106" stroke="#69EFFF" stroke-width="2.5" stroke-linecap="round" />
+      <path d="M133 84L123 95" stroke="#69EFFF" stroke-width="2.5" stroke-linecap="round" />
+      <path d="M145 139L130 135" stroke="#69EFFF" stroke-width="2.5" stroke-linecap="round" />
+    </g>
+
+    <circle cx="67" cy="99" r="6" fill="#52E2FF" filter="url(#pinGlow)" />
+    <circle cx="138" cy="80" r="6" fill="#5EE8FF" filter="url(#pinGlow)" />
+    <circle cx="151" cy="142" r="6" fill="#44E5D3" filter="url(#pinGlow)" />
+
+    <circle cx="100" cy="120" r="15" fill="url(#coreGrad)" filter="url(#softGlow)" />
+    <circle cx="95.5" cy="115" r="4.6" fill="#F3FEFF" opacity="0.88" />
+  </g>
+
+  </svg>
