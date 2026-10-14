@@ -120,6 +120,178 @@
 </div>
 </section>
 
+<!-- Section: End-Consumer Quickstart & Hardware Wiring -->
+<section class="section page-container" id="quickstart">
+<div class="section-heading">
+<div>
+<p class="eyebrow">BEGINNER &amp; MAKER QUICKSTART</p>
+<h2>Zero-Soldering Desktop Connection</h2>
+</div>
+<p class="lead">Building your first desktop robot shouldn't require electrical engineering. Here is exactly how the consumer hardware connects on your desk.</p>
+</div>
+
+<!-- Wiring & Connection SVG Diagram -->
+<div class="consumer-diagram-wrapper">
+<svg viewBox="0 0 860 240" class="consumer-diagram-svg" aria-label="Desktop hardware wiring and connection diagram">
+  <defs>
+    <filter id="wireShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#203c31" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Canvas Background -->
+  <rect x="10" y="10" width="840" height="220" rx="12" fill="#fafbf7" stroke="#e1e6db" stroke-width="1.5"/>
+
+  <!-- 1. Laptop / Host (Left) -->
+  <g transform="translate(30, 40)" filter="url(#wireShadow)">
+    <rect x="0" y="0" width="130" height="110" rx="8" fill="#ffffff" stroke="#315c41" stroke-width="1.5"/>
+    <!-- Screen Header -->
+    <rect x="0" y="0" width="130" height="22" rx="8" fill="#e8ede3"/>
+    <text x="12" y="15" font-family="sans-serif" font-size="8.5" fill="#315c41" font-weight="bold">Laptop / Chrome</text>
+    <circle cx="118" cy="11" r="3.5" fill="#4a7c59"/>
+    
+    <!-- Screen Text -->
+    <text x="12" y="42" font-family="monospace" font-size="7.5" fill="#203c31">WebSerial API</text>
+    <text x="12" y="55" font-family="monospace" font-size="7" fill="#637c6d">115,200 / 1 Mbps</text>
+    <rect x="12" y="68" width="106" height="22" rx="4" fill="#315c41"/>
+    <text x="65" y="82" font-family="sans-serif" font-size="7.5" fill="#ffffff" font-weight="bold" text-anchor="middle">Click "Connect USB"</text>
+    
+    <!-- USB-C Port Output -->
+    <rect x="125" y="50" width="8" height="14" rx="2" fill="#9bb198"/>
+  </g>
+  <text x="95" y="175" font-family="sans-serif" font-size="11" fill="#203c31" font-weight="bold" text-anchor="middle">Step 1: Your Computer</text>
+  <text x="95" y="190" font-family="sans-serif" font-size="9" fill="#637c6d" text-anchor="middle">No software or drivers to install</text>
+
+  <!-- USB-C Cable -->
+  <path d="M165 97 L 225 97" fill="none" stroke="#4a7c59" stroke-width="4" stroke-linecap="round"/>
+  <rect x="175" y="78" width="45" height="16" rx="8" fill="#eef4ea" stroke="#b4c7a6" stroke-width="1"/>
+  <text x="197" y="89" font-family="sans-serif" font-size="7" fill="#315c41" font-weight="bold" text-anchor="middle">USB-C</text>
+
+  <!-- 2. ESP32 Controller Board (Center-Left) -->
+  <g transform="translate(230, 35)" filter="url(#wireShadow)">
+    <rect x="0" y="0" width="140" height="120" rx="8" fill="#2d4a3e" stroke="#1d332a" stroke-width="2"/>
+    <!-- MCU Chip -->
+    <rect x="25" y="30" width="45" height="45" rx="3" fill="#1b2e25" stroke="#4a7c59" stroke-width="1"/>
+    <text x="47" y="55" font-family="monospace" font-size="7" fill="#d4e6ae" text-anchor="middle">ESP32</text>
+    <text x="47" y="64" font-family="monospace" font-size="6" fill="#a8c49d" text-anchor="middle">Fast Spine</text>
+    
+    <!-- Status LEDs -->
+    <circle cx="15" cy="20" r="3.5" fill="#81b29a"/>
+    <circle cx="25" cy="20" r="3.5" fill="#e07a5f"/>
+    
+    <!-- USB-C In Port -->
+    <rect x="-4" y="57" width="8" height="14" rx="2" fill="#adbfa9"/>
+    
+    <!-- 3-Pin Bus Out Header -->
+    <rect x="130" y="45" width="14" height="30" rx="3" fill="#ffffff" stroke="#cdd9c5" stroke-width="1"/>
+    <circle cx="137" cy="52" r="2.5" fill="#203c31"/>
+    <circle cx="137" cy="60" r="2.5" fill="#e07a5f"/>
+    <circle cx="137" cy="68" r="2.5" fill="#f2cc8f"/>
+    
+    <!-- Label -->
+    <text x="70" y="105" font-family="sans-serif" font-size="8" fill="#d4e6ae" text-anchor="middle" font-weight="bold">ESP32-S3 Board ($6)</text>
+  </g>
+  <text x="300" y="175" font-family="sans-serif" font-size="11" fill="#203c31" font-weight="bold" text-anchor="middle">Step 2: Plug Controller</text>
+  <text x="300" y="190" font-family="sans-serif" font-size="9" fill="#637c6d" text-anchor="middle">Runs 200 Hz C++ interpolator</text>
+
+  <!-- 3-Wire Daisy Chain Cable 1 -->
+  <g transform="translate(375, 87)">
+    <line x1="0" y1="4" x2="45" y2="4" stroke="#203c31" stroke-width="2"/>
+    <line x1="0" y1="8" x2="45" y2="8" stroke="#e07a5f" stroke-width="2"/>
+    <line x1="0" y1="12" x2="45" y2="12" stroke="#f2cc8f" stroke-width="2"/>
+  </g>
+
+  <!-- 3. Smart Bus Servo #1 (Shoulder) -->
+  <g transform="translate(425, 45)" filter="url(#wireShadow)">
+    <rect x="0" y="0" width="105" height="100" rx="8" fill="#ffffff" stroke="#315c41" stroke-width="1.5"/>
+    <rect x="0" y="0" width="105" height="20" rx="8" fill="#eef4ea"/>
+    <text x="10" y="14" font-family="sans-serif" font-size="8" fill="#315c41" font-weight="bold">Servo 1: Shoulder</text>
+    
+    <!-- Motor Horn -->
+    <circle cx="52" cy="50" r="16" fill="#cadbba" stroke="#315c41" stroke-width="1.5"/>
+    <circle cx="52" cy="50" r="6" fill="#315c41"/>
+    
+    <!-- Ports -->
+    <rect x="-4" y="44" width="8" height="16" rx="2" fill="#cbd5c5"/>
+    <rect x="101" y="44" width="8" height="16" rx="2" fill="#cbd5c5"/>
+    
+    <text x="52" y="86" font-family="monospace" font-size="7" fill="#637c6d" text-anchor="middle">ID: 1 · Slip-Clutch</text>
+  </g>
+
+  <!-- 3-Wire Daisy Chain Cable 2 -->
+  <g transform="translate(535, 87)">
+    <line x1="0" y1="4" x2="35" y2="4" stroke="#203c31" stroke-width="2"/>
+    <line x1="0" y1="8" x2="35" y2="8" stroke="#e07a5f" stroke-width="2"/>
+    <line x1="0" y1="12" x2="35" y2="12" stroke="#f2cc8f" stroke-width="2"/>
+  </g>
+
+  <!-- 4. Smart Bus Servo #2 (Elbow) -->
+  <g transform="translate(575, 45)" filter="url(#wireShadow)">
+    <rect x="0" y="0" width="105" height="100" rx="8" fill="#ffffff" stroke="#315c41" stroke-width="1.5"/>
+    <rect x="0" y="0" width="105" height="20" rx="8" fill="#eef4ea"/>
+    <text x="10" y="14" font-family="sans-serif" font-size="8" fill="#315c41" font-weight="bold">Servo 2: Elbow</text>
+    
+    <!-- Motor Horn -->
+    <circle cx="52" cy="50" r="16" fill="#cadbba" stroke="#315c41" stroke-width="1.5"/>
+    <circle cx="52" cy="50" r="6" fill="#315c41"/>
+    
+    <!-- Ports -->
+    <rect x="-4" y="44" width="8" height="16" rx="2" fill="#cbd5c5"/>
+    <rect x="101" y="44" width="8" height="16" rx="2" fill="#cbd5c5"/>
+    
+    <text x="52" y="86" font-family="monospace" font-size="7" fill="#637c6d" text-anchor="middle">ID: 2 · Slip-Clutch</text>
+  </g>
+
+  <!-- 3-Wire Daisy Chain Cable 3 -->
+  <g transform="translate(685, 87)">
+    <line x1="0" y1="4" x2="35" y2="4" stroke="#203c31" stroke-width="2"/>
+    <line x1="0" y1="8" x2="35" y2="8" stroke="#e07a5f" stroke-width="2"/>
+    <line x1="0" y1="12" x2="35" y2="12" stroke="#f2cc8f" stroke-width="2"/>
+  </g>
+
+  <!-- 5. Smart Bus Servo #3 (Wrist / Tool) -->
+  <g transform="translate(725, 45)" filter="url(#wireShadow)">
+    <rect x="0" y="0" width="105" height="100" rx="8" fill="#ffffff" stroke="#315c41" stroke-width="1.5"/>
+    <rect x="0" y="0" width="105" height="20" rx="8" fill="#eef4ea"/>
+    <text x="10" y="14" font-family="sans-serif" font-size="8" fill="#315c41" font-weight="bold">Servo 3: Wrist</text>
+    
+    <!-- Gripper attached -->
+    <path d="M52 45 L75 35 L75 42 L60 50 Z" fill="#d99359"/>
+    <path d="M52 55 L75 65 L75 58 L60 50 Z" fill="#d99359"/>
+    <circle cx="52" cy="50" r="8" fill="#315c41"/>
+    
+    <!-- Ports -->
+    <rect x="-4" y="44" width="8" height="16" rx="2" fill="#cbd5c5"/>
+    
+    <text x="52" y="86" font-family="monospace" font-size="7" fill="#637c6d" text-anchor="middle">ID: 3 · End-Effector</text>
+  </g>
+  <text x="655" y="175" font-family="sans-serif" font-size="11" fill="#203c31" font-weight="bold" text-anchor="middle">Step 3: Daisy-Chain Servos (3-Pin Snap Plugs)</text>
+  <text x="655" y="190" font-family="sans-serif" font-size="9" fill="#637c6d" text-anchor="middle">Zero soldering required · Chains like holiday lights</text>
+</svg>
+</div>
+
+<!-- Step by Step Quickstart Details -->
+<div class="three-grid">
+<article class="content-card">
+  <span class="badge live">STEP 1: SNAP &amp; PLUG</span>
+  <h3>Zero Soldering Wiring</h3>
+  <p>Each Feetech STS3215 bus servo features two identical 3-pin snap sockets. Plug the first cable from your ESP32 board to Servo 1, then daisy-chain from Servo 1 to Servo 2, and Servo 2 to Servo 3. Total wiring time: under 3 minutes.</p>
+</article>
+
+<article class="content-card">
+  <span class="badge live">STEP 2: ONE-CLICK CONNECT</span>
+  <h3>Browser WebSerial Pairing</h3>
+  <p>Plug the ESP32 into your computer via USB-C. Open <a href="studio/tree-lab.html">3D Tree Studio</a> in Chrome, Edge, or Opera. Click "Connect USB" and pick your device in the standard browser popup. No drivers or baud rate configuration needed.</p>
+</article>
+
+<article class="content-card">
+  <span class="badge live">STEP 3: SLIDERS &amp; TEACH MODE</span>
+  <h3>Immediate Responsive Motion</h3>
+  <p>Move the joint sliders on your screen—the physical servos track each angle in real time. Switch on "Teach Mode" to gently guide the arm by hand; the browser records your exact motion path for automated playback.</p>
+</article>
+</div>
+</section>
+
 <!-- Section: MuJoCo Native Workbench & Microduck Ingestion -->
 <section class="section page-container" id="workbench">
 <div class="section-heading">

@@ -1486,3 +1486,122 @@ textarea {
   border:1px solid var(--line);
   color:var(--ink);
 }
+
+/* Consumer Journey & Desktop Experience */
+.consumer-diagram-wrapper {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  padding: 28px 24px;
+  margin: 32px 0;
+  box-shadow: 0 4px 20px rgba(32, 60, 49, 0.04);
+}
+.consumer-diagram-svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-width: 860px;
+  margin: 0 auto;
+}
+.consumer-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  margin: 28px 0;
+}
+.consumer-step-card {
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.consumer-step-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(32, 60, 49, 0.06);
+}
+.step-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #eef4ea;
+  color: var(--green);
+  font: 700 15px var(--mono);
+  border: 1.5px solid var(--line);
+}
+.consumer-step-card h3 {
+  font-size: 18px;
+  margin: 0;
+  color: var(--ink);
+}
+.consumer-step-card p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+.consumer-step-meta {
+  font: 600 11px var(--mono);
+  color: var(--green);
+  background: #f4f7f0;
+  padding: 4px 10px;
+  border-radius: 6px;
+  width: fit-content;
+}
+.consumer-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin: 28px 0;
+}
+.consumer-feature-card {
+  background: #fbfbf8;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 20px;
+}
+.consumer-feature-card h4 {
+  font-size: 16px;
+  margin: 0 0 8px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--ink);
+}
+.consumer-feature-card p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: var(--muted);
+  margin: 0;
+}
+.consumer-callout-banner {
+  background: linear-gradient(135deg, #eef5e6 0%, #e3ede0 100%);
+  border: 1px solid #c9d8c3;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin: 32px 0;
+}
+.consumer-callout-text h3 {
+  font-size: 20px;
+  margin: 0 0 6px;
+  color: var(--ink);
+}
+.consumer-callout-text p {
+  font-size: 14px;
+  color: var(--muted);
+  margin: 0;
+  max-width: 600px;
+}
+

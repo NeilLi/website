@@ -44,6 +44,18 @@
 </section>
 
 <section class="page-container">
+<div class="consumer-callout-banner" style="margin-top: 0;">
+<div class="consumer-callout-text">
+  <h3>Beginner &amp; Consumer Guide: Choose Your Desk Embodiment</h3>
+  <p>Looking for a weekend family build, an interactive STEM lesson, or a physical body for your AI? Every project below uses lightweight 3D printed parts, safe 5V USB power, and connects directly to your web browser with zero software installations.</p>
+</div>
+<div style="display: flex; gap: 10px; flex-wrap: wrap;">
+  <span class="consumer-step-meta">🛡️ Safe-by-Physics</span>
+  <span class="consumer-step-meta">🔌 Standard USB-C</span>
+  <span class="consumer-step-meta">⚡ Zero-Install Browser</span>
+</div>
+</div>
+
 <div class="filter-bar" role="group" aria-label="Filter robot references">
   <button class="filter-button" data-filter="all" aria-pressed="true">All embodiments</button>
   <button class="filter-button" data-filter="biped" aria-pressed="false">Bipeds</button>
@@ -74,10 +86,16 @@
 <span class="art-note">Pinned MJCF Ingestion</span>
 </div>
 <div class="robot-copy">
-  <span class="badge live">Primary Reference Embodiment</span>
+  <span class="badge live">Advanced Maker Project</span>
   <h2>Microduck Biped</h2>
+  <ul class="pill-list">
+    <li>Difficulty: Advanced Maker</li>
+    <li>Build Time: ~5-6 Hours</li>
+    <li>Est. Cost: ~$180 BOM</li>
+    <li>14 Bus Servos</li>
+  </ul>
   <p>An open-source bipedal robot selected as SeedCore’s primary reference embodiment. Compact 0.737 kg body, 14 degrees of freedom, and 38 3D-printable parts.</p>
-  <p class="small"><strong>Ingestion Status:</strong> Pinned Microduck 0.1.0 MJCF package verified with SHA-256 integrity manifest. Active milestone M0/M1 establishes the 61/14 tensor interface and zero-drift startup simulation.</p>
+  <p class="small"><strong>Consumer Quickstart:</strong> 3D-print parts in PETG/PLA, assemble leg linkages with M2/M3 screws, and connect to SeedCore's native MuJoCo workbench to verify zero-drift initial stance before powering hardware.</p>
   <a class="text-link" href="https://github.com/pollen-robotics/microduck">Upstream project repository ↗</a>
 </div>
 </article>
@@ -100,10 +118,16 @@
 <span class="art-note">SIM-3 3D Viewport</span>
 </div>
 <div class="robot-copy">
-  <span class="badge live">Zero-Install 3D Studio</span>
+  <span class="badge live">Instant Free Simulation</span>
   <h2>3-Link Articulated Manipulator</h2>
+  <ul class="pill-list">
+    <li>Difficulty: All Ages (Zero Assembly)</li>
+    <li>Setup Time: Instant (0 Min)</li>
+    <li>Cost: $0 (Free)</li>
+    <li>Kid Safe: 100%</li>
+  </ul>
   <p>Interactive 3-DOF revolute serial chain running in the browser on our zero-allocation C++/Wasm analytical dynamics kernel (ABI 2). Full 3D perspective orbit controls and live matrix inspectors.</p>
-  <p class="small"><strong>Qualification Status:</strong> Fully qualified (SIM-3) with 78/78 tests passing. Live M(q), Coriolis, J(q), and mechanical energy conservation verified.</p>
+  <p class="small"><strong>Consumer Quickstart:</strong> Open the link below in Chrome or Safari. Drag joint angle sliders to command the 3D arm, orbit the camera with your mouse, and inspect live mechanical energy conservation in real time.</p>
   <a class="text-link" href="studio/tree-lab.html">Launch 3D Tree Studio ↗</a>
 </div>
 </article>
@@ -123,10 +147,16 @@
 <span class="art-note">$150 BOM Blueprint</span>
 </div>
 <div class="robot-copy">
-  <span class="badge">Maker Reference</span>
+  <span class="badge live">Best Beginner / Family Build</span>
   <h2>SO-100 / Tabletop Arm</h2>
+  <ul class="pill-list">
+    <li>Difficulty: Beginner Maker</li>
+    <li>Build Time: ~90 Minutes</li>
+    <li>Est. Cost: ~$150 BOM</li>
+    <li>Tools: 2mm Hex Key</li>
+  </ul>
   <p>The popular 3D-printed leader-follower robotic arm driven by low-cost Feetech STS3215 magnetic encoder serial bus servos. Ideal for desktop teleoperation and ACT training.</p>
-  <p class="small"><strong>Hardware Bridge:</strong> Runs on our ESP32 Fast Spine firmware with WebSerial browser deployment. Passive leader arms allow rapid dataset collection without expensive motion capture.</p>
+  <p class="small"><strong>Consumer Quickstart:</strong> 3D-print 6 arm brackets, screw in 5 bus servos with the included hex key, daisy-chain the 3-pin snap cables, and plug into your laptop with USB-C. No soldering or Linux required.</p>
   <a class="text-link" href="develop.html#blueprint">Read the Fast Spine Blueprint ↗</a>
 </div>
 </article>
@@ -149,10 +179,16 @@
 <span class="art-note">Companion Reference</span>
 </div>
 <div class="robot-copy">
-  <span class="badge">Related Reference</span>
+  <span class="badge">Desktop AI Companion</span>
   <h2>Reachy Mini</h2>
+  <ul class="pill-list">
+    <li>Difficulty: Intermediate</li>
+    <li>Build Time: ~2-3 Hours</li>
+    <li>Focus: Voice Companion</li>
+    <li>Kid Safe: 100%</li>
+  </ul>
   <p>An expressive desktop companion robot with its own upstream SDK. SeedCore retains earlier Reachy integration work as a multi-joint companion reference alongside Microduck.</p>
-  <p class="small"><strong>Integration Status:</strong> HAL driver interface exists; active milestone focuses on bipedal Microduck locomotion and general tree Wasm solvers.</p>
+  <p class="small"><strong>Consumer Quickstart:</strong> Mount the 3-DOF pan-tilt neck mechanism and webcam. Connect to your voice assistant of choice to synchronize real-time nods, head-tilts, and expressive eye animations with audio responses.</p>
   <a class="text-link" href="https://huggingface.co/docs/reachy_mini/index">Official Reachy docs ↗</a>
 </div>
 </article>

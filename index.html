@@ -219,6 +219,249 @@
 </div>
 </section>
 
+<!-- Section: The End-Consumer Journey & Desktop Experience -->
+<section class="section page-container" id="consumer-guide">
+<div class="section-heading">
+<div>
+<p class="eyebrow">BUILT FOR REAL HOMES &amp; CLASSROOMS</p>
+<h2>From Box to First Move in 10 Minutes</h2>
+</div>
+<p class="lead">No Linux dual-boots. No complex ROS 2 dependencies. No soldering iron. Just plug a standard USB-C cable into your computer, open your browser, and bring your desk robot to life.</p>
+</div>
+
+<!-- Illustrated End-Consumer Setup Diagram -->
+<div class="consumer-diagram-wrapper">
+<svg viewBox="0 0 860 360" class="consumer-diagram-svg" aria-label="End consumer setup diagram showing laptop, USB-C connection, and desktop mini robot">
+  <defs>
+    <linearGradient id="laptopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0f3eb"/>
+    </linearGradient>
+    <linearGradient id="cableGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4a7c59"/>
+      <stop offset="50%" stop-color="#73a968"/>
+      <stop offset="100%" stop-color="#4a7c59"/>
+    </linearGradient>
+    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#203c31" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Background Mat / Grid -->
+  <rect x="10" y="10" width="840" height="340" rx="14" fill="#fafbf7" stroke="#e1e6db" stroke-width="1.5"/>
+  <line x1="10" y1="285" x2="850" y2="285" stroke="#e8ede2" stroke-width="1"/>
+
+  <!-- ZONE 1: LAPTOP / BROWSER STUDIO (Left) -->
+  <g transform="translate(40, 45)" filter="url(#softShadow)">
+    <!-- Laptop Base -->
+    <path d="M15 175 L215 175 L225 188 L5 188 Z" fill="#cfd8cb" stroke="#9bb198" stroke-width="1.5"/>
+    <rect x="95" y="177" width="40" height="4" rx="2" fill="#adbfa9"/>
+    
+    <!-- Laptop Screen Outer -->
+    <rect x="25" y="25" width="180" height="150" rx="8" fill="#324f43" stroke="#233a30" stroke-width="2"/>
+    <!-- Screen Glass -->
+    <rect x="33" y="33" width="164" height="134" rx="4" fill="url(#laptopGrad)"/>
+    
+    <!-- Browser Topbar -->
+    <rect x="33" y="33" width="164" height="20" rx="4" fill="#e2ebd9"/>
+    <circle cx="43" cy="43" r="3" fill="#e07a5f"/>
+    <circle cx="52" cy="43" r="3" fill="#f2cc8f"/>
+    <circle cx="61" cy="43" r="3" fill="#81b29a"/>
+    <rect x="72" y="38" width="85" height="10" rx="3" fill="#ffffff" stroke="#cdd9c5" stroke-width="1"/>
+    <text x="76" y="46" font-family="monospace" font-size="6" fill="#315c41">seedcore.ai/studio</text>
+    <circle cx="188" cy="43" r="3" fill="#4a7c59"/>
+
+    <!-- Browser Content (3D Robot Wireframe & Controls) -->
+    <rect x="40" y="60" width="95" height="98" rx="4" fill="#f4f7f0" stroke="#d5e0cf" stroke-width="1"/>
+    <!-- Mini 3D Arm preview on screen -->
+    <line x1="88" y1="135" x2="88" y2="105" stroke="#4a7c59" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="88" cy="135" r="5" fill="#d4e6ae" stroke="#315c41" stroke-width="1.5"/>
+    <line x1="88" y1="105" x2="115" y2="85" stroke="#4a7c59" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="88" cy="105" r="4" fill="#d4e6ae" stroke="#315c41" stroke-width="1.5"/>
+    <circle cx="115" cy="85" r="4" fill="#e07a5f" stroke="#315c41" stroke-width="1.5"/>
+    <text x="45" y="72" font-family="monospace" font-size="7" fill="#4a7c59" font-weight="bold">3D Tree Studio</text>
+    <rect x="45" y="142" width="85" height="12" rx="3" fill="#315c41"/>
+    <text x="87" y="150" font-family="sans-serif" font-size="6.5" fill="#ffffff" font-weight="bold" text-anchor="middle">● Connected (USB)</text>
+
+    <!-- Side controls on screen -->
+    <rect x="140" y="60" width="50" height="98" rx="4" fill="#ffffff" stroke="#d5e0cf" stroke-width="1"/>
+    <text x="145" y="70" font-family="sans-serif" font-size="6" fill="#666" font-weight="bold">Joint Sliders</text>
+    <line x1="145" y1="80" x2="185" y2="80" stroke="#d0dbc8" stroke-width="2"/>
+    <circle cx="165" cy="80" r="3" fill="#4a7c59"/>
+    <line x1="145" y1="95" x2="185" y2="95" stroke="#d0dbc8" stroke-width="2"/>
+    <circle cx="155" cy="95" r="3" fill="#4a7c59"/>
+    <line x1="145" y1="110" x2="185" y2="110" stroke="#d0dbc8" stroke-width="2"/>
+    <circle cx="175" cy="110" r="3" fill="#4a7c59"/>
+    <rect x="145" y="125" width="40" height="14" rx="2" fill="#eef4ea" stroke="#b8cca9" stroke-width="1"/>
+    <text x="165" y="134" font-family="sans-serif" font-size="6" fill="#315c41" text-anchor="middle" font-weight="bold">Play Track</text>
+  </g>
+
+  <!-- Laptop Labels -->
+  <text x="150" y="255" font-family="sans-serif" font-size="12" fill="#203c31" font-weight="bold" text-anchor="middle">1. Your Laptop or Tablet</text>
+  <text x="150" y="272" font-family="sans-serif" font-size="10" fill="#637c6d" text-anchor="middle">Chrome, Edge, Safari · Zero Install</text>
+  <text x="150" y="315" font-family="monospace" font-size="9" fill="#315c41" text-anchor="middle">No Linux · No ROS · No Terminal</text>
+
+  <!-- ZONE 2: USB-C CABLE & REAL-TIME PROTOCOL (Middle) -->
+  <g transform="translate(265, 90)">
+    <!-- Cable Curve -->
+    <path d="M5 110 C 60 110, 80 40, 160 40 L 195 40" fill="none" stroke="url(#cableGrad)" stroke-width="5" stroke-linecap="round"/>
+    <path d="M5 110 C 60 110, 80 40, 160 40 L 195 40" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="6 6"/>
+
+    <!-- Packet Callout 1 (Top) -->
+    <g transform="translate(45, 5)">
+      <rect x="0" y="0" width="115" height="24" rx="12" fill="#ffffff" stroke="#9bb198" stroke-width="1.2" filter="url(#softShadow)"/>
+      <circle cx="12" cy="12" r="5" fill="#4a7c59"/>
+      <text x="24" y="15" font-family="sans-serif" font-size="8.5" fill="#203c31" font-weight="bold">200 Hz Setpoints ➔</text>
+    </g>
+
+    <!-- Packet Callout 2 (Bottom) -->
+    <g transform="translate(40, 80)">
+      <rect x="0" y="0" width="125" height="24" rx="12" fill="#ffffff" stroke="#9bb198" stroke-width="1.2" filter="url(#softShadow)"/>
+      <circle cx="12" cy="12" r="5" fill="#d4e6ae" stroke="#4a7c59" stroke-width="1"/>
+      <text x="24" y="15" font-family="sans-serif" font-size="8.5" fill="#203c31" font-weight="bold">⮜ Real-Time Angles</text>
+    </g>
+
+    <!-- Safe Power Badge -->
+    <g transform="translate(60, 45)">
+      <rect x="0" y="0" width="85" height="18" rx="9" fill="#eef4ea" stroke="#b4c7a6" stroke-width="1"/>
+      <text x="42" y="12" font-family="sans-serif" font-size="8" fill="#315c41" font-weight="bold" text-anchor="middle">⚡ Safe 5V USB</text>
+    </g>
+  </g>
+
+  <!-- Middle Labels -->
+  <text x="390" y="255" font-family="sans-serif" font-size="12" fill="#203c31" font-weight="bold" text-anchor="middle">2. Plug Standard USB-C</text>
+  <text x="390" y="272" font-family="sans-serif" font-size="10" fill="#637c6d" text-anchor="middle">Direct WebSerial Connection</text>
+  <text x="390" y="315" font-family="monospace" font-size="9" fill="#315c41" text-anchor="middle">Safe 5V Power · No High-Volt LiPo</text>
+
+  <!-- ZONE 3: PHYSICAL MINI ROBOT ON DESK (Right) -->
+  <g transform="translate(480, 50)" filter="url(#softShadow)">
+    <!-- Desk Mat -->
+    <rect x="30" y="155" width="310" height="40" rx="8" fill="#e8ede3" stroke="#cbd5c5" stroke-width="1.5"/>
+    <text x="40" y="180" font-family="sans-serif" font-size="9" fill="#8da388" font-weight="bold">DESK MAT</text>
+
+    <!-- ESP32 Base Controller -->
+    <rect x="80" y="140" width="100" height="26" rx="5" fill="#2d4a3e" stroke="#1d332a" stroke-width="1.5"/>
+    <circle cx="95" cy="153" r="3" fill="#81b29a"/>
+    <circle cx="105" cy="153" r="3" fill="#e07a5f"/>
+    <!-- USB-C Port on base -->
+    <rect x="76" y="148" width="6" height="10" rx="2" fill="#adbfa9"/>
+    <text x="140" y="156" font-family="monospace" font-size="7.5" fill="#d4e6ae">ESP32 Fast Spine</text>
+
+    <!-- Robotic Arm Link 1 (Shoulder) -->
+    <path d="M125 140 L135 90 L150 90 L140 140 Z" fill="#b8cbb3" stroke="#42675e" stroke-width="1.5"/>
+    <!-- Servo 1 Housing -->
+    <rect x="120" y="125" width="25" height="20" rx="3" fill="#315c41" stroke="#203c31" stroke-width="1.5"/>
+    <circle cx="132" cy="135" r="5" fill="#f4f7f0" stroke="#203c31" stroke-width="1.5"/>
+
+    <!-- Robotic Arm Link 2 (Forearm) -->
+    <path d="M142 90 L210 50 L220 56 L152 96 Z" fill="#cadbba" stroke="#42675e" stroke-width="1.5"/>
+    <!-- Servo 2 Housing (Elbow) -->
+    <rect x="135" y="80" width="22" height="20" rx="3" fill="#315c41" stroke="#203c31" stroke-width="1.5"/>
+    <circle cx="146" cy="90" r="5" fill="#f4f7f0" stroke="#203c31" stroke-width="1.5"/>
+
+    <!-- Robotic Arm Link 3 (Wrist & Gripper) -->
+    <!-- Servo 3 Housing -->
+    <circle cx="215" cy="53" r="7" fill="#315c41" stroke="#203c31" stroke-width="1.5"/>
+    <!-- Gripper Fingers -->
+    <path d="M220 50 L245 42 L245 48 L225 53 Z" fill="#d99359" stroke="#9e6132" stroke-width="1.2"/>
+    <path d="M220 56 L245 64 L245 58 L225 53 Z" fill="#d99359" stroke="#9e6132" stroke-width="1.2"/>
+    <!-- Small Toy Block in Gripper -->
+    <rect x="242" y="46" width="14" height="14" rx="2" fill="#e07a5f" stroke="#b04f35" stroke-width="1"/>
+
+    <!-- Webcam Eye on Base -->
+    <rect x="60" y="125" width="16" height="15" rx="3" fill="#ffffff" stroke="#718d7c" stroke-width="1.5"/>
+    <circle cx="68" cy="132" r="4.5" fill="#315c41"/>
+    <circle cx="68" cy="132" r="2" fill="#81b29a"/>
+    <line x1="68" y1="140" x2="68" y2="155" stroke="#718d7c" stroke-width="2"/>
+
+    <!-- Feature Callout Tags on Robot -->
+    <g transform="translate(195, 15)">
+      <rect x="0" y="0" width="135" height="22" rx="11" fill="#ffffff" stroke="#42675e" stroke-width="1" filter="url(#softShadow)"/>
+      <text x="12" y="14" font-family="sans-serif" font-size="8" fill="#203c31" font-weight="bold">🛡️ Slip-Clutch Servos (&lt;2 Nm)</text>
+    </g>
+
+    <g transform="translate(180, 85)">
+      <rect x="0" y="0" width="145" height="22" rx="11" fill="#ffffff" stroke="#42675e" stroke-width="1" filter="url(#softShadow)"/>
+      <text x="12" y="14" font-family="sans-serif" font-size="8" fill="#203c31" font-weight="bold">🪶 Lightweight PLA (&lt;500g)</text>
+    </g>
+
+    <g transform="translate(190, 130)">
+      <rect x="0" y="0" width="140" height="22" rx="11" fill="#eef4ea" stroke="#73a968" stroke-width="1"/>
+      <text x="12" y="14" font-family="sans-serif" font-size="8" fill="#203c31" font-weight="bold">⚡ Hardware Watchdog Stop</text>
+    </g>
+  </g>
+
+  <!-- Right Labels -->
+  <text x="660" y="255" font-family="sans-serif" font-size="12" fill="#203c31" font-weight="bold" text-anchor="middle">3. Desktop Embodiment</text>
+  <text x="660" y="272" font-family="sans-serif" font-size="10" fill="#637c6d" text-anchor="middle">Living Room &amp; Classroom Safe</text>
+  <text x="660" y="315" font-family="monospace" font-size="9" fill="#315c41" text-anchor="middle">Safe-by-Physics · Harmless Collisions</text>
+</svg>
+</div>
+
+<!-- 4-Step Actionable Instructions -->
+<div class="consumer-steps-grid">
+<article class="consumer-step-card">
+  <span class="step-badge">01</span>
+  <h3>3D Print or Unbox</h3>
+  <p>Download our tested open-source STL files or order a pre-printed hardware kit ($50–$80). Snap the lightweight plastic limbs together using standard M3 screws. Takes under 90 minutes.</p>
+  <span class="consumer-step-meta">⏱ ~90 Mins Assembly</span>
+</article>
+
+<article class="consumer-step-card">
+  <span class="step-badge">02</span>
+  <h3>Plug Standard USB-C</h3>
+  <p>Connect the robot's base controller directly to any PC, Mac, or Chromebook using the included USB-C cable. Powered safely via 5V USB—no hazardous high-voltage batteries on your desk.</p>
+  <span class="consumer-step-meta">🔌 Standard 5V USB</span>
+</article>
+
+<article class="consumer-step-card">
+  <span class="step-badge">03</span>
+  <h3>Open Zero-Install Web Studio</h3>
+  <p>Navigate to <code>seedcore.ai/studio</code> in Chrome, Edge, or Safari. Click "Connect USB" (WebSerial). The browser immediately synchronizes with your robot's joints. Zero software installations.</p>
+  <span class="consumer-step-meta">⚡ 1-Click WebSerial</span>
+</article>
+
+<article class="consumer-step-card">
+  <span class="step-badge">04</span>
+  <h3>Teach, Play &amp; Automate</h3>
+  <p>Move interactive joint sliders, physically position the arm in teach mode, track objects using your webcam, or prompt an AI model to execute desktop tasks with real-time safety limits.</p>
+  <span class="consumer-step-meta">🤖 AI &amp; Manual Control</span>
+</article>
+</div>
+
+<!-- Real-World Consumer Use Cases -->
+<div class="consumer-feature-grid">
+<div class="consumer-feature-card">
+  <h4>🤖 Desktop AI Companion</h4>
+  <p>Give your AI assistant a physical presence on your desk. Watch it nod along to voice responses, point to documents, or celebrate when you finish work.</p>
+</div>
+<div class="consumer-feature-card">
+  <h4>📐 Interactive STEM Learning</h4>
+  <p>Great for students and children. Learn geometry, trigonometry, and motor physics intuitively by seeing live angles and simulated math match physical motion.</p>
+</div>
+<div class="consumer-feature-card">
+  <h4>🎯 Visual Desk Sorting</h4>
+  <p>Point an ordinary USB webcam at your desk. The browser vision pipeline detects colored cubes, pens, or keys, smoothly commanding the arm to sort them.</p>
+</div>
+<div class="consumer-feature-card">
+  <h4>🤝 Leader-Follower Mimicry</h4>
+  <p>Build two arms. Gently move the leader arm with your hands; the motorized follower arm mirrors your exact trajectory with zero programming required.</p>
+</div>
+</div>
+
+<!-- Consumer Peace of Mind Banner -->
+<div class="consumer-callout-banner">
+<div class="consumer-callout-text">
+  <h3>The Safe-by-Physics Peace of Mind Guarantee</h3>
+  <p>Traditional factory robots require steel cages because a misplaced trajectory can be dangerous. Mini-robotics under 500g delivers less than 2 Nm of torque—if little hands grab the arm, the slip-clutch gears yield smoothly without pinching. And if the browser closes, the microcontroller's hardware watchdog trips in under 2 milliseconds.</p>
+</div>
+<div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
+  <a class="btn btn-primary" href="studio/tree-lab.html">Try 3D Studio Online ↗</a>
+  <a class="btn btn-secondary" href="diy-showcase.html">Explore Maker Builds ↗</a>
+</div>
+</div>
+</section>
+
 <!-- Interactive Districts -->
 <section class="section page-container" id="explore">
 <div class="section-heading">
