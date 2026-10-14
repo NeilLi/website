@@ -3,635 +3,117 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SeedCore · The Operating Foundation & Trust Runtime for Mini-Robotics</title>
-<meta name="description" content="Bridging high-level AI policies to safe-by-physics desktop embodiments, educational kits, and maker robots with scoped capability tokens, receding-horizon action chunking, and zero-install C++/Wasm simulation.">
-<meta name="theme-color" content="#f6f7f2">
+<title>SeedCore · Verifiable Trust for Physical AI</title>
+<meta name="description" content="The operating foundation for mini-robotics and physical AI. Explore browser-native simulation, bounded execution, and verifiable trust with SeedCore.">
+<meta name="theme-color" content="#070e1b">
 <link rel="icon" href="assets/seedcore-mark.svg" type="image/svg+xml">
 <link rel="canonical" href="https://seedcore.ai/">
-<meta property="og:title" content="SeedCore · The Operating Foundation for Mini-Robotics">
-<meta property="og:description" content="Bridging high-level AI policies to safe-by-physics desktop embodiments, educational kits, and maker robots with scoped capability tokens and zero-install browser simulation.">
+<meta property="og:title" content="SeedCore · Verifiable Trust for Physical AI">
+<meta property="og:description" content="Small robots. Bounded actions. Verifiable evidence. Explore the SeedCore operating foundation and zero-install 3D Studio.">
 <meta property="og:type" content="website">
-
-<link rel="stylesheet" href="css/robotics-central.css?v=20261014">
-<script src="js/robotics-central.js?v=20261014" defer></script>
+<link rel="stylesheet" href="css/robotics-central.css?v=20261014b">
+<script src="js/robotics-central.js?v=20261014b" defer></script>
 </head>
-<body>
+<body class="home-page">
 <a class="skip-link" href="#main">Skip to content</a>
-
 <header class="site-header">
 <div class="header-container">
-<a class="brand" href="index.html" aria-label="SeedCore home">
-  <img src="assets/seedcore-mark.svg" width="34" height="34" alt="">
-  <span>SeedCore<small>MINI ROBOTICS CENTRAL</small></span>
-</a>
+<a class="brand" href="index.html" aria-label="SeedCore home"><img src="assets/seedcore-mark.svg" width="38" height="38" alt=""><span>SeedCore<small>PHYSICAL AI, VERIFIED.</small></span></a>
 <button class="mobile-toggle" type="button" aria-controls="site-menu" aria-expanded="false" hidden>Menu <span aria-hidden="true">☰</span></button>
-
 <nav id="site-menu" aria-label="Primary navigation">
-  <a href="develop.html">Robot Lab &amp; Tech Stack</a>
-  <a href="diy-showcase.html">Build Gallery</a>
-  <a href="about.html">Architecture &amp; Trust</a>
-  <a href="trading.html">Exchange</a>
-  <a class="nav-contact" href="contact.html">Let’s build <span aria-hidden="true">↗</span></a>
+<a href="develop.html">Robot Lab</a><a href="diy-showcase.html">Build Gallery</a><a href="about.html">Architecture</a><a href="resources/index.html">Resources</a>
+<a class="nav-contact" href="studio/tree-lab.html">Launch Studio <span aria-hidden="true">↗</span></a>
 </nav>
 </div>
 </header>
-
 <main id="main">
-<!-- Hero Section -->
 <section class="hero page-container">
 <div class="hero-copy">
-<p class="eyebrow"><span class="tiny-spark">✳</span> VERIFIABLE TRUST RUNTIME FOR PHYSICAL AI</p>
-<h1>The operating foundation for <em>mini-robotics.</em></h1>
-<p class="lead">Bridging high-level AI models to physical mini-robots, maker kits, and desktop embodiments. Powered by scoped capability tokens, "Slow Brain, Fast Spine" action chunking, and zero-install browser simulation.</p>
-<div class="hero-actions">
-  <a class="btn btn-primary" href="studio/tree-lab.html">▶ Launch 3D Tree Studio (SIM-3) <span aria-hidden="true">↗</span></a>
-  <a class="btn btn-secondary" href="studio/index.html">2D Planar Lessons <span aria-hidden="true">↗</span></a>
-  <a class="btn btn-text" href="#paradigm-shift">Explore Architecture ↓</a>
+<p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> THE OPERATING FOUNDATION FOR MINI-ROBOTICS</p>
+<h1>The verifiable<br>trust runtime for<br><em>physical AI.</em></h1>
+<p class="lead">Connect intelligent models to the physical world. Simulate motion, bound every action, and build a chain of evidence you can inspect.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="studio/tree-lab.html">Launch 3D Studio <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="about.html">Explore the architecture <span aria-hidden="true">→</span></a></div>
+<div class="hero-footnote"><span class="dot" aria-hidden="true"></span> Browser-native simulation <span class="footnote-divider">/</span> Apache 2.0</div>
 </div>
-<p class="hero-footnote"><span class="dot"></span> Zero-install C++/Wasm · Safe-by-physics · 100% open verification</p>
+<div id="world" class="studio-preview">
+<div class="studio-titlebar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>seedcore / tree-studio</span><span class="studio-version">WASM ABI 2</span></div>
+<div class="studio-toolbar"><span><span class="signal-dot" aria-hidden="true"></span> Kinematic viewport</span><div class="model-switch" role="group" aria-label="Preview arm model"><button type="button" data-preview-model="2" aria-pressed="false">2-link</button><button type="button" data-preview-model="3" aria-pressed="true">3-link</button></div></div>
+<div class="studio-stage">
+<div class="viewport-label"><span id="previewModelLabel">3-DOF MANIPULATOR</span><small>XY PLANE / ORBIT VIEW</small></div>
+<canvas id="simArmCanvas" class="studio-canvas" role="img" aria-label="Animated kinematic preview of an articulated robot arm">Articulated robot arm preview. Open the 3D Studio to explore dynamics.</canvas>
+<svg class="preview-fallback" viewBox="0 0 560 340" role="img" aria-label="Three-link robot arm illustration"><path d="M30 240L280 120L530 240L280 350Z M70 260L320 140 M120 285L370 165 M170 310L420 190 M220 335L470 215 M70 220L320 340 M120 195L370 315 M170 170L420 290 M220 145L470 265" fill="none" stroke="#20364d"/><ellipse cx="245" cy="275" rx="42" ry="13" fill="#12384a"/><path d="M245 260L215 174L290 116L343 145" fill="none" stroke="#35546c" stroke-width="28" stroke-linecap="round"/><path d="M245 260L215 174L290 116L343 145" fill="none" stroke="#b4ccd8" stroke-width="17" stroke-linecap="round"/><g fill="#0b2031" stroke="#57dfe2" stroke-width="3"><circle cx="245" cy="260" r="17"/><circle cx="215" cy="174" r="15"/><circle cx="290" cy="116" r="12"/></g><circle cx="343" cy="145" r="6" fill="#57dfe2"/></svg>
+<div class="viewport-axis" aria-hidden="true"><span>X</span><span>Y</span><span>Z</span></div>
 </div>
-
-<div id="world">
-<div class="world-map">
-<div class="world-top"><span class="eyebrow">SEEDCORE / ARCHITECTURE 2026</span><span class="map-indicator"><i></i> Open for exploration</span></div>
-<svg viewBox="0 0 760 610" class="world-art" aria-hidden="true">
-<defs>
-<pattern id="grid" width="36" height="36" patternUnits="userSpaceOnUse" patternTransform="matrix(1 .5 -1 .5 380 30)">
-<path d="M36 0H0V36" fill="none" stroke="#a3b5a9" stroke-width=".6" opacity=".4"/>
-</pattern>
-<filter id="shadow">
-<feDropShadow dx="0" dy="15" stdDeviation="12" flood-color="#294d36" flood-opacity=".12"/>
-</filter>
-</defs>
-<rect width="760" height="610" fill="url(#grid)"/>
-<g filter="url(#shadow)">
-<path d="M62 350L367 185L703 361L398 538Z" fill="#c7d9ae"/>
-<path d="M62 350V381L398 563V538Z" fill="#96b581"/>
-<path d="M398 538L703 361V392L398 563Z" fill="#adc796"/>
-<path d="M82 351L368 199L678 362L397 520Z" fill="#deead1"/>
-<path d="M165 321L489 493M292 260L613 429M183 419L507 249" stroke="#faf8ee" stroke-width="29" fill="none"/>
-<path d="M165 321L489 493M292 260L613 429M183 419L507 249" stroke="#b9cba9" stroke-width="1.5" stroke-dasharray="4 9" fill="none"/>
-
-<!-- 3D Tree Lab Hub -->
-<path d="M217 270L306 221L390 265L300 316Z" fill="#f7f9ed"/>
-<path d="M217 270V327L300 371V316Z" fill="#bdd0ba"/>
-<path d="M300 316L390 265V324L300 371Z" fill="#8caf98"/>
-<path d="M235 265V221L306 183L370 217V265L305 303Z" fill="#ecf0df" stroke="#527761" stroke-width="2"/>
-<path d="M235 221L305 258L370 217M305 258V303" fill="none" stroke="#527761" stroke-width="2"/>
-<path d="M253 239L291 259V282L253 262Z" fill="#3f6858"/>
-<path d="M319 258L355 238V262L319 282Z" fill="#3f6858"/>
-
-<!-- Fast Spine MCU Hub -->
-<path d="M458 304L524 269L593 305L526 344Z" fill="#f4d9b7"/>
-<path d="M458 304V359L526 394V344Z" fill="#dfb582"/>
-<path d="M526 344L593 305V359L526 394Z" fill="#cb986b"/>
-<path d="M455 303L525 243L596 304L526 343Z" fill="#db946b" stroke="#a66e4b" stroke-width="2"/>
-
-<!-- Microduck & Biped Hub -->
-<path d="M290 421L368 378L434 413L355 458Z" fill="#acc8c3" stroke="#769b90"/>
-<path d="M290 421V438L355 474V458Z" fill="#759c91"/>
-<path d="M355 458L434 413V429L355 474Z" fill="#8db0a4"/>
-<path d="M344 423L349 392M374 434L372 402" stroke="#466d58" stroke-width="10"/>
-<path d="M330 391L355 377L389 395L366 409Z" fill="#e4ebce" stroke="#466d58" stroke-width="2"/>
-<path d="M330 391V372L355 357L389 375V395L366 409V392Z" fill="#f2eee0" stroke="#466d58" stroke-width="2"/>
-
-<!-- Trees & terrain -->
-<g stroke="#638063" stroke-width="5"><path d="M153 303V260M431 269V224M573 423V383M273 463V427M627 367V326"/></g>
-<g fill="#789f66"><ellipse cx="153" cy="252" rx="21" ry="29"/><ellipse cx="431" cy="217" rx="19" ry="27"/><ellipse cx="573" cy="375" rx="21" ry="29"/><ellipse cx="273" cy="422" rx="17" ry="24"/><ellipse cx="627" cy="320" rx="19" ry="27"/></g>
-</g>
-</svg>
-<a class="world-pin pin-lab" href="studio/tree-lab.html"><span>01</span> 3D Tree Lab (SIM-3) <b>↗</b></a>
-<a class="world-pin pin-build" href="diy-showcase.html#microduck"><span>02</span> Microduck MJCF <b>↗</b></a>
-<a class="world-pin pin-exchange" href="develop.html#blueprint"><span>03</span> Fast Spine $150 BOM <b>↗</b></a>
-<a class="world-pin pin-commons" href="about.html"><span>04</span> Trust Runtime <b>↗</b></a>
-<div class="world-caption"><span>Interactive architecture map</span><span>Choose a module to inspect ↗</span></div>
-</div>
+<div class="studio-readouts"><div><span>MODEL</span><strong id="previewLinkCount">3-link chain</strong></div><div><span>JOINT 01</span><strong id="previewAngle">111.7°</strong></div><div><span>STUDIO ENGINE</span><strong>C++ / Wasm</strong></div></div>
+<div class="studio-preview-footer"><span>Kinematic preview · <a href="studio/tree-lab.html">run dynamics in Studio ↗</a></span><button id="previewPause" type="button" aria-pressed="false" hidden>Pause preview</button></div>
 </div>
 </section>
-
-<!-- Strip -->
-<div class="principle-strip">
-<div class="page-container">
-<span>SEEDCORE CORE PRINCIPLES</span>
-<p>Safe-by-Physics <b>✳</b> Slow Brain / Fast Spine <b>✳</b> Zero-Install Wasm <b>✳</b> Verifiable Receipts</p>
-</div>
-</div>
-
-<!-- Section: The Paradigm Shift -->
-<section class="section page-container" id="paradigm-shift">
-<div class="section-heading">
-<div>
-<p class="eyebrow">THE ARCHITECTURAL SHIFT</p>
-<h2>Industrial Giants vs. DIY &amp; Mini-Robotics</h2>
-</div>
-<p>Classical robotics is designed for heavy, hazardous industrial arms. Mini-robotics requires an inverted set of engineering priorities.</p>
-</div>
-
-<div class="comparison-wrapper">
-<table class="comparison-table">
-<thead>
-<tr>
-  <th>Architectural Dimension</th>
-  <th>Classical Industrial Robotics</th>
-  <th>SeedCore DIY &amp; Mini-Robotics</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-  <td>Physical Hazard Profile</td>
-  <td class="muted-cell">High mass (15–100+ kg), high torque (20–150+ Nm). Crushing &amp; impact risk.</td>
-  <td class="highlight">Featherweight (&lt; 500g – 2 kg), micro-torque (&lt; 0.2–2 Nm). Inherent, passive mechanical safety.</td>
-</tr>
-<tr>
-  <td>Safety Paradigm</td>
-  <td class="muted-cell">Active Enforced Containment: C++ geofencing, optical light curtains, ISO force clamps.</td>
-  <td class="highlight">Safe-by-Physics: Motor stall torque cannot break skin. Passive compliance via 3D-printed PETG/TPU.</td>
-</tr>
-<tr>
-  <td>Compute &amp; Power Envelope</td>
-  <td class="muted-cell">Heavy onboard SoCs (Jetson AGX Orin 60W+) or multi-GPU servers (8x H100s).</td>
-  <td class="highlight">Ultra-low power microcontrollers: ESP32, RP2040, STM32, or host laptops. 5V USB / 2S LiPo.</td>
-</tr>
-<tr>
-  <td>Communication Bus</td>
-  <td class="muted-cell">Industrial fieldbuses: CAN-FD (5 Mbps), EtherCAT (100 Mbps), MIPI CSI-2 DMA.</td>
-  <td class="highlight">Consumer serial &amp; Web APIs: UART/RS-485 serial bus (1 Mbps), USB-CDC, WebSerial, BLE.</td>
-</tr>
-<tr>
-  <td>Simulation &amp; Tooling</td>
-  <td class="muted-cell">Heavy Ubuntu workstation dependencies, complex ROS 2 setups, NVIDIA Isaac Sim.</td>
-  <td class="highlight">Browser-Native &amp; Zero-Install: C++/Wasm simulation (ABI 1 &amp; ABI 2), runs on any Chromebook/laptop.</td>
-</tr>
-<tr>
-  <td>Model Strategy</td>
-  <td class="muted-cell">Monolithic 7B–70B parameter generalist VLAs running on remote cloud clusters.</td>
-  <td class="highlight">Hierarchical Edge-Microbrains: Compact policies (ACT, Diffusion Policy) or cloud VLMs dispatching bounded action chunks.</td>
-</tr>
-<tr>
-  <td>Trust &amp; Governance</td>
-  <td class="muted-cell">Rigid industrial PLC interlocks, closed proprietary firmware safety gates.</td>
-  <td class="highlight">SeedCore Verifiable Governance: Scoped capability tokens, signed receipts, parental/educator supervision.</td>
-</tr>
-<tr>
-  <td>Cost Profile</td>
-  <td class="muted-cell">$15,000 – $150,000+ per unit.</td>
-  <td class="highlight">$50 – $300 total Bill of Materials (BOM).</td>
-</tr>
-</tbody>
-</table>
+<div class="foundation-strip page-container" aria-label="Core technologies"><span>BUILT ON OPEN FOUNDATIONS</span><div><span>C++17</span><span>WebAssembly</span><span>Python / MuJoCo</span><span>Rust</span><span>Apache 2.0</span></div></div>
+<section class="capabilities-section page-container" id="paradigm-shift" aria-label="SeedCore capabilities">
+<div class="capability-grid" id="explore">
+<a class="capability-card" href="studio/tree-lab.html"><div class="capability-top"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="3" y="5" width="26" height="18" rx="3"/><path d="M11 28h10M16 23v5M11 17l4-6 6 5"/><circle cx="15" cy="11" r="2"/></svg><span class="badge live">AVAILABLE IN BROWSER</span></div><h2>Your lab. Zero install.</h2><p>Explore articulated robot dynamics, orbit the 3D viewport, and inspect the math behind every move.</p><span class="card-link">Open the 3D Studio <span aria-hidden="true">↗</span></span></a>
+<a class="capability-card" href="#architecture"><div class="capability-top"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="9" y="9" width="14" height="14" rx="3"/><path d="M13 3v6M19 3v6M13 23v6M19 23v6M3 13h6M3 19h6M23 13h6M23 19h6M13 16h6"/></svg><span class="badge">ARCHITECTURE</span></div><h2>Slow brain. Fast spine.</h2><p>Separate high-level planning from deterministic local control. Keep physical execution bounded.</p><span class="card-link">Explore the execution path <span aria-hidden="true">→</span></span></a>
+<a class="capability-card" href="about.html"><div class="capability-top"><svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3l11 4v9c0 6-6 10-11 13C11 26 5 22 5 16V7zM11 15l4 4 7-8"/></svg><span class="badge">TRUST RUNTIME</span></div><h2>Evidence, by design.</h2><p>Scoped capability tokens and action-bound receipts make the trust boundary explicit and inspectable.</p><span class="card-link">Inspect the trust model <span aria-hidden="true">↗</span></span></a>
 </div>
 </section>
-
-<!-- Section: Slow Brain, Fast Spine Architecture -->
-<section class="section page-container" id="architecture">
-<div class="section-heading">
-<div>
-<p class="eyebrow">COMMUNICATION &amp; LATENCY REALITY</p>
-<h2>The "Slow Brain, Fast Spine" Pattern</h2>
-</div>
-<p>Mini-robots communicate over consumer serial/BLE with 15–40 ms of jitter. Instead of fighting jitter with expensive industrial transceivers, SeedCore adopts receding-horizon action chunking.</p>
-</div>
-
-<div class="trust-diagram">
-<div>
-  <span>01 / SLOW BRAIN</span>
-  <h3>Cloud / Host / Browser</h3>
-  <p>Runs a compact policy or VLM planner at 10–20 Hz, dispatching a chunk of 30–50 future waypoints (0.5–1.0s horizon).</p>
-</div>
-<b aria-hidden="true">→</b>
-<div>
-  <span>02 / SEEDCORE GATE</span>
-  <h3>Scoped Capability Token</h3>
-  <p>Policy Decision Point validates intent bounds, freshness, and safety limits. Issues signed revocable tokens.</p>
-</div>
-<b aria-hidden="true">→</b>
-<div>
-  <span>03 / FAST SPINE</span>
-  <h3>Edge MCU (ESP32 / RP2040)</h3>
-  <p>Deterministic C++ spline interpolator running locally at 200–500 Hz executes smooth motor setpoints over UART bus servos.</p>
-</div>
-<b aria-hidden="true">→</b>
-<div>
-  <span>04 / VERIFIABLE EVIDENCE</span>
-  <h3>Cryptographic Receipts</h3>
-  <p>Action-bound telemetry logs are hashed and verified against policy limits by the Rust proof engine (RESULT_VERIFIER).</p>
-</div>
-</div>
-</section>
-
-<!-- Section: The End-Consumer Journey & Desktop Experience -->
-<section class="section page-container" id="consumer-guide">
-<div class="section-heading">
-<div>
-<p class="eyebrow">BUILT FOR REAL HOMES &amp; CLASSROOMS</p>
-<h2>From Box to First Move in 10 Minutes</h2>
-</div>
-<p class="lead">No Linux dual-boots. No complex ROS 2 dependencies. No soldering iron. Just plug a standard USB-C cable into your computer, open your browser, and bring your desk robot to life.</p>
-</div>
-
-<!-- Illustrated End-Consumer Setup Diagram -->
-<div class="consumer-diagram-wrapper">
-<svg viewBox="0 0 860 360" class="consumer-diagram-svg" aria-label="End consumer setup diagram showing laptop, USB-C connection, and desktop mini robot">
-  <defs>
-    <linearGradient id="laptopGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ffffff"/>
-      <stop offset="100%" stop-color="#f0f3eb"/>
-    </linearGradient>
-    <linearGradient id="cableGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#4a7c59"/>
-      <stop offset="50%" stop-color="#73a968"/>
-      <stop offset="100%" stop-color="#4a7c59"/>
-    </linearGradient>
-    <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
-      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#203c31" flood-opacity="0.08"/>
-    </filter>
-  </defs>
-
-  <!-- Background Mat / Grid -->
-  <rect x="10" y="10" width="840" height="340" rx="14" fill="#fafbf7" stroke="#e1e6db" stroke-width="1.5"/>
-  <line x1="10" y1="285" x2="850" y2="285" stroke="#e8ede2" stroke-width="1"/>
-
-  <!-- ZONE 1: LAPTOP / BROWSER STUDIO (Left) -->
-  <g transform="translate(40, 45)" filter="url(#softShadow)">
-    <!-- Laptop Base -->
-    <path d="M15 175 L215 175 L225 188 L5 188 Z" fill="#cfd8cb" stroke="#9bb198" stroke-width="1.5"/>
-    <rect x="95" y="177" width="40" height="4" rx="2" fill="#adbfa9"/>
-    
-    <!-- Laptop Screen Outer -->
-    <rect x="25" y="25" width="180" height="150" rx="8" fill="#324f43" stroke="#233a30" stroke-width="2"/>
-    <!-- Screen Glass -->
-    <rect x="33" y="33" width="164" height="134" rx="4" fill="url(#laptopGrad)"/>
-    
-    <!-- Browser Topbar -->
-    <rect x="33" y="33" width="164" height="20" rx="4" fill="#e2ebd9"/>
-    <circle cx="43" cy="43" r="3" fill="#e07a5f"/>
-    <circle cx="52" cy="43" r="3" fill="#f2cc8f"/>
-    <circle cx="61" cy="43" r="3" fill="#81b29a"/>
-    <rect x="72" y="38" width="85" height="10" rx="3" fill="#ffffff" stroke="#cdd9c5" stroke-width="1"/>
-    <text x="76" y="46" font-family="monospace" font-size="6" fill="#315c41">seedcore.ai/studio</text>
-    <circle cx="188" cy="43" r="3" fill="#4a7c59"/>
-
-    <!-- Browser Content (3D Robot Wireframe & Controls) -->
-    <rect x="40" y="60" width="95" height="98" rx="4" fill="#f4f7f0" stroke="#d5e0cf" stroke-width="1"/>
-    <!-- Mini 3D Arm preview on screen -->
-    <line x1="88" y1="135" x2="88" y2="105" stroke="#4a7c59" stroke-width="4" stroke-linecap="round"/>
-    <circle cx="88" cy="135" r="5" fill="#d4e6ae" stroke="#315c41" stroke-width="1.5"/>
-    <line x1="88" y1="105" x2="115" y2="85" stroke="#4a7c59" stroke-width="4" stroke-linecap="round"/>
-    <circle cx="88" cy="105" r="4" fill="#d4e6ae" stroke="#315c41" stroke-width="1.5"/>
-    <circle cx="115" cy="85" r="4" fill="#e07a5f" stroke="#315c41" stroke-width="1.5"/>
-    <text x="45" y="72" font-family="monospace" font-size="7" fill="#4a7c59" font-weight="bold">3D Tree Studio</text>
-    <rect x="45" y="142" width="85" height="12" rx="3" fill="#315c41"/>
-    <text x="87" y="150" font-family="sans-serif" font-size="6.5" fill="#ffffff" font-weight="bold" text-anchor="middle">● Connected (USB)</text>
-
-    <!-- Side controls on screen -->
-    <rect x="140" y="60" width="50" height="98" rx="4" fill="#ffffff" stroke="#d5e0cf" stroke-width="1"/>
-    <text x="145" y="70" font-family="sans-serif" font-size="6" fill="#666" font-weight="bold">Joint Sliders</text>
-    <line x1="145" y1="80" x2="185" y2="80" stroke="#d0dbc8" stroke-width="2"/>
-    <circle cx="165" cy="80" r="3" fill="#4a7c59"/>
-    <line x1="145" y1="95" x2="185" y2="95" stroke="#d0dbc8" stroke-width="2"/>
-    <circle cx="155" cy="95" r="3" fill="#4a7c59"/>
-    <line x1="145" y1="110" x2="185" y2="110" stroke="#d0dbc8" stroke-width="2"/>
-    <circle cx="175" cy="110" r="3" fill="#4a7c59"/>
-    <rect x="145" y="125" width="40" height="14" rx="2" fill="#eef4ea" stroke="#b8cca9" stroke-width="1"/>
-    <text x="165" y="134" font-family="sans-serif" font-size="6" fill="#315c41" text-anchor="middle" font-weight="bold">Play Track</text>
-  </g>
-
-  <!-- Laptop Labels -->
-  <text x="150" y="255" font-family="sans-serif" font-size="12" fill="#203c31" font-weight="bold" text-anchor="middle">1. Your Laptop or Tablet</text>
-  <text x="150" y="272" font-family="sans-serif" font-size="10" fill="#637c6d" text-anchor="middle">Chrome, Edge, Safari · Zero Install</text>
-  <text x="150" y="315" font-family="monospace" font-size="9" fill="#315c41" text-anchor="middle">No Linux · No ROS · No Terminal</text>
-
-  <!-- ZONE 2: USB-C CABLE & REAL-TIME PROTOCOL (Middle) -->
-  <g transform="translate(265, 90)">
-    <!-- Cable Curve -->
-    <path d="M5 110 C 60 110, 80 40, 160 40 L 195 40" fill="none" stroke="url(#cableGrad)" stroke-width="5" stroke-linecap="round"/>
-    <path d="M5 110 C 60 110, 80 40, 160 40 L 195 40" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-dasharray="6 6"/>
-
-    <!-- Packet Callout 1 (Top) -->
-    <g transform="translate(45, 5)">
-      <rect x="0" y="0" width="115" height="24" rx="12" fill="#ffffff" stroke="#9bb198" stroke-width="1.2" filter="url(#softShadow)"/>
-      <circle cx="12" cy="12" r="5" fill="#4a7c59"/>
-      <text x="24" y="15" font-family="sans-serif" font-size="8.5" fill="#203c31" font-weight="bold">200 Hz Setpoints ➔</text>
-    </g>
-
-    <!-- Packet Callout 2 (Bottom) -->
-    <g transform="translate(40, 80)">
-      <rect x="0" y="0" width="125" height="24" rx="12" fill="#ffffff" stroke="#9bb198" stroke-width="1.2" filter="url(#softShadow)"/>
-      <circle cx="12" cy="12" r="5" fill="#d4e6ae" stroke="#4a7c59" stroke-width="1"/>
-      <text x="24" y="15" font-family="sans-serif" font-size="8.5" fill="#203c31" font-weight="bold">⮜ Real-Time Angles</text>
-    </g>
-
-    <!-- Safe Power Badge -->
-    <g transform="translate(60, 45)">
-      <rect x="0" y="0" width="85" height="18" rx="9" fill="#eef4ea" stroke="#b4c7a6" stroke-width="1"/>
-      <text x="42" y="12" font-family="sans-serif" font-size="8" fill="#315c41" font-weight="bold" text-anchor="middle">⚡ Safe 5V USB</text>
-    </g>
-  </g>
-
-  <!-- Middle Labels -->
-  <text x="390" y="255" font-family="sans-serif" font-size="12" fill="#203c31" font-weight="bold" text-anchor="middle">2. Plug Standard USB-C</text>
-  <text x="390" y="272" font-family="sans-serif" font-size="10" fill="#637c6d" text-anchor="middle">Direct WebSerial Connection</text>
-  <text x="390" y="315" font-family="monospace" font-size="9" fill="#315c41" text-anchor="middle">Safe 5V Power · No High-Volt LiPo</text>
-
-  <!-- ZONE 3: PHYSICAL MINI ROBOT ON DESK (Right) -->
-  <g transform="translate(480, 50)" filter="url(#softShadow)">
-    <!-- Desk Mat -->
-    <rect x="30" y="155" width="310" height="40" rx="8" fill="#e8ede3" stroke="#cbd5c5" stroke-width="1.5"/>
-    <text x="40" y="180" font-family="sans-serif" font-size="9" fill="#8da388" font-weight="bold">DESK MAT</text>
-
-    <!-- ESP32 Base Controller -->
-    <rect x="80" y="140" width="100" height="26" rx="5" fill="#2d4a3e" stroke="#1d332a" stroke-width="1.5"/>
-    <circle cx="95" cy="153" r="3" fill="#81b29a"/>
-    <circle cx="105" cy="153" r="3" fill="#e07a5f"/>
-    <!-- USB-C Port on base -->
-    <rect x="76" y="148" width="6" height="10" rx="2" fill="#adbfa9"/>
-    <text x="140" y="156" font-family="monospace" font-size="7.5" fill="#d4e6ae">ESP32 Fast Spine</text>
-
-    <!-- Robotic Arm Link 1 (Shoulder) -->
-    <path d="M125 140 L135 90 L150 90 L140 140 Z" fill="#b8cbb3" stroke="#42675e" stroke-width="1.5"/>
-    <!-- Servo 1 Housing -->
-    <rect x="120" y="125" width="25" height="20" rx="3" fill="#315c41" stroke="#203c31" stroke-width="1.5"/>
-    <circle cx="132" cy="135" r="5" fill="#f4f7f0" stroke="#203c31" stroke-width="1.5"/>
-
-    <!-- Robotic Arm Link 2 (Forearm) -->
-    <path d="M142 90 L210 50 L220 56 L152 96 Z" fill="#cadbba" stroke="#42675e" stroke-width="1.5"/>
-    <!-- Servo 2 Housing (Elbow) -->
-    <rect x="135" y="80" width="22" height="20" rx="3" fill="#315c41" stroke="#203c31" stroke-width="1.5"/>
-    <circle cx="146" cy="90" r="5" fill="#f4f7f0" stroke="#203c31" stroke-width="1.5"/>
-
-    <!-- Robotic Arm Link 3 (Wrist & Gripper) -->
-    <!-- Servo 3 Housing -->
-    <circle cx="215" cy="53" r="7" fill="#315c41" stroke="#203c31" stroke-width="1.5"/>
-    <!-- Gripper Fingers -->
-    <path d="M220 50 L245 42 L245 48 L225 53 Z" fill="#d99359" stroke="#9e6132" stroke-width="1.2"/>
-    <path d="M220 56 L245 64 L245 58 L225 53 Z" fill="#d99359" stroke="#9e6132" stroke-width="1.2"/>
-    <!-- Small Toy Block in Gripper -->
-    <rect x="242" y="46" width="14" height="14" rx="2" fill="#e07a5f" stroke="#b04f35" stroke-width="1"/>
-
-    <!-- Webcam Eye on Base -->
-    <rect x="60" y="125" width="16" height="15" rx="3" fill="#ffffff" stroke="#718d7c" stroke-width="1.5"/>
-    <circle cx="68" cy="132" r="4.5" fill="#315c41"/>
-    <circle cx="68" cy="132" r="2" fill="#81b29a"/>
-    <line x1="68" y1="140" x2="68" y2="155" stroke="#718d7c" stroke-width="2"/>
-
-    <!-- Feature Callout Tags on Robot -->
-    <g transform="translate(195, 15)">
-      <rect x="0" y="0" width="135" height="22" rx="11" fill="#ffffff" stroke="#42675e" stroke-width="1" filter="url(#softShadow)"/>
-      <text x="12" y="14" font-family="sans-serif" font-size="8" fill="#203c31" font-weight="bold">🛡️ Slip-Clutch Servos (&lt;2 Nm)</text>
-    </g>
-
-    <g transform="translate(180, 85)">
-      <rect x="0" y="0" width="145" height="22" rx="11" fill="#ffffff" stroke="#42675e" stroke-width="1" filter="url(#softShadow)"/>
-      <text x="12" y="14" font-family="sans-serif" font-size="8" fill="#203c31" font-weight="bold">🪶 Lightweight PLA (&lt;500g)</text>
-    </g>
-
-    <g transform="translate(190, 130)">
-      <rect x="0" y="0" width="140" height="22" rx="11" fill="#eef4ea" stroke="#73a968" stroke-width="1"/>
-      <text x="12" y="14" font-family="sans-serif" font-size="8" fill="#203c31" font-weight="bold">⚡ Hardware Watchdog Stop</text>
-    </g>
-  </g>
-
-  <!-- Right Labels -->
-  <text x="660" y="255" font-family="sans-serif" font-size="12" fill="#203c31" font-weight="bold" text-anchor="middle">3. Desktop Embodiment</text>
-  <text x="660" y="272" font-family="sans-serif" font-size="10" fill="#637c6d" text-anchor="middle">Living Room &amp; Classroom Safe</text>
-  <text x="660" y="315" font-family="monospace" font-size="9" fill="#315c41" text-anchor="middle">Safe-by-Physics · Harmless Collisions</text>
-</svg>
-</div>
-
-<!-- 4-Step Actionable Instructions -->
-<div class="consumer-steps-grid">
-<article class="consumer-step-card">
-  <span class="step-badge">01</span>
-  <h3>3D Print or Unbox</h3>
-  <p>Download our tested open-source STL files or order a pre-printed hardware kit ($50–$80). Snap the lightweight plastic limbs together using standard M3 screws. Takes under 90 minutes.</p>
-  <span class="consumer-step-meta">⏱ ~90 Mins Assembly</span>
-</article>
-
-<article class="consumer-step-card">
-  <span class="step-badge">02</span>
-  <h3>Plug Standard USB-C</h3>
-  <p>Connect the robot's base controller directly to any PC, Mac, or Chromebook using the included USB-C cable. Powered safely via 5V USB—no hazardous high-voltage batteries on your desk.</p>
-  <span class="consumer-step-meta">🔌 Standard 5V USB</span>
-</article>
-
-<article class="consumer-step-card">
-  <span class="step-badge">03</span>
-  <h3>Open Zero-Install Web Studio</h3>
-  <p>Navigate to <code>seedcore.ai/studio</code> in Chrome, Edge, or Safari. Click "Connect USB" (WebSerial). The browser immediately synchronizes with your robot's joints. Zero software installations.</p>
-  <span class="consumer-step-meta">⚡ 1-Click WebSerial</span>
-</article>
-
-<article class="consumer-step-card">
-  <span class="step-badge">04</span>
-  <h3>Teach, Play &amp; Automate</h3>
-  <p>Move interactive joint sliders, physically position the arm in teach mode, track objects using your webcam, or prompt an AI model to execute desktop tasks with real-time safety limits.</p>
-  <span class="consumer-step-meta">🤖 AI &amp; Manual Control</span>
-</article>
-</div>
-
-<!-- Real-World Consumer Use Cases -->
-<div class="consumer-feature-grid">
-<div class="consumer-feature-card">
-  <h4>🤖 Desktop AI Companion</h4>
-  <p>Give your AI assistant a physical presence on your desk. Watch it nod along to voice responses, point to documents, or celebrate when you finish work.</p>
-</div>
-<div class="consumer-feature-card">
-  <h4>📐 Interactive STEM Learning</h4>
-  <p>Great for students and children. Learn geometry, trigonometry, and motor physics intuitively by seeing live angles and simulated math match physical motion.</p>
-</div>
-<div class="consumer-feature-card">
-  <h4>🎯 Visual Desk Sorting</h4>
-  <p>Point an ordinary USB webcam at your desk. The browser vision pipeline detects colored cubes, pens, or keys, smoothly commanding the arm to sort them.</p>
-</div>
-<div class="consumer-feature-card">
-  <h4>🤝 Leader-Follower Mimicry</h4>
-  <p>Build two arms. Gently move the leader arm with your hands; the motorized follower arm mirrors your exact trajectory with zero programming required.</p>
-</div>
-</div>
-
-<!-- Consumer Peace of Mind Banner -->
-<div class="consumer-callout-banner">
-<div class="consumer-callout-text">
-  <h3>The Safe-by-Physics Peace of Mind Guarantee</h3>
-  <p>Traditional factory robots require steel cages because a misplaced trajectory can be dangerous. Mini-robotics under 500g delivers less than 2 Nm of torque—if little hands grab the arm, the slip-clutch gears yield smoothly without pinching. And if the browser closes, the microcontroller's hardware watchdog trips in under 2 milliseconds.</p>
-</div>
-<div style="display: flex; gap: 12px; align-items: center; flex-wrap: wrap;">
-  <a class="btn btn-primary" href="studio/tree-lab.html">Try 3D Studio Online ↗</a>
-  <a class="btn btn-secondary" href="diy-showcase.html">Explore Maker Builds ↗</a>
-</div>
+<section class="architecture-section section page-container" id="architecture">
+<div class="architecture-copy"><p class="eyebrow">01 / THE EXECUTION BOUNDARY</p><h2>From intention<br>to <em>evidence.</em></h2><p>Intelligence can propose a move. The runtime defines what is allowed, the controller executes within those bounds, and the verifier checks the evidence.</p>
+<ol class="execution-flow">
+<li><span>01</span><div><h3>Plan the intent</h3><p>A host policy proposes a bounded action chunk.</p></div><small>PLAN</small></li>
+<li><span>02</span><div><h3>Authorize the scope</h3><p>The trust gate checks authority, limits, and freshness.</p></div><small>GATE</small></li>
+<li><span>03</span><div><h3>Execute locally</h3><p>The fast spine interpolates motion on the controller.</p></div><small>ACT</small></li>
+<li><span>04</span><div><h3>Verify the evidence</h3><p>Action-bound telemetry becomes an auditable receipt.</p></div><small>PROVE</small></li>
+</ol><a class="text-link" href="about.html">Read the architecture <span aria-hidden="true">↗</span></a></div>
+<div class="contract-panel">
+<div class="contract-heading"><span class="signal-dot" aria-hidden="true"></span> THE TRUST CONTRACT <span class="badge">ILLUSTRATIVE</span></div>
+<div class="contract-tabs" role="tablist" aria-label="Illustrative trust contracts"><button id="intent-tab" type="button" role="tab" aria-controls="intent-code" aria-selected="true" data-code-tab="intent">Action intent</button><button id="receipt-tab" type="button" role="tab" aria-controls="receipt-code" aria-selected="false" tabindex="-1" data-code-tab="receipt">Execution receipt</button></div>
+<div id="intent-code" class="code-panel" role="tabpanel" aria-labelledby="intent-tab" tabindex="0"><pre><code><span class="code-comment">// A bounded proposal for physical motion</span>
+<span class="code-purple">const</span> intent = {
+  robot: <span class="code-cyan">"mini-arm"</span>,
+  action: <span class="code-cyan">"joint.move"</span>,
+  bounds: {
+    max_velocity: <span class="code-orange">0.5</span>,
+    horizon_ms: <span class="code-orange">500</span>
+  },
+  authority: <span class="code-cyan">"scoped-capability"</span>,
+  evidence: <span class="code-cyan">"action-bound"</span>
+};</code></pre></div>
+<div id="receipt-code" class="code-panel" role="tabpanel" aria-labelledby="receipt-tab" tabindex="0" hidden><pre><code><span class="code-comment">// Evidence tied to the authorized action</span>
+<span class="code-purple">const</span> receipt = {
+  intent_digest: <span class="code-cyan">"sha256:…"</span>,
+  capability_digest: <span class="code-cyan">"sha256:…"</span>,
+  telemetry: {
+    scope: <span class="code-cyan">"joint.position"</span>,
+    action_bound: <span class="code-orange">true</span>
+  },
+  verification: <span class="code-cyan">"required"</span>,
+  signature: <span class="code-cyan">"…"</span>
+};</code></pre></div>
+<div class="contract-boundary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4-4 7-8 9-4-2-8-5-8-9V6zM8 12l3 3 5-6"/></svg><div><strong>Authority before actuation.</strong><p>Conceptual contracts. Explore the source for implementation details and current hardware milestones.</p></div></div>
+<a class="contract-source" href="https://github.com/NeilLi/seedcore">Inspect the open-source runtime <span aria-hidden="true">↗</span></a>
 </div>
 </section>
-
-<!-- Interactive Districts -->
-<section class="section page-container" id="explore">
-<div class="section-heading">
-<div>
-<p class="eyebrow">DISCOVER SEEDCORE</p>
-<h2>Four pillars of the mini-robotics ecosystem</h2>
-</div>
-<p>From browser simulation to MCU firmware and cryptographic verification.</p>
-</div>
-
-<div class="district-grid">
-<a class="district" href="develop.html">
-  <span class="district-num">01 / SIM-3 LAB</span><span class="district-icon">⌁</span>
-  <h3>Robot Lab &amp; 3D Studio <span>↗</span></h3>
-  <p>Multi-link articulated dynamics in C++/Wasm (ABI 2). Orbit camera, live mass matrix M(q), and Jacobian J(q) inspectors.</p>
-  <span class="district-status"><i></i> SIM-3 Live · 78/78 tests passing</span>
-</a>
-<a class="district" href="diy-showcase.html">
-  <span class="district-num">02 / REFERENCE BUILDS</span><span class="district-icon">⚙</span>
-  <h3>Build Gallery <span>↗</span></h3>
-  <p>Explore Microduck (14-actuator biped MJCF), SO-100 maker arms, and Reachy Mini companion models.</p>
-  <span class="district-status">Pinned Model Ingestion</span>
-</a>
-<a class="district" href="develop.html#blueprint">
-  <span class="district-num">03 / MAKER BLUEPRINT</span><span class="district-icon">⇄</span>
-  <h3>$150 BOM &amp; Fast Spine <span>↗</span></h3>
-  <p>Complete maker blueprint: ESP32 fast spine firmware, WebSerial deployment, and micro serial bus servos.</p>
-  <span class="district-status">Open Source Blueprint</span>
-</a>
-<a class="district" href="about.html">
-  <span class="district-num">04 / GOVERNANCE</span><span class="district-icon">◎</span>
-  <h3>Trust Runtime <span>↗</span></h3>
-  <p>Scoped tokens, parental supervision gates, and cryptographic proof receipts verified by Rust.</p>
-  <span class="district-status">Verifiable Execution</span>
-</a>
-</div>
+<section class="builds-section section page-container">
+<div class="section-heading"><div><p class="eyebrow">02 / SMALL SCALE. REAL ENGINEERING.</p><h2>A foundation for your next build.</h2></div><a class="text-link" href="diy-showcase.html">Explore the build gallery <span aria-hidden="true">↗</span></a></div>
+<div class="reference-builds">
+<a class="reference-build" href="diy-showcase.html#mini-arm"><div class="build-art arm-art"><svg viewBox="0 0 340 210" aria-hidden="true"><ellipse cx="151" cy="175" rx="67" ry="17" fill="#173044"/><path d="M105 170h90l-12-25h-67z" fill="#718e9f"/><path d="M151 144l-28-62 64-36 40 43" fill="none" stroke="#35546a" stroke-width="26" stroke-linecap="round"/><path d="M151 144l-28-62 64-36 40 43" fill="none" stroke="#b9ccd5" stroke-width="16" stroke-linecap="round"/><g fill="#0f2638" stroke="#59dade" stroke-width="3"><circle cx="151" cy="144" r="14"/><circle cx="123" cy="82" r="13"/><circle cx="187" cy="46" r="11"/></g><path d="M225 86l14 10-5 13M225 86l-5 18 10 9" fill="none" stroke="#59dade" stroke-width="4" stroke-linecap="round"/></svg><span>01 / ARTICULATED MOTION</span></div><div class="build-info"><div><span class="eyebrow">SIMULATION REFERENCE</span><h3>3-link manipulator</h3></div><span aria-hidden="true">↗</span></div><p>Start with an inspectable chain of joints, dynamics, and model contracts.</p></a>
+<a class="reference-build" href="diy-showcase.html#microduck"><div class="build-art duck-art"><svg viewBox="0 0 340 210" aria-hidden="true"><ellipse cx="172" cy="180" rx="63" ry="12" fill="#193248"/><path d="M148 116l-7 31 12 26M187 116l8 31-10 26" fill="none" stroke="#adc7d4" stroke-width="15" stroke-linecap="round"/><path d="M127 174h36M177 174h34" stroke="#5acdd8" stroke-width="9" stroke-linecap="round"/><rect x="139" y="79" width="61" height="47" rx="12" fill="#829daa" stroke="#c3d7de" stroke-width="2"/><rect x="129" y="38" width="81" height="46" rx="14" fill="#b7cbd2"/><rect x="141" y="47" width="57" height="22" rx="8" fill="#102b3e"/><circle cx="154" cy="58" r="5" fill="#59dade"/><circle cx="184" cy="58" r="5" fill="#59dade"/><g fill="#18364b" stroke="#5acdd8" stroke-width="2"><circle cx="146" cy="142" r="9"/><circle cx="192" cy="142" r="9"/></g></svg><span>02 / PINNED MODEL PACKAGE</span></div><div class="build-info"><div><span class="eyebrow">MUJOCO / MJCF</span><h3>Microduck biped</h3></div><span aria-hidden="true">↗</span></div><p>Inspect the versioned model package and follow the hardware milestone.</p></a>
+<a class="reference-build" href="develop.html#blueprint"><div class="build-art board-art"><svg viewBox="0 0 340 210" aria-hidden="true"><path d="M96 64l124-22 30 96-124 23z" fill="#153c46" stroke="#428b91" stroke-width="2"/><path d="M96 64v13l30 98 124-23v-14" fill="none" stroke="#0e2638" stroke-width="5"/><path d="M127 74l58-10 14 48-58 10z" fill="#8ba7b5"/><path d="M137 80l40-7 10 33-40 7z" fill="#0d2436" stroke="#5ccdd6"/><path d="M198 60l17-3 7 22-17 3z" fill="#a1b6c2"/><g fill="none" stroke="#3f8891" stroke-width="2"><path d="M138 97l-24 4 5 18 26-4M181 88l34-6 12 37-32 6M155 123l5 17 49-9"/></g><g fill="#7cdbdc"><circle cx="113" cy="77" r="3"/><circle cx="218" cy="133" r="3"/><circle cx="134" cy="145" r="3"/></g><path d="M100 80l-9 2M104 94l-9 2M109 109l-9 2M114 124l-9 2M237 76l9-2M241 91l9-2M246 106l9-2" stroke="#adbfc9" stroke-width="4"/></svg><span>03 / DETERMINISTIC CONTROL</span></div><div class="build-info"><div><span class="eyebrow">ESP32 / RP2040 BLUEPRINT</span><h3>The fast spine</h3></div><span aria-hidden="true">↗</span></div><p>Explore the maker controller architecture and local execution boundary.</p></a>
+</div><p class="illustration-note">Concept illustrations · See each reference for implementation status and scope.</p>
 </section>
-
-<!-- Tech Stacks Section -->
-<section class="section page-container" id="tech-stack">
-<div class="section-heading">
-<div>
-<p class="eyebrow">COMPREHENSIVE TECH STACK</p>
-<h2>Engineered across every layer</h2>
-</div>
-<p>From zero-allocation C++ dynamics to Rust verification and browser WebAssembly.</p>
-</div>
-
-<div class="tech-stack-grid">
-<div class="tech-card">
-  <span class="tech-tag">C++17 / CMake</span>
-  <h3>Zero-Allocation Physics Kernel</h3>
-  <p>Analytical kinematics and dynamics for 1-, 2-, and 3-link chains. Cramer cofactor 3x3 matrix inversion, skew-symmetric Coriolis vector, and RK4 integration in caller-owned memory.</p>
-  <ul class="pill-list">
-    <li>ABI 1 Planar</li>
-    <li>ABI 2 Multi-Link Tree</li>
-    <li>No Malloc / No Exceptions</li>
-  </ul>
-</div>
-
-<div class="tech-card">
-  <span class="tech-tag">WebAssembly / LLVM</span>
-  <h3>Dual-ABI Wasm Core</h3>
-  <p>Compiled with Clang and wasm-ld into a compact 13 KB binary. Standalone host math imports (sin/cos) with zero dynamic linear memory growth, running at 480 Hz in the browser.</p>
-  <ul class="pill-list">
-    <li>13 KB Payload</li>
-    <li>100% Deterministic</li>
-    <li>Chromebook Native</li>
-  </ul>
-</div>
-
-<div class="tech-card">
-  <span class="tech-tag">HTML5 / Canvas 3D</span>
-  <h3>Zero-Install 3D Studio</h3>
-  <p>Zero-dependency 3D perspective projection with interactive orbit controls (drag-to-orbit yaw/pitch, zoom). Live analytical inspectors for mass matrix M(q), Jacobian J(q), and mechanical energy.</p>
-  <ul class="pill-list">
-    <li>Zero CDN Dependencies</li>
-    <li>Depth-Sorted Projection</li>
-    <li>JSON State Exporter</li>
-  </ul>
-</div>
-
-<div class="tech-card">
-  <span class="tech-tag">TypeScript / JSON Schema</span>
-  <h3>Model Contracts &amp; Schemas</h3>
-  <p>Strict schemas (seedcore.mini-sim.tree-model.v1) with UTF-8 canonical JSON SHA-256 digests. Validates physical mass, link inertia, COM bounds, and forward kinematics in 3D.</p>
-  <ul class="pill-list">
-    <li>Immutable Digests</li>
-    <li>TypeSafe Bindings</li>
-    <li>Worker v2/v3 Protocol</li>
-  </ul>
-</div>
-
-<div class="tech-card">
-  <span class="tech-tag">Python / MuJoCo</span>
-  <h3>Pinned Model Packages &amp; HAL</h3>
-  <p>Ingestion pipeline verifying integrity manifests and joint/mass parity. Features Microduck 0.1.0 pinned MJCF (0.737 kg, 14 actuators) and HAL driver abstraction.</p>
-  <ul class="pill-list">
-    <li>Microduck 0.1.0 MJCF</li>
-    <li>BaseRobotDriver HAL</li>
-    <li>Proprioception Feedback</li>
-  </ul>
-</div>
-
-<div class="tech-card">
-  <span class="tech-tag">Rust / Cryptography</span>
-  <h3>Proof Engine &amp; Verifier</h3>
-  <p>High-assurance offline and embedded proof kernel (seedcore-verify) validating execution receipts, action-bound telemetry, and custody handoffs against policy decision rules.</p>
-  <ul class="pill-list">
-    <li>Cryptographic Receipts</li>
-    <li>RESULT_VERIFIER</li>
-    <li>Replay Audits</li>
-  </ul>
-</div>
-</div>
-</section>
-
-<!-- Active Milestones -->
-<section class="section page-container">
-<div class="join-panel">
-<div>
-  <p class="eyebrow">ROADMAP &amp; CURRENT MILESTONE</p>
-  <h2>One governed Microduck move<br>with verifiable evidence.</h2>
-  <p>SIM-1, SIM-2, and SIM-3 (Multi-Link Tree Dynamics &amp; 3D Studio) are fully qualified with 78/78 tests passing. Next active milestone: Microduck M0/M1 simulation driver and observation contract.</p>
-</div>
-<a class="btn btn-primary" href="develop.html#workbench">Inspect Developer Workbench ↗</a>
-</div>
-</section>
+<section class="stack-section page-container" id="tech-stack"><div><p class="eyebrow">03 / UNDER THE HOOD</p><h2>Engineered across every layer.</h2></div><div class="stack-grid">
+<a href="develop.html"><span>01 / SIMULATE</span><h3>C++ / Wasm</h3><p>Analytical dynamics.<br>Browser-native execution.</p><b aria-hidden="true">↗</b></a>
+<a href="develop.html#workbench"><span>02 / INSPECT</span><h3>Python / MuJoCo</h3><p>Native workbench.<br>Pinned model packages.</p><b aria-hidden="true">↗</b></a>
+<a href="develop.html#blueprint"><span>03 / CONTROL</span><h3>Embedded MCU</h3><p>Bounded action chunks.<br>Local interpolation.</p><b aria-hidden="true">↗</b></a>
+<a href="about.html"><span>04 / VERIFY</span><h3>Rust / Cryptography</h3><p>Scoped authority.<br>Action-bound evidence.</p><b aria-hidden="true">↗</b></a>
+</div></section>
+<section class="start-section page-container" id="consumer-guide"><div><p class="eyebrow">YOUR NEXT EXPERIMENT STARTS HERE</p><h2>Open a browser.<br><em>Explore the possibilities.</em></h2><p>Start with the simulation. Inspect a model, run its dynamics, and take the next step toward your own build.</p></div><div class="start-actions"><a class="btn btn-primary" href="studio/tree-lab.html">Launch 3D Studio <span aria-hidden="true">↗</span></a><a class="text-link" href="contact.html">Talk to the team <span aria-hidden="true">→</span></a></div></section>
 </main>
-
-<footer class="site-footer">
-<div class="page-container">
-<div class="footer-top">
-<div>
-  <a class="brand" href="index.html">
-    <img src="assets/seedcore-mark.svg" width="28" height="28" alt="">
-    <span>SeedCore<small>MINI ROBOTICS CENTRAL</small></span>
-  </a>
-  <p class="footer-summary">The verifiable trust runtime and operating foundation for DIY, maker, and mini-robotics platforms.</p>
-</div>
-<div>
-  <h4>Robot Lab</h4>
-  <ul>
-    <li><a href="studio/tree-lab.html">3D Tree Studio (SIM-3)</a></li>
-    <li><a href="studio/index.html">2D Planar Lessons</a></li>
-    <li><a href="develop.html">Workbench &amp; Tech Stack</a></li>
-  </ul>
-</div>
-<div>
-  <h4>Reference Builds</h4>
-  <ul>
-    <li><a href="diy-showcase.html#microduck">Microduck Biped</a></li>
-    <li><a href="diy-showcase.html#reachy">Reachy Mini</a></li>
-    <li><a href="diy-showcase.html#mini-arm">3-Link Manipulator</a></li>
-  </ul>
-</div>
-<div>
-  <h4>Governance</h4>
-  <ul>
-    <li><a href="about.html">Trust Runtime</a></li>
-    <li><a href="https://github.com/NeilLi/seedcore">GitHub Repository</a></li>
-    <li><a href="contact.html">Contact Team</a></li>
-  </ul>
-</div>
-</div>
-<div class="footer-bottom">
-  <span>© SeedCore Project. Licensed under Apache-2.0.</span>
-  <span>Zero-install Wasm · Safe-by-Physics · Verifiable Receipts</span>
-</div>
-</div>
-</footer>
+<footer class="site-footer"><div class="page-container"><div class="footer-top">
+<div><a class="footer-wordmark" href="index.html">SeedCore<span aria-hidden="true">✳</span></a><p>The operating foundation for mini-robotics.<br>Intelligent motion. Verifiable trust.</p><a class="footer-github" href="https://github.com/NeilLi/seedcore">Built in the open ↗</a></div>
+<div><p class="eyebrow">EXPLORE</p><a href="develop.html">Robot Lab &amp; Tech Stack</a><a href="diy-showcase.html">Build Gallery</a><a href="trading.html">Exchange</a><a href="activities.html">Community Activities</a></div>
+<div><p class="eyebrow">BUILD</p><a href="studio/tree-lab.html">3D Tree Studio</a><a href="studio/index.html">2D Planar Lessons</a><a href="develop.html#blueprint">Maker Blueprint</a><a href="resources/index.html">Technical Resources</a></div>
+<div><p class="eyebrow">SEEDCORE</p><a href="about.html">Architecture &amp; Trust</a><a href="https://github.com/NeilLi/seedcore">GitHub Repository</a><a href="contact.html">Contact</a><a href="sitemap.html">Site Map</a></div>
+</div><div class="footer-bottom"><span>© 2026 SeedCore Project · Apache-2.0</span><div><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html">Terms</a><span><span class="dot" aria-hidden="true"></span> PHYSICAL AI, VERIFIED.</span></div></div></div></footer>
 </body>
 </html>

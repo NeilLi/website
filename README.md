@@ -25,7 +25,7 @@ The source of direction is the sibling SeedCore repository (`/Users/ningli/proje
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | Core portal: paradigm shift matrix, slow brain/fast spine flow, tech stack grid, and 4 districts |
+| `index.html` | Technical product portal: interactive arm preview, capability cards, execution flow, illustrative trust contracts, reference builds, and tech stack |
 | `develop.html` | SIM-3 3D Tree Studio showcase, $150 Fast Spine blueprint, MuJoCo workbench, and full SIM-1–SIM-6 roadmap |
 | `studio/tree-lab.html` | **Live SIM-3 3D Studio**: 1/2/3-link kinematic tree dynamics, 3D orbit viewport, and live $M(q)$ / $\mathbf{J}(q)$ inspectors |
 | `studio/index.html` | **SIM-1/SIM-2 2D Lab**: Step-by-step physics lessons, checkpointing, replay, and JSON export |
@@ -38,6 +38,13 @@ The source of direction is the sibling SeedCore repository (`/Users/ningli/proje
 | `sitemap.html`, `sitemap.xml` | Public routes and indexing |
 
 ## Asset & Studio Synchronization
+
+The public pages share a dark navy and cyan visual system in
+`css/robotics-central.css`, with responsive layouts, visible keyboard focus, and
+consistent navigation. The homepage arm is an illustrative kinematic preview,
+with two- and three-link model selection, pause/play, and reduced-motion support.
+The separate 3D Studio runs the C++/Wasm dynamics. Homepage contract tabs show
+conceptual examples and support arrow-key, Home, and End navigation.
 
 The browser simulation runtime in `website/studio/` mirrors `seedcore/apps/mini-robot-simulator/`:
 - `mini-physics.wasm` (13,242 bytes, compiled C++ dynamics kernel supporting ABI 1 and ABI 2)
