@@ -20,6 +20,8 @@ PUBLIC_FILES = (
     'studio/LICENSE', 'studio/index.html', 'studio/styles.css', 'studio/physics.js',
     'studio/physics-build.js', 'studio/physics-build.json', 'studio/physics-wasm.js',
     'studio/physics-worker-loader.js', 'studio/mini-physics.wasm', 'studio/sim-contracts.js', 'studio/simulation-worker.js', 'studio/app.js',
+    # SIM-3 3D Studio & artifacts
+    'studio/tree-lab.html', 'studio/tree-lab.js', 'studio/tree-lab-ui.js', 'studio/tree-physics-wasm.js', 'studio/sim-contracts.d.ts',
 )
 
 def main():

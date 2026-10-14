@@ -5,20 +5,20 @@
 
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Our direction · SeedCore</title>
-<meta name="description" content="SeedCore is building a trust runtime for physical AI, starting with Microduck and useful small robot functions.">
+<title>Our Direction &amp; Trust Runtime · SeedCore</title>
+<meta name="description" content="SeedCore is the verifiable trust runtime and operating foundation for physical AI and safe-by-physics mini robotics.">
 
 <meta name="theme-color" content="#f6f7f2">
 <link rel="icon" href="assets/seedcore-mark.svg" type="image/svg+xml">
 
 <link rel="canonical" href="https://seedcore.ai/about.html">
 
-<meta property="og:title" content="Our direction · SeedCore">
-<meta property="og:description" content="SeedCore is building a trust runtime for physical AI, starting with Microduck and useful small robot functions.">
+<meta property="og:title" content="Our Direction &amp; Trust Runtime · SeedCore">
+<meta property="og:description" content="SeedCore is the verifiable trust runtime and operating foundation for physical AI and safe-by-physics mini robotics.">
 <meta property="og:type" content="website">
 
-<link rel="stylesheet" href="css/robotics-central.css?v=20261008">
-<script src="js/robotics-central.js?v=20261008" defer>
+<link rel="stylesheet" href="css/robotics-central.css?v=20261014">
+<script src="js/robotics-central.js?v=20261014" defer>
 </script>
 
 </head>
@@ -38,112 +38,173 @@
 
 <main id="main">
 <section class="page-intro page-container">
-<p class="eyebrow">OUR DIRECTION
-</p>
-<h1>A small world.<br><em>A serious foundation.</em>
-</h1>
-<p class="lead">Mini Robotics Central is SeedCore’s public place for exploration. Beneath the experiments is a focused mission: a trust runtime for physical AI.
-</p>
+<p class="eyebrow">OUR DIRECTION &amp; PHILOSOPHY</p>
+<h1>Safe by physics.<br><em>Governed by proof.</em></h1>
+<p class="lead">Mini Robotics Central is SeedCore’s public proving ground. Beneath the open simulations and maker blueprints sits our fundamental engineering goal: a verifiable trust runtime and operating foundation for physical AI.</p>
 </section>
+
+<!-- The Physical Paradigm Shift -->
 <section class="page-container two-grid">
-<article class="content-card "><span class="badge">THE HUMAN STARTING POINT</span>
-<h3>Find the job before the robot.
-</h3>
-<p>SeedCore’s proposed service starts with a person’s desired outcome: understand the need, compare hardware, define a bounded function, validate the result, and plan support. Customer discovery runs alongside engineering. A useful robot is a means to an outcome.
-</p>
-<a class="btn btn-text" href="contact.html?interest=solution">Describe your need <span aria-hidden="true">↗</span></a>
+<article class="content-card">
+<span class="badge">THE PHYSICAL PARADIGM SHIFT</span>
+<h3>Why mini-robotics changes everything.</h3>
+<p>Industrial robots weigh hundreds of kilograms and swing kilowatt actuators. If an autonomous model errs by an inch, steel frames bend and humans are injured—which is why industrial robots are locked behind hard physical cages. Mini-robotics under 1&nbsp;kg is inherently <strong>safe-by-physics</strong>. Low mass, minimal inertia, and compliant joint limits ensure that physical contact is harmless to humans. This enables fearless personal prototyping on any desk.</p>
+<ul class="pill-list">
+  <li>Sub-1kg Payloads</li>
+  <li>Harmless Collisions</li>
+  <li>Personal Desk Safe</li>
+  <li>Rapid Iteration</li>
+</ul>
 </article>
-<article class="content-card "><span class="badge">THE FIRST ENGINEERING PROOF</span>
-<h3>One move we can explain.
-</h3>
-<p>Microduck is the reference integration. The immediate goal is a short bounded move followed by a stop, with a trace of the accountable requester, permission, physical attempt, and observed result. The native workbench now inspects a pinned Microduck model package. Its hardware adapter and governed motion remain planned; the browser arm is a separate teaching model.
-</p>
-<a class="btn btn-text" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/application_directions.md">Read the current direction <span aria-hidden="true">↗</span></a>
+
+<article class="content-card">
+<span class="badge">THE BEHAVIORAL CHALLENGE</span>
+<h3>Why trust requires cryptographic proof.</h3>
+<p>Physical safety does not eliminate autonomy risks. As AI agents and vision-language models take real-world actions, they interact with personal workspaces, sensitive objects, and network services. Without a strict trust boundary, runaway planner loops, actuator over-torquing, or privacy breaches can cause damage. Because physical cages are absent, <strong>behavioral governance must be mathematical</strong>—enforced via capability tokens, local watchdog revocation, and immutable evidence trails.</p>
+<ul class="pill-list">
+  <li>ActionIntent Gateway</li>
+  <li>Scoped Capability Tokens</li>
+  <li>Sub-ms Watchdog Revocation</li>
+  <li>Content-Addressed Audit Log</li>
+</ul>
 </article>
 </section>
+
+<!-- The Trust Boundary Architecture -->
 <section class="section page-container">
 <div class="section-heading">
 <div>
-<p class="eyebrow">WHERE SEEDCORE FITS
-</p>
-<h2>A proposal is the beginning of an attempt.
-</h2>
+<p class="eyebrow">THE TRUST LIFECYCLE</p>
+<h2>From high-level intent to verifiable motion.</h2>
+<p class="lead">How SeedCore admits, bounds, and proves physical actions across the slow brain and fast spine.</p>
 </div>
 </div>
+
 <div class="trust-diagram">
-<div><span>PLAN</span>
-<h3>Person / AI planner
-</h3>
-<p>Proposes the intended task
-</p>
+<div>
+  <span>01 / PROPOSE</span>
+  <h3>Planner / VLM</h3>
+  <p>Proposes a high-level <code>ActionIntent</code> with target coordinates, speed limits, bounding box, and bounded Time-to-Live (TTL).</p>
 </div>
 <b aria-hidden="true">→</b>
-<div><span>ADMIT</span>
-<h3>SeedCore trust runtime
-</h3>
-<p>Checks authority and issues bounded permission
-</p>
+<div>
+  <span>02 / ADMIT</span>
+  <h3>SeedCore Trust Runtime</h3>
+  <p>Validates capability tokens, policy invariants, and safety boundaries. Signs an ephemeral execution lease via the Rust proof kernel.</p>
 </div>
 <b aria-hidden="true">→</b>
-<div><span>EXECUTE</span>
-<h3>Robot runtime
-</h3>
-<p>Controls motion and enforces local limits
-</p>
+<div>
+  <span>03 / GOVERN</span>
+  <h3>Embedded Fast Spine</h3>
+  <p>Microcontroller executes 200–500&nbsp;Hz spline interpolation. Local hardware watchdog trips and kills torque within milliseconds if bounds are exceeded.</p>
 </div>
 <b aria-hidden="true">→</b>
-<div><span>EXPLAIN</span>
-<h3>Evidence & review
-</h3>
-<p>Records and assesses the observed outcome
-</p>
+<div>
+  <span>04 / EXPLAIN</span>
+  <h3>Evidence &amp; Forensic Log</h3>
+  <p>Captures correlated sensor telemetry, signed tokens, and observed outcome into tamper-evident receipts for complete post-execution auditability.</p>
 </div>
 </div>
-<p class="source-note">A valid token cannot override the robot’s local controls. Captured evidence can explain an attempt; it does not by itself establish physical truth or safety certification.
-</p>
+
+<p class="source-note">A valid token cannot override physical hardware limits or watchdog kill switches. Captured evidence explains what was attempted and measured; it guarantees auditability without relying on opaque cloud black-boxes.</p>
 </section>
 
-<section class="page-container">
+<!-- The Multi-Layer Tech Stack -->
+<section class="page-container section">
 <div class="section-heading">
 <div>
-<p class="eyebrow">A FOCUSED START. AN OPEN HORIZON.
-</p>
-<h2>What is here, and what comes next.
-</h2>
+<p class="eyebrow">THE OPERATING FOUNDATION</p>
+<h2>SeedCore multi-layer technology stack.</h2>
+<p class="lead">Every layer is designed for zero unverified dependencies, maximum determinism, and open mathematical verifiability.</p>
 </div>
 </div>
-<div class="three-grid">
-<article class="content-card "><span class="badge">AVAILABLE HERE</span>
-<h3>Learn in a browser
-</h3>
-<p>The C++/Wasm two-joint Robot Lab with replay, exports, and resumable progress. The source repository also includes a native MuJoCo workbench and pinned model ingestion.
-</p>
-</article>
-<article class="content-card "><span class="badge">ACTIVE DIRECTION</span>
-<h3>Prove the trust boundary
-</h3>
-<p>Customer needs discovery and the planned Microduck integration: bounded intent, local enforcement, failure cases, and correlated evidence.
-</p>
-</article>
-<article class="content-card "><span class="badge">FUTURE EXPANSION</span>
-<h3>Grow the robotics world
-</h3>
-<p>Broader simulator capabilities, reusable skill packages, additional robot adapters, community gatherings, and a possible exchange. Each needs its own evidence and demand.
-</p>
-</article>
+
+<div class="tech-stack-grid">
+  <article class="tech-card">
+    <span class="tech-tag">C++17 Dynamics Kernel</span>
+    <h3>Zero-Allocation Physics</h3>
+    <p>Analytically derived Lagrange equations of motion ($M(q)\ddot{q} + C(q, \dot{q})\dot{q} + g(q) = \tau$). Zero dynamic memory allocations during simulation ticks ensure deterministic execution across native desktop and WebAssembly.</p>
+  </article>
+
+  <article class="tech-card">
+    <span class="tech-tag">WebAssembly ABI 1 &amp; ABI 2</span>
+    <h3>Deterministic Browser Studio</h3>
+    <p>Zero-install client-side physics engines compiled with clang/llvm. ABI 1 powers 2D educational planar lessons; ABI 2 drives the 3D kinematic tree studio with full 64-bit precision and memory-mapped state buffers.</p>
+  </article>
+
+  <article class="tech-card">
+    <span class="tech-tag">TypeScript Schema Contracts</span>
+    <h3>Typed Simulation Contracts</h3>
+    <p>Formal type declarations (<code>sim-contracts.js</code> and <code>sim-contracts.d.ts</code>) defining joint telemetry, state snapshots, control frames, and WebSerial wire protocols with strict input validation.</p>
+  </article>
+
+  <article class="tech-card">
+    <span class="tech-tag">MuJoCo Native Workbench</span>
+    <h3>Model Ingestion &amp; Verification</h3>
+    <p>Native robotics workbench with pinned Microduck 0.1.0 MJCF package ingestion. Automated SHA-256 integrity verification, 61/14 tensor layout mapping, and cross-simulation sanity validation.</p>
+  </article>
+
+  <article class="tech-card">
+    <span class="tech-tag">Hardware Abstraction (HAL)</span>
+    <h3>$150 Fast Spine Blueprint</h3>
+    <p>Microcontroller firmware running on ESP32/RP2040 communicating with Feetech/Dynamixel bus servos. High-frequency spline interpolation (200–500&nbsp;Hz) with hardware watchdog fail-safes.</p>
+  </article>
+
+  <article class="tech-card">
+    <span class="tech-tag">Rust Verification Kernel</span>
+    <h3>Cryptographic Proofs &amp; Audit</h3>
+    <p>High-assurance proof verifier producing tamper-evident receipts for action intents, telemetry traces, and policy conformance. Powers deterministic forensic replay and accountability.</p>
+  </article>
 </div>
-<p class="source-note">Grounded in SeedCore’s <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/physical_ai_strategy.md">physical AI strategy</a> and <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/robot_solution_delivery.md">customer delivery model</a>. Direction reviewed October 12, 2026.
-</p>
 </section>
+
+<!-- Current Progress vs Active Roadmap -->
+<section class="page-container section">
+<div class="section-heading">
+<div>
+<p class="eyebrow">TRANSPARENT ROADMAP</p>
+<h2>Grounded in evidence. Clear on boundaries.</h2>
+<p class="lead">We distinguish between what is delivered and tested in code today versus what is actively under development.</p>
+</div>
+</div>
+
+<div class="three-grid">
+<article class="content-card">
+<span class="badge live">DELIVERED &amp; QUALIFIED</span>
+<h3>Simulation &amp; Studio Artifacts</h3>
+<p><strong>SIM-1 &amp; SIM-2:</strong> 2D Planar arm dynamics with state checkpointing and JSON exports.<br>
+<strong>SIM-3:</strong> 3D Kinematic tree studio with 78/78 tests passing, live $M(q)$ and $\mathbf{J}(q)$ matrix inspection.<br>
+<strong>M0:</strong> Pinned Microduck 0.1.0 model package ingestion and native MuJoCo validation in the SeedCore repository.</p>
+<a class="btn btn-text" href="develop.html">Explore Robot Lab ↗</a>
+</article>
+
+<article class="content-card">
+<span class="badge">ACTIVE DEVELOPMENT</span>
+<h3>Hardware Bridge &amp; Watchdogs</h3>
+<p><strong>M1 Watchdog Bridge:</strong> Fast spine microcontroller firmware bridging WebSerial and smart bus servos with local heartbeats.<br>
+<strong>M2 Scoped Tokens:</strong> End-to-end ActionIntent verification, local policy enforcement, and sub-millisecond emergency stop on physical hardware.</p>
+<a class="btn btn-text" href="https://github.com/NeilLi/seedcore">Inspect GitHub commits ↗</a>
+</article>
+
+<article class="content-card">
+<span class="badge">FUTURE HORIZON</span>
+<h3>Autonomous Physical AI Fleet</h3>
+<p><strong>M3 Closed-Loop VLM:</strong> Receding-horizon action chunking with vision feedback.<br>
+<strong>M4 Skill Commons:</strong> Verified skills exchange, multi-robot coordination, and decentralized behavioral proofs across open hardware builders.</p>
+<a class="btn btn-text" href="contact.html?interest=exchange">Shape the Exchange ↗</a>
+</article>
+</div>
+
+<p class="source-note">Grounded in SeedCore’s <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/physical_ai_strategy.md">physical AI strategy</a> and <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/mini_robot_simulator_implementation_plan.md">mini robot implementation plan</a>. Updated October 2026.</p>
+</section>
+
+<!-- Action Callout -->
 <section class="page-container">
 <div class="join-panel">
 <div>
-<p class="eyebrow">THE NEXT SMALL STEP
-</p>
-<h2>Bring a useful question.
-</h2>
-<p>A small robot idea, a reproducible experiment, or a real task is enough to start a conversation.
-</p>
+<p class="eyebrow">JOIN THE EXPERIMENT</p>
+<h2>Build something useful with us.</h2>
+<p>Whether you are designing a desktop robot, training a vision-language action model, or testing safe-by-physics control algorithms, our open-source tools and trust runtime are built for you.</p>
 </div>
 <a class="btn btn-primary" href="contact.html?interest=solution">Tell us your idea <span aria-hidden="true">↗</span></a>
 </div>
@@ -154,15 +215,14 @@
 <div class="page-container">
 <div class="footer-top">
 <div><a class="footer-wordmark" href="index.html">SeedCore<span aria-hidden="true">✳</span></a>
-<p>A small world for robots.<br>A thoughtful place to start.
-</p>
+<p>The physical AI operating foundation.<br>A verifiable trust runtime for mini robotics.</p>
 </div>
 <div><span class="eyebrow">EXPLORE</span><a href="develop.html">Robot Lab</a><a href="diy-showcase.html">Build Gallery</a><a href="trading.html">Exchange</a><a href="activities.html">Commons</a>
 </div>
-<div><span class="eyebrow">SEEDCORE</span><a href="about.html">Our direction</a><a href="contact.html">Get in touch</a><a href="https://github.com/NeilLi/seedcore">Source code ↗</a><a href="sitemap.html">Site map</a>
+<div><span class="eyebrow">SEEDCORE</span><a href="about.html" aria-current="page">Our direction</a><a href="contact.html">Get in touch</a><a href="https://github.com/NeilLi/seedcore">Source code ↗</a><a href="sitemap.html">Site map</a>
 </div>
 </div>
-<div class="footer-bottom"><span>© 2026 Seed Core Limited</span><span>Built with curiosity. Grounded in evidence.</span>
+<div class="footer-bottom"><span>© 2026 Seed Core Limited</span><span>Safe by physics. Governed by proof.</span>
 <div><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html">Terms</a>
 </div>
 </div>

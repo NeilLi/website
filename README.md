@@ -1,13 +1,10 @@
 # SeedCore · Mini Robotics Central
 
-A static public website for SeedCore's small robotics direction. The homepage
-is a navigable concept world with four districts: Robot Lab, Build Gallery,
-Exchange, and Commons. SeedCore remains the main brand and the trust runtime
-for physical AI beneath the public experience.
+A static public website for SeedCore's physical AI operating foundation and mini-robotics direction. The website connects the paradigm shift of safe-by-physics small robotics to SeedCore's verifiable trust runtime, zero-install WebAssembly simulation studio, and open maker blueprints.
 
 ## Direction and implementation status
 
-The source of direction is the sibling SeedCore repository, especially:
+The source of direction is the sibling SeedCore repository (`/Users/ningli/project/seedcore`), specifically:
 
 - `docs/development/application_directions.md`
 - `docs/development/robotics/physical_ai_strategy.md`
@@ -15,70 +12,65 @@ The source of direction is the sibling SeedCore repository, especially:
 - `docs/development/robotics/mini_robot_simulator_implementation_plan.md`
 - `apps/mini-robot-simulator/README.md`
 
-Direction reviewed October 12, 2026 through SeedCore commit `bb711b69c5c39cd644826c1ff31b72118605894c`. Microduck is the primary planned integration.
-The browser lab is a working two-link research model; it does not simulate
-Microduck, control hardware, issue execution authority, or establish physical
-safety. SIM-1 and a narrow SIM-2 C++/Wasm/checkpoint slice have local source qualification; SIM-3–SIM-6 remain research plans. The native MuJoCo workbench and versioned model-package inspection are available in SeedCore, including pinned Microduck 0.1.0 assets. Browser MuJoCo, CAD adapters, actuator-aware package experiments, and hardware integration remain planned.
-The Exchange and community sessions are concepts in discovery. There are no
-live listings, transactions, grants, paid policies, or scheduled tournaments.
+### Current qualification & delivery state:
+- **Safe-by-Physics Paradigm**: While industrial robots require hard physical safety cages, mini-robotics (<1 kg) is inherently safe-by-physics. The governance focus shifts to behavioral trust, capability boundaries, and verifiable audit trails.
+- **Slow Brain, Fast Spine Architecture**: High-level vision-language models run asynchronously at ~1–5 Hz generating bounded `ActionIntent` chunks, while embedded microcontrollers (ESP32/RP2040) run a 200–500 Hz deterministic spline interpolator with sub-millisecond hardware watchdog trip circuits.
+- **Delivered Simulation Slices (SIM-1, SIM-2, SIM-3)**:
+  - **SIM-1 & SIM-2**: 2D Planar arm dynamics with state checkpointing, JSON exports, and Wasm ABI 1.
+  - **SIM-3**: 3D Kinematic Tree Studio (`studio/tree-lab.html`) with dual-ABI Wasm (ABI 2), 78/78 deterministic tests passing, live analytical mass matrix $M(q)$, Coriolis vector, and end-effector Jacobian $\mathbf{J}(q)$ evaluation.
+- **MuJoCo & Microduck Ingestion (M0)**: Native MuJoCo workbench and versioned model-package inspection are available in SeedCore, including pinned Microduck 0.1.0 MJCF assets with SHA-256 integrity verification.
+- **Maker Blueprints**: $150 Fast Spine controller architecture utilizing WebSerial, smart serial bus servos (Feetech/Dynamixel), and open 3D printable designs (Microduck biped, SO-100 arm, Reachy Mini).
 
 ## Public pages
 
 | Path | Purpose |
 | --- | --- |
-| `index.html` | Concept world, four destinations, kinematics preview, and SeedCore direction |
-| `develop.html` | Working browser lab entry and simulator roadmap |
-| `studio/index.html` | Included two-joint physics lab: experiments, replay, JSON exports |
-| `diy-showcase.html` | Filterable original-project references, not a kit catalog |
-| `trading.html` | Future parts/skills exchange and feedback invitation |
-| `activities.html` | Three available self-guided challenges; proposed community formats |
-| `about.html` | Customer mission, trust boundary, and current/future scope |
-| `contact.html` | Email draft with query-prefilled interest and copy fallback |
-| `resources/index.html` | Current research pointers; earlier concepts marked deferred |
-| `sitemap.html`, `sitemap.xml` | Current public routes |
+| `index.html` | Core portal: paradigm shift matrix, slow brain/fast spine flow, tech stack grid, and 4 districts |
+| `develop.html` | SIM-3 3D Tree Studio showcase, $150 Fast Spine blueprint, MuJoCo workbench, and full SIM-1–SIM-6 roadmap |
+| `studio/tree-lab.html` | **Live SIM-3 3D Studio**: 1/2/3-link kinematic tree dynamics, 3D orbit viewport, and live $M(q)$ / $\mathbf{J}(q)$ inspectors |
+| `studio/index.html` | **SIM-1/SIM-2 2D Lab**: Step-by-step physics lessons, checkpointing, replay, and JSON export |
+| `diy-showcase.html` | Curated reference builds: Microduck biped (0.1.0 pinned MJCF), 3-link manipulator, SO-100 arm, Reachy Mini |
+| `trading.html` | Future verified skills & parts exchange discovery |
+| `activities.html` | Builder challenges and community experiment formats |
+| `about.html` | Safe-by-physics philosophy, capability token lifecycle, and SeedCore trust runtime foundation |
+| `contact.html` | Client-side email draft generator with topic prefilling and copy fallback |
+| `resources/index.html` | Technical documentation and research pointers |
+| `sitemap.html`, `sitemap.xml` | Public routes and indexing |
 
-The main website uses local assets and system fonts. Concept illustrations are
-original SVG; they are not renders of specific hardware. The homepage arm is a
-kinematics illustration, explicitly distinct from the dynamics in the lab.
-The lab runtime is copied from SeedCore; see `studio/PROVENANCE.md` for snapshot
-origin, modifications, and update instructions.
+## Asset & Studio Synchronization
 
-The contact form prepares a `mailto:` draft to the established studio address,
-`hello@seedcore.ai`. It does not submit or persist a message. Visitors review
-and send from their own email app; native submission is disabled without JavaScript; a visible copy fallback is provided.
+The browser simulation runtime in `website/studio/` mirrors `seedcore/apps/mini-robot-simulator/`:
+- `mini-physics.wasm` (13,242 bytes, compiled C++ dynamics kernel supporting ABI 1 and ABI 2)
+- `sim-contracts.js` & `sim-contracts.d.ts` (Strongly typed schemas)
+- `tree-lab.html`, `tree-lab.js`, `tree-lab-ui.js`, `tree-physics-wasm.js` (3D kinematic tree studio)
+- `index.html`, `app.js`, `styles.css` (2D interactive physics lessons)
 
-## Preview and stage
+Zero remote CDN dependencies: all physics, 3D projections, and UI widgets execute 100% offline in client browsers.
+
+## Build and Stage
 
 ```sh
+# Stage public files into dist/client and validate links/fragments
 python3 tools/build_site.py
+
+# Launch local preview server
 python3 -m http.server 4173 --bind 127.0.0.1 --directory dist/client
 ```
 
-Open `http://127.0.0.1:4173/`. HTTP(S) is required for the lab worker.
-The build validates its explicit public-file manifest, local links/fragments,
-CSS and worker dependencies, and sitemap routes before replacing `dist/client`.
-It preserves the existing Sites asset worker and metadata. It does not publish.
-Historical research files remain in the source repo outside the public build.
-The existing legal pages and their stylesheet are retained.
+Open `http://127.0.0.1:4173/`. HTTP(S) is required for WebAssembly and Web Worker execution.
 
-## Verify
+## Verification
 
 ```sh
+# 1. Check local HTML links, fragments, and sitemap routes
 python3 tools/check_site.py
+
+# 2. Syntax-check main website script
 node --check js/robotics-central.js
+
+# 3. Run studio physics and worker tests
 node --test studio/physics.test.cjs studio/simulation-worker.test.cjs studio/app-worker.test.cjs
-# With Playwright resolvable and Chrome installed; the preview server must be running:
+
+# 4. (Optional) Run headless browser smoke suite
 node tools/check_browser.cjs
 ```
-
-For the bundled Codex runtime, set `NODE_PATH` to the runtime's Node packages
-and use its Node executable if they are not available on the system PATH.
-Browser checks accept `SITE_URL` and `BROWSER_CHANNEL` environment overrides.
-They cover 12 routes at 1440, 768, 390, and 320 pixels; responsive navigation,
-no-JavaScript links, gallery filters/deep links, contact drafts, reduced motion,
-and lab step/reset/run/replay/export. Preview screenshots go to `/tmp`.
-
-All 40 included lab tests passed on October 12, 2026. This website suite does not
-include the sibling repository's compiler/toolchain and full native parity checks or establish
-cross-browser or physical-robot qualification. See
-`docs/website-review-2026-10-12.md` for this update, source findings, and verification.

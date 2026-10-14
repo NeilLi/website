@@ -1357,3 +1357,132 @@ textarea {
     scroll-behavior:auto!important
   }
 }
+
+/* Enhanced Mini-Robotics Architecture Styles */
+.comparison-wrapper {
+  overflow-x:auto;
+  margin:28px 0;
+  border:1px solid var(--line);
+  border-radius:18px;
+  background:var(--white);
+  box-shadow:0 6px 20px rgba(32,60,49,0.04);
+}
+.comparison-table {
+  width:100%;
+  border-collapse:collapse;
+  font-size:13.5px;
+  text-align:left;
+  min-width:680px;
+}
+.comparison-table th {
+  background:#edf4ea;
+  color:var(--ink);
+  font-weight:600;
+  padding:14px 18px;
+  border-bottom:2px solid var(--line);
+  font-family:var(--mono);
+  font-size:11px;
+  letter-spacing:0.05em;
+  text-transform:uppercase;
+}
+.comparison-table td {
+  padding:14px 18px;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+  line-height:1.55;
+}
+.comparison-table tr:last-child td {
+  border-bottom:none;
+}
+.comparison-table td:first-child {
+  font-weight:600;
+  color:var(--ink);
+  white-space:nowrap;
+  background:#fafbf9;
+}
+.comparison-table td.highlight {
+  background:#f4f9f1;
+  color:var(--ink);
+  font-weight:550;
+}
+.comparison-table td.muted-cell {
+  color:var(--muted);
+}
+
+.tech-stack-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+  gap:20px;
+  margin:30px 0;
+}
+.tech-card {
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:18px;
+  padding:24px;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+  transition:transform 0.2s, box-shadow 0.2s;
+}
+.tech-card:hover {
+  transform:translateY(-3px);
+  box-shadow:0 12px 28px rgba(32,60,49,0.06);
+}
+.tech-card h3 {
+  font-size:18px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin:0;
+}
+.tech-card p {
+  font-size:13.5px;
+  line-height:1.6;
+  color:var(--muted);
+  margin:0;
+}
+.tech-tag {
+  display:inline-block;
+  font-family:var(--mono);
+  font-size:11px;
+  padding:3px 8px;
+  border-radius:6px;
+  background:#eef4ea;
+  color:var(--green);
+  font-weight:600;
+  width:fit-content;
+}
+.btn-secondary {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:6px;
+  padding:12px 20px;
+  border-radius:30px;
+  font-weight:600;
+  font-size:14px;
+  border:1.5px solid var(--green);
+  color:var(--green);
+  background:transparent;
+}
+.btn-secondary:hover {
+  background:var(--lime);
+  color:var(--ink);
+}
+.pill-list {
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:10px 0 0;
+  padding:0;
+  list-style:none;
+}
+.pill-list li {
+  font-size:12px;
+  background:#f4f6f1;
+  padding:4px 10px;
+  border-radius:14px;
+  border:1px solid var(--line);
+  color:var(--ink);
+}
