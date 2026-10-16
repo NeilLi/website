@@ -41,7 +41,8 @@ function initGallery() {
     buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === category)));
     let count = 0;
     cards.forEach(card => {
-      card.hidden = category !== 'all' && card.dataset.category !== category;
+      const categories = (card.dataset.category || '').split(/\s+/);
+      card.hidden = category !== 'all' && !categories.includes(category);
       if (!card.hidden) count++;
     });
     if (status) status.textContent = `${count} reference${count === 1 ? '' : 's'}`;
@@ -142,53 +143,66 @@ function initArmPreview() {
     }
     ctx.clearRect(0,0,width,height);
     ctx.lineCap='round';
+    // Isometric workbench cutting mat grid
     for (let n = -240; n <= 300; n += 30) {
-      line(project({x:n,y:0,z:-220}),project({x:n,y:0,z:220}),'#263e535f');
-      line(project({x:-240,y:0,z:n}),project({x:300,y:0,z:n}),'#263e535f');
+      line(project({x:n,y:0,z:-220}),project({x:n,y:0,z:220}),'#263e5355');
+      line(project({x:-240,y:0,z:n}),project({x:300,y:0,z:n}),'#263e5355');
     }
-    line(project({x:-240,y:0,z:0}),project({x:300,y:0,z:0}),'#49727d70');
-    line(project({x:0,y:0,z:-220}),project({x:0,y:0,z:220}),'#44648070');
+    line(project({x:-240,y:0,z:0}),project({x:300,y:0,z:0}),'#4ade8044', 1.4);
+    line(project({x:0,y:0,z:-220}),project({x:0,y:0,z:220}),'#38bdf844', 1.4);
     const base = project({x:0,y:0,z:0});
-    ctx.beginPath();ctx.ellipse(base.x,base.y+4*scale,57*scale,15*scale,0,0,Math.PI*2);ctx.fillStyle='#040b15a0';ctx.fill();
-    ctx.beginPath();ctx.ellipse(base.x,base.y,35*scale,12*scale,0,0,Math.PI*2);ctx.fillStyle='#335169';ctx.fill();
-    ctx.beginPath();ctx.ellipse(base.x,base.y-5*scale,35*scale,12*scale,0,0,Math.PI*2);ctx.fillStyle='#879eac';ctx.fill();
-    ctx.beginPath();ctx.ellipse(base.x,base.y-6*scale,25*scale,8*scale,0,0,Math.PI*2);ctx.fillStyle='#152c3d';ctx.fill();
+    // Holographic green calibration rings (inspired by SeedCore sandbox preview)
+    ctx.beginPath();ctx.ellipse(base.x,base.y+3*scale,74*scale,21*scale,0,0,Math.PI*2);
+    ctx.strokeStyle='#4ade8066';ctx.lineWidth=1.4*scale;ctx.setLineDash([5*scale,4*scale]);ctx.stroke();ctx.setLineDash([]);
+    ctx.beginPath();ctx.ellipse(base.x,base.y+3*scale,54*scale,15*scale,0,0,Math.PI*2);
+    ctx.fillStyle='#4ade8012';ctx.fill();ctx.strokeStyle='#4ade8088';ctx.lineWidth=1.2*scale;ctx.stroke();
+    // Tactile 3D-printed base pedestal
+    ctx.beginPath();ctx.ellipse(base.x,base.y+4*scale,40*scale,12*scale,0,0,Math.PI*2);ctx.fillStyle='#040b15b0';ctx.fill();
+    ctx.beginPath();ctx.ellipse(base.x,base.y,34*scale,11*scale,0,0,Math.PI*2);ctx.fillStyle='#1e293b';ctx.fill();ctx.strokeStyle='#475569';ctx.lineWidth=1.5*scale;ctx.stroke();
+    ctx.beginPath();ctx.ellipse(base.x,base.y-5*scale,26*scale,8*scale,0,0,Math.PI*2);ctx.fillStyle='#0f172a';ctx.fill();ctx.strokeStyle='#38bdf866';ctx.stroke();
+    // End-effector trajectory trail
     ctx.beginPath();
     for (let n = 0; n <= 65; n++) {
       const past = pose(time - 7 + n*7/65).points[links];
       const p = project(past);
       if (n===0) ctx.moveTo(p.x,p.y); else ctx.lineTo(p.x,p.y);
     }
-    ctx.strokeStyle='#60dce066';ctx.lineWidth=1.3;ctx.setLineDash([3,4]);ctx.stroke();ctx.setLineDash([]);
+    ctx.strokeStyle='#4ade8099';ctx.lineWidth=1.6;ctx.setLineDash([4,4]);ctx.stroke();ctx.setLineDash([]);
     const state = pose(time);
     const points = state.points.map(project);
+    // Simplified, tactile 3D-printed link colors (Yellow -> Cyan -> Mint)
+    const linkColors = [
+      {outer:'#a16207', inner:'#facc15', slot:'#713f12'},
+      {outer:'#0369a1', inner:'#38bdf8', slot:'#0c4a6e'},
+      {outer:'#15803d', inner:'#4ade80', slot:'#14532d'}
+    ];
     for (let n = 0; n < links; n++) {
-      const a=points[n],b=points[n+1];
-      line({x:a.x+3*scale,y:a.y+5*scale},{x:b.x+3*scale,y:b.y+5*scale},'#02081399',27*scale);
-      const metal=ctx.createLinearGradient(a.x-10*scale,a.y,b.x+10*scale,b.y);
-      metal.addColorStop(0,'#5d788b');metal.addColorStop(.32,'#d0dce2');metal.addColorStop(.67,'#a7becb');metal.addColorStop(1,'#6e8d9f');
-      line(a,b,'#36556c',25*scale);line(a,b,metal,19*scale);
-      const insetA={x:a.x+(b.x-a.x)*.2,y:a.y+(b.y-a.y)*.2};
-      const insetB={x:a.x+(b.x-a.x)*.8,y:a.y+(b.y-a.y)*.8};
-      line(insetA,insetB,'#192f41',4*scale);line(insetA,insetB,'#69d9de',1.2*scale);
+      const a=points[n],b=points[n+1],pal=linkColors[n % linkColors.length];
+      line({x:a.x+3*scale,y:a.y+5*scale},{x:b.x+3*scale,y:b.y+5*scale},'#02081399',25*scale);
+      line(a,b,pal.outer,22*scale);
+      line(a,b,pal.inner,14*scale);
+      const insetA={x:a.x+(b.x-a.x)*.22,y:a.y+(b.y-a.y)*.22};
+      const insetB={x:a.x+(b.x-a.x)*.78,y:a.y+(b.y-a.y)*.78};
+      line(insetA,insetB,pal.slot,3.6*scale);
     }
+    // Realistic Feetech STS3215 Servo Blocks & Brass Spline Horns at Joints
     for (let n = 0; n < links; n++) {
-      const p=points[n],radius=(n===0?17:14)*scale;
-      ctx.beginPath();ctx.arc(p.x,p.y,radius,0,Math.PI*2);ctx.fillStyle='#86a1b0';ctx.fill();ctx.lineWidth=1.5*scale;ctx.strokeStyle='#c7dbe5';ctx.stroke();
-      ctx.beginPath();ctx.arc(p.x,p.y,radius*.72,0,Math.PI*2);ctx.fillStyle='#102639';ctx.fill();ctx.strokeStyle='#5ccfd7';ctx.stroke();
-      ctx.beginPath();ctx.arc(p.x,p.y,3.4*scale,0,Math.PI*2);ctx.fillStyle='#70e5e2';ctx.fill();
+      const p=points[n],radius=(n===0?16:13.5)*scale;
+      ctx.beginPath();ctx.arc(p.x,p.y,radius,0,Math.PI*2);ctx.fillStyle='#1e293b';ctx.fill();ctx.lineWidth=2*scale;ctx.strokeStyle='#94a3b8';ctx.stroke();
+      ctx.beginPath();ctx.arc(p.x,p.y,radius*.66,0,Math.PI*2);ctx.fillStyle='#0f172a';ctx.fill();ctx.strokeStyle='#4ade80';ctx.lineWidth=1.4*scale;ctx.stroke();
+      ctx.beginPath();ctx.arc(p.x,p.y,4*scale,0,Math.PI*2);ctx.fillStyle='#f59e0b';ctx.fill();
       const side=n===0?-1:1;
-      line({x:p.x+side*radius,y:p.y},{x:p.x+side*32*scale,y:p.y-9*scale},'#4b718b',.8);
-      ctx.fillStyle='#9fbbcd';ctx.font=`${Math.max(8,9*scale)}px monospace`;
-      ctx.textAlign=side<0?'right':'left';ctx.fillText('J0'+(n+1),p.x+side*36*scale,p.y-8*scale);
+      line({x:p.x+side*radius,y:p.y},{x:p.x+side*32*scale,y:p.y-9*scale},'#4ade8088',1);
+      ctx.fillStyle='#b6d4e4';ctx.font=`${Math.max(8,9*scale)}px monospace`;
+      ctx.textAlign=side<0?'right':'left';ctx.fillText('STS-0'+(n+1),p.x+side*36*scale,p.y-8*scale);
     }
     ctx.textAlign='left';
     const tip=points[links],last=points[links-1];
     const gripAngle=Math.atan2(tip.y-last.y,tip.x-last.x);
-    ctx.save();ctx.translate(tip.x,tip.y);ctx.rotate(gripAngle);ctx.strokeStyle='#94b5c5';ctx.lineWidth=4*scale;
+    ctx.save();ctx.translate(tip.x,tip.y);ctx.rotate(gripAngle);ctx.strokeStyle='#f97316';ctx.lineWidth=4.2*scale;
     ctx.beginPath();ctx.moveTo(0,-6*scale);ctx.lineTo(15*scale,-10*scale);ctx.lineTo(22*scale,-5*scale);ctx.moveTo(0,6*scale);ctx.lineTo(15*scale,10*scale);ctx.lineTo(22*scale,5*scale);ctx.stroke();ctx.restore();
-    ctx.beginPath();ctx.arc(tip.x,tip.y,4*scale,0,Math.PI*2);ctx.fillStyle='#69e1e0';ctx.fill();
-    ctx.font=`${Math.max(8,9*scale)}px monospace`;ctx.fillStyle='#7dd5dd';ctx.fillText('END EFFECTOR',tip.x+16*scale,tip.y-20*scale);
+    ctx.beginPath();ctx.arc(tip.x,tip.y,5*scale,0,Math.PI*2);ctx.fillStyle='#4ade80';ctx.fill();
+    ctx.font=`${Math.max(8,9*scale)}px monospace`;ctx.fillStyle='#86efac';ctx.fillText('END EFFECTOR',tip.x+16*scale,tip.y-20*scale);
     if (Math.abs(time-lastReadout)>.12 || lastReadout<0) {
       const angle=document.getElementById('previewAngle');
       if (angle) angle.textContent=(state.firstAngle*180/Math.PI).toFixed(1)+'°';

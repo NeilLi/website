@@ -4,16 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Build Gallery · SeedCore Mini Robotics</title>
-<meta name="description" content="Discover Microduck biped, 3-link Wasm manipulator, SO-100 maker arm, and Reachy Mini with original project links and clear integration status.">
+<meta name="description" content="Discover Microduck biped, 3-link Wasm manipulator, SO-100 maker arm, Reachy Mini, and the standardized Parts Gallery with original project links and integration status.">
 <meta name="theme-color" content="#070e1b">
 <link rel="icon" href="assets/seedcore-mark.svg" type="image/svg+xml">
 <link rel="canonical" href="https://seedcore.ai/diy-showcase.html">
 <meta property="og:title" content="Build Gallery · SeedCore Mini Robotics">
-<meta property="og:description" content="Discover Microduck biped, 3-link Wasm manipulator, SO-100 maker arm, and Reachy Mini with original project links and clear integration status.">
+<meta property="og:description" content="Discover Microduck biped, 3-link Wasm manipulator, SO-100 maker arm, Reachy Mini, and standardized maker components.">
 <meta property="og:type" content="website">
 
-<link rel="stylesheet" href="css/robotics-central.css?v=20261014b">
-<script src="js/robotics-central.js?v=20261014b" defer></script>
+<link rel="stylesheet" href="css/robotics-central.css?v=20261016a">
+<script src="js/robotics-central.js?v=20261016a" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -40,18 +40,18 @@
 <section class="page-intro page-container">
 <p class="eyebrow">02 / BUILD GALLERY &amp; REFERENCE EMBODIMENTS</p>
 <h1>Meet your next<br><em>mini embodiment.</em></h1>
-<p class="lead">Explore small physical and simulated robots, understand their role in the SeedCore trust ecosystem, and follow the original open-source makers. Safe-by-physics, micro-torque, and built for exploration.</p>
+<p class="lead">Explore small physical and simulated robots, inspect standardized maker components, and follow the original open-source builders. Safe-by-physics, micro-torque, and built for exploration.</p>
 </section>
 
 <section class="page-container">
 <div class="consumer-callout-banner" style="margin-top: 0;">
 <div class="consumer-callout-text">
   <h3>Beginner &amp; Consumer Guide: Choose Your Desk Embodiment</h3>
-  <p>Looking for a weekend family build, an interactive STEM lesson, or a physical body for your AI? Every project below uses lightweight 3D printed parts, safe 5V USB power, and connects directly to your web browser with zero software installations.</p>
+  <p>Looking for a weekend family build, an interactive STEM lesson, or a physical body for your AI? Every project below uses lightweight 3D printed parts, safe 2S LiPo or 5V USB power, and connects directly to your web browser with zero software installations.</p>
 </div>
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
   <span class="consumer-step-meta">🛡️ Safe-by-Physics</span>
-  <span class="consumer-step-meta">🔌 Standard USB-C</span>
+  <span class="consumer-step-meta">🔌 WebSerial USB-C</span>
   <span class="consumer-step-meta">⚡ Zero-Install Browser</span>
 </div>
 </div>
@@ -70,20 +70,65 @@
 <article class="robot-card" id="microduck" data-category="biped">
 <div class="robot-visual sage">
 <svg class="robot-art" viewBox="0 0 360 300" aria-hidden="true">
-  <ellipse cx="180" cy="263" rx="90" ry="14" fill="#173f3520"/>
-  <path d="M158 172L142 220L115 244M199 172L221 217L245 244" stroke="#315a4b" stroke-width="21" stroke-linecap="round" fill="none"/>
-  <path d="M107 247H143M222 247H260" stroke="#203f37" stroke-width="16" stroke-linecap="round"/>
-  <path d="M161 147V113M195 147V113" stroke="#7d9c87" stroke-width="13"/>
-  <rect x="130" y="68" width="99" height="66" rx="20" fill="#e5ecd8" stroke="#315a4b" stroke-width="3"/>
-  <rect x="148" y="79" width="60" height="28" rx="10" fill="#24453b"/>
-  <circle cx="163" cy="93" r="5" fill="#d6f294"/>
-  <circle cx="193" cy="93" r="5" fill="#d6f294"/>
-  <path d="M155 121L196 121L180 144Z" fill="#df9a49" stroke="#aa7139" stroke-width="2"/>
-  <rect x="145" y="149" width="70" height="37" rx="12" fill="#b8d28f" stroke="#315a4b" stroke-width="3"/>
-  <circle cx="147" cy="212" r="13" fill="#deaa60" stroke="#315a4b" stroke-width="3"/>
-  <circle cx="219" cy="212" r="13" fill="#deaa60" stroke="#315a4b" stroke-width="3"/>
+  <!-- Isometric Workbench Cutting Mat & Glowing Green Calibration Rings -->
+  <path d="M34 242L180 186L326 242L180 286Z" fill="#0d1d2e" stroke="#284863" stroke-width="1.8"/>
+  <path d="M78 225L224 269M124 207L270 251M124 270L270 214M78 252L224 196" stroke="#18324a" stroke-width="1"/>
+  <ellipse cx="192" cy="242" rx="76" ry="20" fill="#4ade8012" stroke="#4ade80" stroke-width="1.6" stroke-dasharray="6 4"/>
+  <ellipse cx="192" cy="242" rx="48" ry="12.5" fill="#4ade8024" stroke="#4ade80" stroke-width="1.5"/>
+  <!-- Status Dot -->
+  <circle cx="332" cy="24" r="6" fill="#4ade80"/>
+  <!-- Floating STS3215 Servo Hologram Callout (Left, matching SeedCore Studio Preview) -->
+  <g transform="translate(52, 118)">
+    <rect x="0" y="8" width="38" height="46" rx="5" fill="#1e293b" stroke="#4ade80" stroke-width="2"/>
+    <rect x="6" y="14" width="26" height="12" rx="2" fill="#0f172a"/>
+    <circle cx="19" cy="36" r="7" fill="#0f172a" stroke="#60dce0" stroke-width="1.8"/>
+    <circle cx="19" cy="36" r="2.5" fill="#f59e0b"/>
+    <path d="M38 28H82" stroke="#4ade80" stroke-width="2.2" stroke-dasharray="4 3"/>
+    <circle cx="82" cy="28" r="4.5" fill="#4ade80"/>
+  </g>
+  <!-- Webbed Duck Feet (Orange 3D-Printed PLA/TPU) -->
+  <path d="M138 244L156 230L176 244L166 251H142Z" fill="#f97316" stroke="#9a3412" stroke-width="2" stroke-linejoin="round"/>
+  <path d="M202 244L220 230L240 244L230 251H206Z" fill="#f97316" stroke="#9a3412" stroke-width="2" stroke-linejoin="round"/>
+  <!-- Articulated Biped Leg Links (Green & Purple with Charcoal STS3215 Joints) -->
+  <path d="M168 180L154 208L160 236" fill="none" stroke="#4ade80" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M216 180L228 208L220 236" fill="none" stroke="#4ade80" stroke-width="15" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="154" cy="208" r="8.5" fill="#1e293b" stroke="#a855f7" stroke-width="2.2"/>
+  <circle cx="228" cy="208" r="8.5" fill="#1e293b" stroke="#a855f7" stroke-width="2.2"/>
+  <circle cx="160" cy="234" r="6" fill="#1e293b" stroke="#facc15" stroke-width="1.8"/>
+  <circle cx="220" cy="234" r="6" fill="#1e293b" stroke="#facc15" stroke-width="1.8"/>
+  <!-- Arms (Blue/Green Articulated Links + Yellow Hands) -->
+  <path d="M144 128L124 156L130 180" fill="none" stroke="#38bdf8" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M240 128L258 156L250 180" fill="none" stroke="#4ade80" stroke-width="11" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="130" cy="182" r="6.5" fill="#facc15" stroke="#854d0e" stroke-width="1.8"/>
+  <circle cx="250" cy="182" r="6.5" fill="#facc15" stroke="#854d0e" stroke-width="1.8"/>
+  <!-- Pelvis & Torso Chassis (Yellow / Coral Red / Blue 3D-Printed Panels) -->
+  <rect x="160" y="166" width="64" height="20" rx="8" fill="#a855f7" stroke="#581c87" stroke-width="2"/>
+  <rect x="148" y="112" width="88" height="58" rx="12" fill="#facc15" stroke="#854d0e" stroke-width="2.2"/>
+  <rect x="148" y="120" width="15" height="42" rx="5" fill="#3b82f6"/>
+  <rect x="221" y="120" width="15" height="42" rx="5" fill="#ef4444"/>
+  <rect x="168" y="122" width="48" height="26" rx="6" fill="#fef08a" stroke="#ca8a04" stroke-width="1.5"/>
+  <!-- 3 Chest Status LEDs -->
+  <circle cx="182" cy="158" r="3.2" fill="#4ade80"/>
+  <circle cx="192" cy="158" r="3.2" fill="#38bdf8"/>
+  <circle cx="202" cy="158" r="3.2" fill="#f97316"/>
+  <!-- Neck Servo Joint -->
+  <rect x="181" y="98" width="22" height="16" rx="4" fill="#334155" stroke="#0f172a" stroke-width="2"/>
+  <!-- Rounded Teal Head, Orange Ear Caps & Stereo Camera Lens Eyes -->
+  <circle cx="140" cy="68" r="9" fill="#f97316" stroke="#9a3412" stroke-width="2"/>
+  <circle cx="244" cy="68" r="9" fill="#f97316" stroke="#9a3412" stroke-width="2"/>
+  <rect x="144" y="40" width="96" height="60" rx="18" fill="#38bdf8" stroke="#0369a1" stroke-width="2.2"/>
+  <rect x="154" y="48" width="76" height="36" rx="12" fill="#0f172a" stroke="#bae6fd" stroke-width="1.8"/>
+  <!-- Left & Right Camera Lens Eyes -->
+  <circle cx="174" cy="66" r="12" fill="#1e293b" stroke="#94a3b8" stroke-width="2.2"/>
+  <circle cx="174" cy="66" r="7" fill="#020617"/>
+  <circle cx="171" cy="63" r="2.8" fill="#ffffff"/>
+  <circle cx="210" cy="66" r="12" fill="#1e293b" stroke="#94a3b8" stroke-width="2.2"/>
+  <circle cx="210" cy="66" r="7" fill="#020617"/>
+  <circle cx="207" cy="63" r="2.8" fill="#ffffff"/>
+  <!-- Warm Orange Duck Bill -->
+  <path d="M168 83H216L228 93C228 99 210 103 192 103C174 103 156 99 156 93Z" fill="#f59e0b" stroke="#92400e" stroke-width="2" stroke-linejoin="round"/>
 </svg>
-<span class="art-note">Pinned MJCF Ingestion</span>
+<span class="art-note">Pinned MJCF · 14x STS3215 Bus</span>
 </div>
 <div class="robot-copy">
   <span class="badge live">Advanced Maker Project</span>
@@ -104,18 +149,42 @@
 <article class="robot-card" id="mini-arm" data-category="simulation manipulator">
 <div class="robot-visual blue">
 <svg class="robot-art" viewBox="0 0 360 300" aria-hidden="true">
-  <ellipse cx="177" cy="256" rx="87" ry="14" fill="#173f3520"/>
-  <path d="M113 239H183L197 260H99Z" fill="#cadbba" stroke="#42675e" stroke-width="3"/>
-  <path d="M148 238L155 180L210 130L260 90" fill="none" stroke="#42675e" stroke-width="20" stroke-linecap="round"/>
-  <path d="M148 238L155 180L210 130L260 90" fill="none" stroke="#a3c782" stroke-width="12" stroke-linecap="round"/>
-  <circle cx="148" cy="238" r="16" fill="#f0e1bb" stroke="#42675e" stroke-width="3"/>
-  <circle cx="155" cy="180" r="14" fill="#f0e1bb" stroke="#42675e" stroke-width="3"/>
-  <circle cx="210" cy="130" r="12" fill="#f0e1bb" stroke="#42675e" stroke-width="3"/>
-  <circle cx="260" cy="90" r="8" fill="#d99359"/>
-  <circle cx="295" cy="90" r="14" fill="#d99359"/>
-  <path d="M288 90H302M295 83V97" stroke="#fff" stroke-width="2"/>
+  <!-- Isometric Workbench Mat -->
+  <path d="M34 242L180 186L326 242L180 286Z" fill="#0d1d2e" stroke="#284863" stroke-width="1.8"/>
+  <ellipse cx="152" cy="240" rx="64" ry="17" fill="#4ade8012" stroke="#4ade80" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <!-- Status Dot -->
+  <circle cx="332" cy="24" r="6" fill="#4ade80"/>
+  <!-- Trajectory Arc -->
+  <path d="M112 120C148 56 232 48 282 96" fill="none" stroke="#4ade80" stroke-width="1.8" stroke-dasharray="4 4"/>
+  <!-- Base Pedestal & STS3215 Servo 1 -->
+  <ellipse cx="152" cy="240" rx="42" ry="12" fill="#1e293b" stroke="#475569" stroke-width="2"/>
+  <rect x="130" y="204" width="44" height="34" rx="5" fill="#1f2937" stroke="#0f172a" stroke-width="2"/>
+  <!-- Link 1 (Yellow 3D-Printed Bracket) -->
+  <path d="M152 216L128 142" stroke="#ca8a04" stroke-width="24" stroke-linecap="round"/>
+  <path d="M152 216L128 142" stroke="#facc15" stroke-width="15" stroke-linecap="round"/>
+  <!-- Link 2 (Teal 3D-Printed Bracket) -->
+  <path d="M128 142L208 86" stroke="#0284c7" stroke-width="22" stroke-linecap="round"/>
+  <path d="M128 142L208 86" stroke="#38bdf8" stroke-width="13" stroke-linecap="round"/>
+  <!-- Link 3 (Mint Forearm Bracket) -->
+  <path d="M208 86L268 112" stroke="#16a34a" stroke-width="18" stroke-linecap="round"/>
+  <path d="M208 86L268 112" stroke="#4ade80" stroke-width="10" stroke-linecap="round"/>
+  <!-- STS3215 Servo Joint Nodes -->
+  <g fill="#111827" stroke="#e2e8f0" stroke-width="2.2">
+    <circle cx="152" cy="216" r="14"/>
+    <circle cx="128" cy="142" r="13"/>
+    <circle cx="208" cy="86" r="12"/>
+  </g>
+  <g fill="#f59e0b">
+    <circle cx="152" cy="216" r="5"/>
+    <circle cx="128" cy="142" r="4.5"/>
+    <circle cx="208" cy="86" r="4"/>
+  </g>
+  <!-- End-Effector & Target Star -->
+  <circle cx="268" cy="112" r="8" fill="#1f2937" stroke="#60dce0" stroke-width="2"/>
+  <circle cx="296" cy="96" r="12" fill="#f9731628" stroke="#f97316" stroke-width="2"/>
+  <path d="M290 96H302M296 90V102" stroke="#fde047" stroke-width="2.2" stroke-linecap="round"/>
 </svg>
-<span class="art-note">SIM-3 3D Viewport</span>
+<span class="art-note">SIM-3 3D Viewport · Wasm ABI 2</span>
 </div>
 <div class="robot-copy">
   <span class="badge live">Instant Free Simulation</span>
@@ -136,15 +205,30 @@
 <article class="robot-card" id="so-100" data-category="manipulator">
 <div class="robot-visual sage">
 <svg class="robot-art" viewBox="0 0 360 300" aria-hidden="true">
-  <ellipse cx="180" cy="255" rx="80" ry="12" fill="#173f3520"/>
-  <rect x="135" y="235" width="90" height="20" rx="4" fill="#2d4a3e"/>
-  <path d="M180 235V185L230 145L270 120" fill="none" stroke="#315a4b" stroke-width="18" stroke-linecap="round"/>
-  <circle cx="180" cy="185" r="14" fill="#dfb582" stroke="#2d4a3e" stroke-width="3"/>
-  <circle cx="230" cy="145" r="12" fill="#dfb582" stroke="#2d4a3e" stroke-width="3"/>
-  <circle cx="270" cy="120" r="10" fill="#dfb582" stroke="#2d4a3e" stroke-width="3"/>
-  <path d="M270 120L285 105M270 120L290 125" stroke="#315a4b" stroke-width="6" stroke-linecap="round"/>
+  <!-- Isometric Workbench Mat -->
+  <path d="M34 242L180 186L326 242L180 286Z" fill="#0d1d2e" stroke="#284863" stroke-width="1.8"/>
+  <!-- Status Dot -->
+  <circle cx="332" cy="24" r="6" fill="#4ade80"/>
+  <!-- 3D-Printed Clamp Base & STS3215 Waist Servo -->
+  <rect x="116" y="220" width="92" height="24" rx="6" fill="#eab308" stroke="#854d0e" stroke-width="2"/>
+  <rect x="140" y="186" width="44" height="36" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+  <!-- 3-Wire Daisy-Chain UART Cables -->
+  <path d="M142 198C118 184 118 148 148 134" fill="none" stroke="#ef4444" stroke-width="2.2"/>
+  <path d="M142 202C122 188 122 152 150 138" fill="none" stroke="#facc15" stroke-width="2.2"/>
+  <path d="M168 126C184 102 208 96 226 108" fill="none" stroke="#ef4444" stroke-width="2.2"/>
+  <!-- Shoulder & Upper Arm Bracket (Warm Orange / Yellow 3D Print) -->
+  <path d="M162 194L156 132L228 98L268 126" fill="none" stroke="#ea580c" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M162 194L156 132L228 98L268 126" fill="none" stroke="#fb923c" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- STS3215 Servo Blocks at Shoulder, Elbow, Wrist -->
+  <rect x="138" y="116" width="36" height="30" rx="5" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="210" y="82" width="34" height="28" rx="5" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+  <circle cx="156" cy="131" r="6" fill="#f59e0b" stroke="#0f172a" stroke-width="2"/>
+  <circle cx="227" cy="96" r="5.5" fill="#f59e0b" stroke="#0f172a" stroke-width="2"/>
+  <circle cx="268" cy="126" r="9" fill="#1e293b" stroke="#4ade80" stroke-width="2"/>
+  <!-- Parallel Gripper Jaws -->
+  <path d="M275 120L298 110L302 118M275 132L296 144L302 136" fill="none" stroke="#fde047" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-<span class="art-note">$150 BOM Blueprint</span>
+<span class="art-note">$150 BOM · 5x STS3215 Bus</span>
 </div>
 <div class="robot-copy">
   <span class="badge live">Best Beginner / Family Build</span>
@@ -165,18 +249,35 @@
 <article class="robot-card" id="reachy" data-category="companion">
 <div class="robot-visual peach">
 <svg class="robot-art" viewBox="0 0 360 300" aria-hidden="true">
-  <ellipse cx="180" cy="255" rx="83" ry="13" fill="#173f3520"/>
-  <path d="M137 219L133 250H230L224 219" fill="#bfcec9" stroke="#42675e" stroke-width="3"/>
-  <rect x="142" y="174" width="76" height="53" rx="25" fill="#e2ece8" stroke="#42675e" stroke-width="3"/>
-  <path d="M147 93L133 52M213 93L227 52" stroke="#42675e" stroke-width="5"/>
-  <circle cx="131" cy="48" r="8" fill="#cd815d"/>
-  <circle cx="229" cy="48" r="8" fill="#cd815d"/>
-  <rect x="113" y="85" width="136" height="96" rx="30" fill="#f5eee3" stroke="#42675e" stroke-width="3"/>
-  <rect x="132" y="109" width="96" height="43" rx="16" fill="#31564a"/>
-  <ellipse cx="157" cy="130" rx="8" ry="12" fill="#b8e5cb"/>
-  <ellipse cx="204" cy="130" rx="8" ry="12" fill="#b8e5cb"/>
+  <!-- Isometric Workbench Mat -->
+  <path d="M34 242L180 186L326 242L180 286Z" fill="#131c31" stroke="#334568" stroke-width="1.8"/>
+  <ellipse cx="180" cy="242" rx="64" ry="16" fill="#38bdf814" stroke="#38bdf8" stroke-width="1.4" stroke-dasharray="5 4"/>
+  <!-- Status Dot -->
+  <circle cx="332" cy="24" r="6" fill="#f59e0b"/>
+  <!-- Base & Torso Dome -->
+  <path d="M132 214L124 246H236L228 214Z" fill="#334155" stroke="#64748b" stroke-width="2" stroke-linejoin="round"/>
+  <rect x="138" y="168" width="84" height="54" rx="22" fill="#e2e8f0" stroke="#475569" stroke-width="2.2"/>
+  <circle cx="172" cy="196" r="3" fill="#4ade80"/>
+  <circle cx="180" cy="196" r="3" fill="#38bdf8"/>
+  <circle cx="188" cy="196" r="3" fill="#f97316"/>
+  <!-- 3-DOF Orbita Neck Joint -->
+  <rect x="166" y="150" width="28" height="22" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+  <!-- Expressive Spring Antennas -->
+  <path d="M146 82L128 42M214 82L232 42" stroke="#94a3b8" stroke-width="5" stroke-linecap="round"/>
+  <circle cx="126" cy="38" r="8" fill="#f97316" stroke="#9a3412" stroke-width="2"/>
+  <circle cx="234" cy="38" r="8" fill="#f97316" stroke="#9a3412" stroke-width="2"/>
+  <!-- Rounded Companion Head & Stereo Camera Visor -->
+  <rect x="114" y="74" width="132" height="82" rx="26" fill="#f8fafc" stroke="#475569" stroke-width="2.2"/>
+  <rect x="130" y="92" width="100" height="46" rx="16" fill="#0f172a" stroke="#38bdf8" stroke-width="1.8"/>
+  <!-- Stereo Camera Lens Eyes -->
+  <circle cx="156" cy="115" r="13" fill="#1e293b" stroke="#94a3b8" stroke-width="2.2"/>
+  <circle cx="156" cy="115" r="7.5" fill="#020617"/>
+  <circle cx="153" cy="112" r="3" fill="#4ade80"/>
+  <circle cx="204" cy="115" r="13" fill="#1e293b" stroke="#94a3b8" stroke-width="2.2"/>
+  <circle cx="204" cy="115" r="7.5" fill="#020617"/>
+  <circle cx="201" cy="112" r="3" fill="#4ade80"/>
 </svg>
-<span class="art-note">Companion Reference</span>
+<span class="art-note">Companion Reference · 3-DOF Neck</span>
 </div>
 <div class="robot-copy">
   <span class="badge">Desktop AI Companion</span>
@@ -195,6 +296,182 @@
 </div>
 
 <p class="source-note">These are reference projects and models, not commercial kits. Illustrations and specifications are open-source reference engineering. Pinned models are located in <code>packages/models/</code>.</p>
+</section>
+
+<!-- Standardized Maker Parts Gallery (Inspired by SeedCore Mini Components Studio Preview) -->
+<section class="section page-container" id="parts-gallery">
+<div class="section-heading">
+<div>
+  <p class="eyebrow">03 / MINI COMPONENTS STUDIO · PARTS GALLERY</p>
+  <h2>Standardized maker components.</h2>
+</div>
+<p>Real off-the-shelf electronics and 3D-printed brackets shared across Microduck, SO-100, and the $150 Fast Spine blueprint.</p>
+</div>
+
+<div class="parts-gallery-grid">
+  <!-- Part 1: Microduck Biped Chassis -->
+  <article class="part-card">
+    <div class="part-card-top">
+      <span class="part-tag">3D PRINT (.3MF / .STL)</span>
+      <span class="part-dot amber" title="3D Printable CAD Package"></span>
+    </div>
+    <div class="part-art">
+      <svg viewBox="0 0 180 130" aria-hidden="true">
+        <ellipse cx="90" cy="112" rx="54" ry="10" fill="#07101e"/>
+        <!-- Isometric Yellow 3D-Printed Biped Chassis Bracket -->
+        <path d="M52 72L68 88V104L52 92Z" fill="#ca8a04" stroke="#713f12" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M112 72L128 88V104L112 92Z" fill="#ca8a04" stroke="#713f12" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M44 42L90 22L136 42L90 64Z" fill="#fde047" stroke="#713f12" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M44 42V66L90 88V64Z" fill="#facc15" stroke="#713f12" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M136 42V66L90 88V64Z" fill="#eab308" stroke="#713f12" stroke-width="2" stroke-linejoin="round"/>
+        <!-- Mounting Holes -->
+        <ellipse cx="72" cy="42" rx="5" ry="3" fill="#0f172a"/>
+        <ellipse cx="90" cy="34" rx="5" ry="3" fill="#0f172a"/>
+        <ellipse cx="108" cy="42" rx="5" ry="3" fill="#0f172a"/>
+        <ellipse cx="90" cy="50" rx="5" ry="3" fill="#0f172a"/>
+      </svg>
+    </div>
+    <h3>Microduck Biped Chassis</h3>
+    <p>Lightweight PETG/PLA structural torso and hip bracket with M2/M3 brass heat-set insert pockets.</p>
+    <div class="part-meta"><span>Weight: ~42g</span><span>Est: $4 Filament</span></div>
+  </article>
+
+  <!-- Part 2: Feetech STS3215 Servo -->
+  <article class="part-card">
+    <div class="part-card-top">
+      <span class="part-tag">1 MBPS TTL UART BUS</span>
+      <span class="part-dot green" title="Supported in Fast Spine HAL"></span>
+    </div>
+    <div class="part-art">
+      <svg viewBox="0 0 180 130" aria-hidden="true">
+        <ellipse cx="90" cy="112" rx="52" ry="10" fill="#07101e"/>
+        <!-- 3-Wire UART Pigtail -->
+        <path d="M118 82C136 86 146 96 152 106" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+        <path d="M118 86C134 90 142 99 147 108" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+        <path d="M118 78C138 82 149 92 156 102" fill="none" stroke="#facc15" stroke-width="2.5" stroke-linecap="round"/>
+        <!-- Isometric Charcoal Servo Body -->
+        <rect x="58" y="34" width="64" height="68" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+        <rect x="48" y="52" width="84" height="10" rx="2" fill="#334155" stroke="#475569" stroke-width="1.6"/>
+        <rect x="64" y="42" width="52" height="14" rx="3" fill="#0f172a"/>
+        <!-- Servo Horn & Brass Gear Spline -->
+        <ellipse cx="90" cy="34" rx="18" ry="8" fill="#334155" stroke="#94a3b8" stroke-width="2"/>
+        <ellipse cx="90" cy="31" rx="7" ry="4" fill="#f59e0b" stroke="#78350f" stroke-width="1.5"/>
+        <circle cx="108" cy="90" r="3" fill="#4ade80"/>
+      </svg>
+    </div>
+    <h3>Feetech STS3215 Servo</h3>
+    <p>12-bit magnetic encoder smart serial bus actuator with daisy-chain 3-pin UART sockets and overload clutch.</p>
+    <div class="part-meta"><span>Torque: 30 kg·cm</span><span>Est: ~$15 / unit</span></div>
+  </article>
+
+  <!-- Part 3: ESP32-S3 Eye Controller -->
+  <article class="part-card">
+    <div class="part-card-top">
+      <span class="part-tag">FAST SPINE MCU</span>
+      <span class="part-dot green" title="200-500 Hz Spline Firmware"></span>
+    </div>
+    <div class="part-art">
+      <svg viewBox="0 0 180 130" aria-hidden="true">
+        <ellipse cx="90" cy="112" rx="58" ry="10" fill="#07101e"/>
+        <!-- Isometric PCB -->
+        <path d="M32 68L92 36L148 66L88 98Z" fill="#0f5132" stroke="#4ade80" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M32 68V76L88 106L148 74V66" fill="#062e1e" stroke="#15803d" stroke-width="1.6" stroke-linejoin="round"/>
+        <!-- Gold GPIO Pin Header Rows -->
+        <path d="M46 66L90 43M100 84L138 64" stroke="#facc15" stroke-width="3.5" stroke-linecap="round" stroke-dasharray="2 5"/>
+        <!-- Stereo Camera Lenses -->
+        <ellipse cx="76" cy="64" rx="14" ry="10" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+        <ellipse cx="76" cy="64" rx="7.5" ry="5.5" fill="#020617"/>
+        <circle cx="73" cy="62" r="2.2" fill="#38bdf8"/>
+        <ellipse cx="106" cy="54" rx="14" ry="10" fill="#1e293b" stroke="#94a3b8" stroke-width="2"/>
+        <ellipse cx="106" cy="54" rx="7.5" ry="5.5" fill="#020617"/>
+        <circle cx="103" cy="52" r="2.2" fill="#38bdf8"/>
+      </svg>
+    </div>
+    <h3>ESP32-S3 Eye Controller</h3>
+    <p>Dual-core microcontroller running the 200–500 Hz cubic spline interpolator, WebSerial USB bridge, and stereo camera input.</p>
+    <div class="part-meta"><span>Bus: WebSerial / UART</span><span>Est: $6–$14</span></div>
+  </article>
+
+  <!-- Part 4: Biped Leg Link Assembly (Highlighted Card like attached preview) -->
+  <article class="part-card featured">
+    <div class="part-card-top">
+      <span class="part-tag">ACTIVE KINEMATIC LINK</span>
+      <span class="part-dot green" title="Pinned MJCF Verified"></span>
+    </div>
+    <div class="part-art">
+      <svg viewBox="0 0 180 130" aria-hidden="true">
+        <ellipse cx="90" cy="114" rx="56" ry="10" fill="#07101e"/>
+        <!-- Left & Right Articulated Biped Leg Links with Webbed Duck Feet -->
+        <path d="M52 104L66 96L82 104L74 110H54Z" fill="#f97316" stroke="#9a3412" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M98 104L112 96L128 104L120 110H100Z" fill="#f97316" stroke="#9a3412" stroke-width="1.8" stroke-linejoin="round"/>
+        <!-- Upper & Lower Leg Links -->
+        <path d="M78 34L60 64L66 98" fill="none" stroke="#4ade80" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M104 34L118 64L112 98" fill="none" stroke="#f43f5e" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M78 34H104" stroke="#38bdf8" stroke-width="14" stroke-linecap="round"/>
+        <!-- Servo Joint Hubs -->
+        <circle cx="78" cy="34" r="7" fill="#1e293b" stroke="#e2e8f0" stroke-width="2"/>
+        <circle cx="104" cy="34" r="7" fill="#1e293b" stroke="#e2e8f0" stroke-width="2"/>
+        <circle cx="60" cy="64" r="7" fill="#1e293b" stroke="#facc15" stroke-width="2"/>
+        <circle cx="118" cy="64" r="7" fill="#1e293b" stroke="#facc15" stroke-width="2"/>
+      </svg>
+    </div>
+    <h3>Biped Leg Link Assembly</h3>
+    <p>Pre-calibrated femur, tibia, and webbed foot linkage geometry matched to SeedCore’s pinned MJCF inertial tensors.</p>
+    <div class="part-meta"><span>DOF: 6-DOF Pair</span><span>MJCF: 0.1.0 Pinned</span></div>
+  </article>
+
+  <!-- Part 5: ToF Sensor Hat -->
+  <article class="part-card">
+    <div class="part-card-top">
+      <span class="part-tag">I2C RANGEFINDER</span>
+      <span class="part-dot green" title="Supported Telemetry Scope"></span>
+    </div>
+    <div class="part-art">
+      <svg viewBox="0 0 180 130" aria-hidden="true">
+        <ellipse cx="90" cy="112" rx="54" ry="10" fill="#07101e"/>
+        <!-- Isometric Green Sensor Hat PCB -->
+        <path d="M38 66L90 38L142 66L90 94Z" fill="#15803d" stroke="#4ade80" stroke-width="2" stroke-linejoin="round"/>
+        <path d="M38 66V75L90 103L142 75V66" fill="#0f5132" stroke="#166534" stroke-width="1.6" stroke-linejoin="round"/>
+        <!-- Central Black Laser ToF Sensor IC -->
+        <path d="M68 62L90 50L112 62L90 74Z" fill="#1e293b" stroke="#94a3b8" stroke-width="1.8"/>
+        <path d="M68 62V70L90 82L112 70V62" fill="#0f172a" stroke="#475569" stroke-width="1.5"/>
+        <ellipse cx="85" cy="61" rx="4" ry="2.5" fill="#f97316"/>
+        <ellipse cx="95" cy="61" rx="4" ry="2.5" fill="#38bdf8"/>
+        <!-- Yellow 4-Pin I2C Connector -->
+        <rect x="64" y="82" width="22" height="10" rx="2" fill="#facc15" stroke="#854d0e" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <h3>ToF Sensor Hat</h3>
+    <p>Laser Time-of-Flight distance and micro-terrain proximity shield over 400 kHz I2C for local collision bounding.</p>
+    <div class="part-meta"><span>Range: 40–4000 mm</span><span>Bus: I2C 3.3V</span></div>
+  </article>
+
+  <!-- Part 6: DIY 2S LiPo Battery Pack -->
+  <article class="part-card">
+    <div class="part-card-top">
+      <span class="part-tag">7.4V SAFE DESK POWER</span>
+      <span class="part-dot amber" title="2S LiPo / 18650 Pack"></span>
+    </div>
+    <div class="part-art">
+      <svg viewBox="0 0 180 130" aria-hidden="true">
+        <ellipse cx="90" cy="112" rx="54" ry="10" fill="#07101e"/>
+        <!-- Red/Black Power Leads -->
+        <path d="M124 84C140 88 148 96 152 104" fill="none" stroke="#ef4444" stroke-width="3" stroke-linecap="round"/>
+        <path d="M120 88C136 92 142 99 146 106" fill="none" stroke="#1e293b" stroke-width="3" stroke-linecap="round"/>
+        <!-- Dual Cell 2S Battery Pack Housing -->
+        <rect x="46" y="42" width="84" height="52" rx="10" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
+        <rect x="54" y="48" width="32" height="40" rx="6" fill="#f97316" stroke="#9a3412" stroke-width="1.5"/>
+        <rect x="90" y="48" width="32" height="40" rx="6" fill="#f97316" stroke="#9a3412" stroke-width="1.5"/>
+        <!-- Top Balance / XT30 Connector -->
+        <rect x="76" y="34" width="24" height="10" rx="3" fill="#facc15" stroke="#854d0e" stroke-width="1.5"/>
+        <text x="88" y="72" font-family="monospace" font-size="9" fill="#0f172a" font-weight="bold" text-anchor="middle">2S 7.4V</text>
+      </svg>
+    </div>
+    <h3>DIY 2S LiPo Battery Pack</h3>
+    <p>Dual-cell 7.4V 18650 / LiPo pack with integrated BMS over-current cut-off for untethered biped and arm experiments.</p>
+    <div class="part-meta"><span>Power: 2S LiPo OK</span><span>Est: $12–$15</span></div>
+  </article>
+</div>
 </section>
 
 <section class="page-container">
@@ -233,6 +510,7 @@
     <li><a href="diy-showcase.html#microduck">Microduck Biped</a></li>
     <li><a href="diy-showcase.html#reachy">Reachy Mini</a></li>
     <li><a href="diy-showcase.html#mini-arm">3-Link Manipulator</a></li>
+    <li><a href="diy-showcase.html#parts-gallery">Parts Gallery</a></li>
   </ul>
 </div>
 <div>

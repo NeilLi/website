@@ -1,76 +1,75 @@
-<svg width="960" height="240" viewBox="0 0 960 240" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="seedcoreTitle seedcoreDesc">
+<svg width="960" height="280" viewBox="0 0 960 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="seedcoreTitle seedcoreDesc">
   <title id="seedcoreTitle">SeedCore logo</title>
-  <desc id="seedcoreDesc">SeedCore icon with circular orbit mark and bold wordmark</desc>
+  <desc id="seedcoreDesc">Simplified geometric S-ribbon mark with SeedCore wordmark and subtitle</desc>
   <defs>
-    <linearGradient id="discGrad" x1="30" y1="34" x2="176" y2="178" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#2F2AD8"/>
-      <stop offset="46%" stop-color="#6A42F4"/>
-      <stop offset="100%" stop-color="#2A8EFF"/>
+    <linearGradient id="bgGrad" x1="56" y1="48" x2="216" y2="232" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#132338" />
+      <stop offset="100%" stop-color="#08111f" />
     </linearGradient>
-    <radialGradient id="discLight" cx="0.68" cy="0.36" r="0.72">
-      <stop offset="0%" stop-color="#A566FF" stop-opacity="0.42"/>
-      <stop offset="100%" stop-color="#A566FF" stop-opacity="0"/>
-    </radialGradient>
-    <linearGradient id="orbitGrad" x1="54" y1="52" x2="158" y2="160" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#33B9FF"/>
-      <stop offset="100%" stop-color="#8EF8FF"/>
+    <linearGradient id="borderGrad" x1="48" y1="48" x2="224" y2="232" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4ade80" stop-opacity="0.75" />
+      <stop offset="50%" stop-color="#38bdf8" stop-opacity="0.6" />
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0.75" />
     </linearGradient>
-    <radialGradient id="coreGrad" cx="0.42" cy="0.34" r="0.78">
-      <stop offset="0%" stop-color="#D9FCFF"/>
-      <stop offset="32%" stop-color="#8FF7FF"/>
-      <stop offset="100%" stop-color="#27B7FF"/>
-    </radialGradient>
-    <radialGradient id="coreAura" cx="50%" cy="50%" r="62%">
-      <stop offset="0%" stop-color="#6EF5FF" stop-opacity="0.58"/>
-      <stop offset="100%" stop-color="#6EF5FF" stop-opacity="0"/>
-    </radialGradient>
-    <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="6" result="blur"/>
-      <feMerge>
-        <feMergeNode in="blur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
-    </filter>
-    <clipPath id="orbitClip">
-      <circle cx="100" cy="100" r="56"/>
-    </clipPath>
+    <linearGradient id="upperRibbon" x1="176" y1="84" x2="92" y2="148" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4ade80" />
+      <stop offset="55%" stop-color="#2dd4bf" />
+      <stop offset="100%" stop-color="#38bdf8" />
+    </linearGradient>
+    <linearGradient id="lowerRibbon" x1="96" y1="136" x2="184" y2="200" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="55%" stop-color="#6366f1" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
   </defs>
 
-  <rect width="960" height="240" fill="transparent"/>
+  <rect width="960" height="280" fill="transparent" />
 
-  <g transform="translate(40 20)">
-    <circle cx="100" cy="100" r="72" fill="url(#discGrad)"/>
-    <circle cx="100" cy="100" r="72" fill="url(#discLight)"/>
-    <circle cx="100" cy="100" r="70.5" stroke="#2B22A7" stroke-width="4"/>
+  <!-- Icon Tile -->
+  <g transform="translate(44, 44)">
+    <rect x="0" y="0" width="192" height="192" rx="44" fill="url(#bgGrad)" stroke="url(#borderGrad)" stroke-width="6" />
+    <rect x="14" y="14" width="164" height="164" rx="32" stroke="#1e344d" stroke-width="2.5" stroke-dasharray="8 8" opacity="0.65" />
 
-    <circle cx="100" cy="100" r="54" stroke="url(#orbitGrad)" stroke-width="6" fill="none" opacity="0.96"/>
+    <!-- Ribbon Shadow -->
+    <path d="M132 50H80C62 50 48 64 48 82C48 100 62 114 80 114H116C134 114 148 128 148 146C148 164 134 178 116 178H64" transform="translate(0, -10)" stroke="#040912" stroke-width="26" stroke-linecap="round" opacity="0.55" />
 
-    <g clip-path="url(#orbitClip)">
-      <path d="M66 94C74 70 97 58 121 60C131 61 139 66 145 74"
-        stroke="url(#orbitGrad)" stroke-width="5.2" stroke-linecap="round" fill="none"/>
-      <path d="M61 144C80 158 107 148 128 131C137 124 146 121 154 122"
-        stroke="url(#orbitGrad)" stroke-width="5.2" stroke-linecap="round" fill="none"/>
+    <!-- Upper S-Ribbon -->
+    <path d="M134 44H80C63 44 49 58 49 75C49 92 63 106 80 106H116" stroke="url(#upperRibbon)" stroke-width="22" stroke-linecap="round" />
 
-      <path d="M76 103L93 108" stroke="#7EEFFF" stroke-width="4.2" stroke-linecap="round"/>
-      <path d="M138 81L122 95" stroke="#7EEFFF" stroke-width="4.2" stroke-linecap="round"/>
-      <path d="M149 126L128 118" stroke="#7EEFFF" stroke-width="4.2" stroke-linecap="round"/>
-    </g>
+    <!-- Lower S-Ribbon -->
+    <path d="M80 92H116C133 92 147 106 147 123C147 140 133 154 116 154H62" stroke="url(#lowerRibbon)" stroke-width="22" stroke-linecap="round" />
 
-    <circle cx="68" cy="96" r="7.5" fill="#6BEAFF"/>
-    <circle cx="145" cy="75" r="7.5" fill="#B2FFFF"/>
-    <circle cx="153" cy="122" r="7.5" fill="#A4FFFF"/>
+    <!-- Center Joint Node -->
+    <circle cx="98" cy="99" r="12" fill="#0b1628" stroke="#60dce0" stroke-width="6" />
 
-    <circle cx="105" cy="104" r="24" fill="url(#coreAura)" opacity="0.55"/>
-    <circle cx="103" cy="101" r="17" fill="url(#coreGrad)" filter="url(#softGlow)"/>
-    <circle cx="108" cy="94" r="7" fill="#E9FFFF" opacity="0.72"/>
+    <!-- Terminal Nodes -->
+    <circle cx="134" cy="44" r="15" fill="#0b1628" stroke="#4ade80" stroke-width="8" />
+    <circle cx="134" cy="44" r="5.5" fill="#86efac" />
+
+    <circle cx="62" cy="154" r="15" fill="#0b1628" stroke="#a855f7" stroke-width="8" />
+    <circle cx="62" cy="154" r="5.5" fill="#d8b4fe" />
   </g>
 
-  <g transform="translate(250 0)">
-    <text x="0" y="134"
+  <!-- Wordmark -->
+  <g transform="translate(272, 0)">
+    <text x="0" y="148"
       font-family="'Avenir Next', 'SF Pro Display', Inter, 'Segoe UI', Arial, sans-serif"
-      font-size="82"
-      font-weight="800"
-      letter-spacing="0.6"
-      fill="#16161F">SEEDCORE</text>
+      font-size="84"
+      font-weight="750"
+      letter-spacing="0.5"
+      fill="#EDF4FC">SEED</text>
+    <text x="234" y="148"
+      font-family="'Avenir Next', 'SF Pro Display', Inter, 'Segoe UI', Arial, sans-serif"
+      font-size="84"
+      font-weight="350"
+      letter-spacing="0.5"
+      fill="#60DCE0">CORE</text>
+
+    <text x="4" y="190"
+      font-family="'SFMono-Regular', Consolas, monospace"
+      font-size="15"
+      font-weight="600"
+      letter-spacing="4"
+      fill="#9BAEC2">MINI COMPONENTS &amp; TRUST RUNTIME</text>
   </g>
 </svg>
