@@ -4,12 +4,12 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"><title>Research notes · SeedCore</title>
-<meta name="description" content="Follow SeedCore’s current robotics direction, browser lab, and source documentation.">
+<meta name="description" content="Follow SeedCore’s October 19, 2026 source snapshot: Central World CW-A01–A03 authoring, simulation-first acceptance, mjswan assessment, and M0/CW-D01 register.">
 <link rel="canonical" href="https://seedcore.ai/resources/">
 <link rel="icon" href="../assets/seedcore-mark.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../css/robotics-central.css?v=20261014b">
+<link rel="stylesheet" href="../css/robotics-central.css?v=20261019b">
 <meta name="theme-color" content="#070e1b">
-<script src="../js/robotics-central.js?v=20261014b" defer></script>
+<script src="../js/robotics-central.js?v=20261019a" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -20,50 +20,91 @@
   <a href="../diy-showcase.html">Build Gallery</a>
   <a href="../about.html">Architecture</a>
   <a href="../resources/index.html" aria-current="page">Resources</a>
-  <a class="nav-contact" href="../studio/tree-lab.html">Launch Studio <span aria-hidden="true">↗</span></a>
+  <a href="../studio/tree-lab.html" class="nav-contact">Launch Studio <span aria-hidden="true">↗</span></a>
 </nav>
 </div>
 </header>
 
 <main id="main">
 <section class="page-intro page-container">
-<p class="eyebrow">RESEARCH NOTES
-</p>
-<h1>Follow the<br><em>current direction.</em>
-</h1>
-<p class="lead">SeedCore now focuses on a trust runtime for physical AI, with Microduck as the first integration target. Earlier city, craft, and visitor-experience concepts are deferred.
-</p>
+<p class="eyebrow">RESEARCH &amp; ENGINEERING NOTES</p>
+<h1>Follow the<br><em>current direction.</em></h1>
+<p class="lead">SeedCore focuses on an open trust runtime for physical AI, pairing the Central World component &amp; assembly authoring stack (<code>CW1</code>, <code>CW-A01 v2</code>, <code>CW-A02/A03</code>) with simulation-first Microduck (<code>M0</code>) and Fast Spine (<code>fast-spine-v1</code>) rehearsal.</p>
 </section>
 <section class="page-container three-grid">
 <article class="content-card"><span class="badge">THE PRODUCT</span>
-<h2>Our direction
-</h2>
-<p>How useful robot functions connect to permissions, local enforcement, and evidence.
-</p>
+<h2>Our direction</h2>
+<p>How browser-first experiments, canonical assembly contracts, bounded authority, and verifiable receipts fit together across <code>G0–G5</code>.</p>
 <a class="text-link" href="../about.html">Read the direction ↗</a>
 </article>
-<article class="content-card"><span class="badge">THE EXPERIMENT</span>
-<h2>Robot Lab
-</h2>
-<p>The C++/Wasm teaching lab, native MuJoCo workbench, and separate research roadmaps.
-</p>
+<article class="content-card"><span class="badge">THE WORKBENCH</span>
+<h2>Robot Lab &amp; Central World</h2>
+<p>The SIM-3 C++/Wasm 3D Tree Studio, local Central World <code>CW-A02/A03</code> Mini Studio authoring and placement, and <code>fast-spine-v1</code> bounded-session rehearsal.</p>
 <a class="text-link" href="../develop.html">Explore the lab ↗</a>
 </article>
 <article class="content-card"><span class="badge">THE SOURCE</span>
-<h2>Development notes
-</h2>
-<p>The SeedCore repository is the source for current contracts, plans, and their implementation status.
-</p>
+<h2>Development notes</h2>
+<p>The SeedCore repository is the canonical source for active queues, acceptance matrices, test runners, and hardware qualification registers.</p>
 <a class="text-link" href="https://github.com/NeilLi/seedcore/tree/main/docs/development">Open the documentation ↗</a>
 </article>
 </section>
-<section class="section page-container"><div class="section-heading"><div><p class="eyebrow">OCTOBER 12, 2026 / SOURCE SNAPSHOT</p><h2>Build from the evidence.</h2></div><p>Reviewed through commit bb711b6.</p></div><div class="three-grid"><article class="content-card"><span class="badge">BLUEPRINT / PROPOSED</span><h2>Mini-robotics developer path</h2><p>Brain, trust boundary, and local controller patterns. Browser MuJoCo and physical deployment describe intended integrations, not current website features.</p><a class="text-link" href="https://github.com/NeilLi/seedcore/blob/bb711b69c5c39cd644826c1ff31b72118605894c/docs/development/robotics/mini_robot_developer_blueprint.md">Read the source ↗</a></article>
-<article class="content-card"><span class="badge">IMPLEMENTED / NATIVE</span><h2>MuJoCo workbench</h2><p>Bounded model experiments, comparison, measurements, and optional internal agent tools.</p><a class="text-link" href="https://github.com/NeilLi/seedcore/blob/bb711b69c5c39cd644826c1ff31b72118605894c/docs/development/robotics/mujoco_development_workbench.md">Read the source ↗</a></article>
-<article class="content-card"><span class="badge">IMPLEMENTED / INSPECTION</span><h2>Versioned model packages</h2><p>Pinned Microduck assets, provenance, integrity checks, and compiled model parity.</p><a class="text-link" href="https://github.com/NeilLi/seedcore/blob/bb711b69c5c39cd644826c1ff31b72118605894c/docs/development/robotics/model_package_ingestion.md">Read the source ↗</a></article>
-<article class="content-card"><span class="badge">ARCHITECTURE / RESEARCH</span><h2>Embodied AI reference</h2><p>How research architectures inform mini-robotics, with separate qualification for execution.</p><a class="text-link" href="https://github.com/NeilLi/seedcore/blob/bb711b69c5c39cd644826c1ff31b72118605894c/docs/development/robotics/embodied_ai_architecture_reference.md">Read the source ↗</a></article>
-<article class="content-card"><span class="badge">ASSESSMENT / PLANNED</span><h2>CAD integration sequence</h2><p>An export-first path through Rhoban / Onshape, followed by FreeCAD / RobotCAD authoring. CAD adapters remain planned.</p><a class="text-link" href="https://github.com/NeilLi/seedcore/blob/bb711b69c5c39cd644826c1ff31b72118605894c/docs/development/robotics/robot_design_toolkit_assessment.md">Read the source ↗</a></article>
-<article class="content-card"><span class="badge">INTEGRATION / PLANNED</span><h2>Microduck acceptance gates</h2><p>A short bounded motion, interruption, and action-bound evidence. Hardware readiness remains open.</p><a class="text-link" href="https://github.com/NeilLi/seedcore/blob/bb711b69c5c39cd644826c1ff31b72118605894c/docs/development/robotics/microduck_integration_plan.md">Read the source ↗</a></article>
-</div></section>
+
+<section class="section page-container">
+<div class="section-heading">
+  <div>
+    <p class="eyebrow">OCTOBER 19, 2026 / SOURCE SNAPSHOT</p>
+    <h2>Build from the evidence.</h2>
+  </div>
+  <p>Local source snapshot through <code>12aa49e</code> (CW-A03), following <code>4708e06</code> (CW-A02). Software acceptance is separate from physical qualification.</p>
+</div>
+<p class="source-note">This snapshot includes local acceptance records not yet available on the public repository. Source paths below identify those records; the public links open available summaries and published documents.</p>
+<div class="three-grid">
+  <article class="content-card">
+    <span class="badge live">DELIVERED LOCALLY / CW-A02 &amp; CW-A03</span>
+    <h2 id="assembly-authoring">Mini Studio &amp; Proxy Placement</h2>
+    <p>Strict raw-JSON <code>seedcore.assembly.v2</code> import with duplicate-key rejection, 32-entry / 2 MiB frozen revision store, undo/redo, stale-load fencing, and Three.js box-proxy preview, plus 15 mm snapping, ghost previews, numeric placement, and subtree reparenting (88 TS tests, 14 API tests, 18 browser groups).</p>
+    <p class="small">Local source record: <code>docs/development/robotics/central_world_cw_a02_authoring.md</code> and <code>docs/development/robotics/central_world_cw_a03_snapping.md</code>.</p>
+    <a class="text-link" href="../develop.html#central-world">Explore local authoring scope →</a>
+  </article>
+
+  <article class="content-card">
+    <span class="badge live">DELIVERED / CW-A01 V2</span>
+    <h2 id="assembly-contract">Assembly v2 Authoring Contract</h2>
+    <p>RFC 8785 <code>seedcore.jcs-safe-integers.v1</code> canonical serialization, exact catalog file-byte pins, <code>opposed_z_rx_pi</code> mating poses, and 5-part <code>tabletop-starter.sc-assembly.json</code> (<code>0.2.0</code>, 117 Python + 71 Node tests).</p>
+    <p class="small">Local source record: <code>docs/development/robotics/central_world_cw_a01_acceptance_plan.md</code>.</p>
+    <a class="text-link" href="../develop.html#central-world">Inspect the contract summary →</a>
+  </article>
+
+  <article class="content-card">
+    <span class="badge live">DELIVERED / SIMULATION-FIRST</span>
+    <h2>Bounded-Session Rehearsal</h2>
+    <p>Pinned <code>microduck-sim-v1</code> read-only HAL adapter, 16 upstream-derived observation/ONNX goldens, <code>fast-spine-v1</code> split-screen session rehearsal, and Python/Rust simulation receipt verification.</p>
+    <a class="text-link" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/simulation_first_acceptance.md">Read acceptance guide ↗</a>
+  </article>
+
+  <article class="content-card">
+    <span class="badge">INVENTORY / OCT 19 REGISTER</span>
+    <h2 id="hardware-register">M0 &amp; CW-D01 Source Register</h2>
+    <p>Rechecks pinned Microduck runtime/RL/model commits and records <code>ESP32-S3-DevKitC-1-N8R8</code> and <code>Feetech STS3215</code> (spec A/0) reference facts while keeping connector pinout and 4–7.4 V rail reconciliation open.</p>
+    <p class="small">Local source record: <code>docs/development/robotics/m0_cw_d01_register_2026_10_19.md</code>.</p>
+    <a class="text-link" href="../develop.html#blueprint">Inspect open hardware gates →</a>
+  </article>
+
+  <article class="content-card">
+    <span class="badge">ASSESSMENT / CONDITIONAL</span>
+    <h2>mjswan 0.11.9 Integration</h2>
+    <p>Evaluates <code>mjswan 0.11.9</code> as a conditional <code>CW-S02</code> / <code>CW-S03</code> browser MuJoCo candidate, documenting MuJoCo <code>3.11.0</code> vs <code>3.15.0</code> and <code>mjlab</code> version conflicts plus required worker/veto/telemetry seams.</p>
+    <a class="text-link" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/mjswan_integration_assessment.md">Read mjswan assessment ↗</a>
+  </article>
+
+  <article class="content-card">
+    <span class="badge">SCHEDULE &amp; MATRIX</span>
+    <h2>Central World Delivery &amp; Gates</h2>
+    <p>Defines the work-package sequence (<code>CW-A03</code> proxy placement delivered locally → <code>CW-A04</code> DRC next → <code>CW-S/G/E/F/L</code>) and the required positive/negative evidence in the acceptance matrix.</p>
+    <a class="text-link" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/central_world_remaining_delivery_schedule.md">Read delivery schedule ↗</a>
+  </article>
+</div>
+</section>
 </main>
 <footer class="site-footer">
 <div class="page-container footer-bottom"><span>© 2026 Seed Core Limited</span>

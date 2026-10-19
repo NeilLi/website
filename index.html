@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SeedCore · Verifiable Trust for Physical AI</title>
-<meta name="description" content="The operating foundation for mini-robotics and physical AI. Explore browser-native simulation, bounded execution, and verifiable trust with SeedCore.">
+<meta name="description" content="The open trust runtime for physical AI and mini-robotics. Explore browser-first simulation, Central World assembly authoring, bounded execution authority, and verifiable action evidence.">
 <meta name="theme-color" content="#070e1b">
 <link rel="icon" href="assets/seedcore-mark.svg" type="image/svg+xml">
 <link rel="canonical" href="https://seedcore.ai/">
 <meta property="og:title" content="SeedCore · Verifiable Trust for Physical AI">
-<meta property="og:description" content="Small robots. Bounded actions. Verifiable evidence. Explore the SeedCore operating foundation and zero-install 3D Studio.">
+<meta property="og:description" content="Small robots. Bounded actions. Verifiable evidence. Explore the SeedCore trust runtime, SIM-3 3D Tree Studio, and Central World assembly contracts.">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="css/robotics-central.css?v=20261016a">
-<script src="js/robotics-central.js?v=20261016a" defer></script>
+<link rel="stylesheet" href="css/robotics-central.css?v=20261019b">
+<script src="js/robotics-central.js?v=20261019a" defer></script>
 </head>
 <body class="home-page">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -29,17 +29,17 @@
 <main id="main">
 <section class="hero page-container">
 <div class="hero-copy">
-<p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> THE OPERATING FOUNDATION FOR MINI-ROBOTICS</p>
+<p class="eyebrow"><span class="signal-dot" aria-hidden="true"></span> THE OPEN TRUST RUNTIME FOR PHYSICAL AI</p>
 <h1>The verifiable<br>trust runtime for<br><em>physical AI.</em></h1>
-<p class="lead">Connect intelligent models to the physical world. Simulate motion, bound every action, and build a chain of evidence you can inspect.</p>
-<div class="hero-actions"><a class="btn btn-primary" href="studio/tree-lab.html">Launch 3D Studio <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="about.html">Explore the architecture <span aria-hidden="true">→</span></a></div>
-<div class="hero-footnote"><span class="dot" aria-hidden="true"></span> Browser-native simulation <span class="footnote-divider">/</span> Apache 2.0</div>
+<p class="lead">Connect intelligent models to physical and simulated embodiments. Author immutable assemblies, rehearse bounded sessions, and verify every action receipt.</p>
+<div class="hero-actions"><a class="btn btn-primary" href="studio/tree-lab.html">Launch 3D Studio <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="develop.html#central-world">Explore Central World <span aria-hidden="true">→</span></a></div>
+<div class="hero-footnote"><span class="dot" aria-hidden="true"></span> SIM-3 Wasm ABI 2 <span class="footnote-divider">/</span> Central World CW-A02/A03 <span class="footnote-divider">/</span> Apache 2.0</div>
 </div>
 <div id="world" class="studio-preview">
-<div class="studio-titlebar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>seedcore // mini-components-studio</span><span class="studio-version">WASM ABI 2</span></div>
-<div class="studio-toolbar"><span><span class="signal-dot" aria-hidden="true"></span> Sandbox &amp; Live Simulator</span><div class="model-switch" role="group" aria-label="Preview arm model"><button type="button" data-preview-model="2" aria-pressed="false">2-link</button><button type="button" data-preview-model="3" aria-pressed="true">3-link</button></div></div>
+<div class="studio-titlebar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>seedcore // kinematic-preview</span><span class="studio-version">ILLUSTRATIVE PREVIEW</span></div>
+<div class="studio-toolbar"><span><span class="signal-dot" aria-hidden="true"></span> Kinematic arm preview</span><div class="model-switch" role="group" aria-label="Preview arm model"><button type="button" data-preview-model="2" aria-pressed="false">2-link</button><button type="button" data-preview-model="3" aria-pressed="true">3-link</button></div></div>
 <div class="studio-stage">
-<div class="viewport-label"><span id="previewModelLabel">3-DOF MANIPULATOR</span><small>WORKBENCH MAT / ORBIT VIEW</small></div>
+<div class="viewport-label"><span id="previewModelLabel">3-DOF MANIPULATOR</span><small>ILLUSTRATIVE / NO PHYSICS</small></div>
 <canvas id="simArmCanvas" class="studio-canvas" role="img" aria-label="Animated kinematic preview of an articulated robot arm">Articulated robot arm preview. Open the 3D Studio to explore dynamics.</canvas>
 <svg class="preview-fallback" viewBox="0 0 560 340" role="img" aria-label="Three-link robot arm illustration on SeedCore workbench mat">
   <!-- Isometric Workbench Cutting Mat -->
@@ -78,59 +78,60 @@
 </svg>
 <div class="viewport-axis" aria-hidden="true"><span>X</span><span>Y</span><span>Z</span></div>
 </div>
-<div class="studio-readouts"><div><span>MODEL</span><strong id="previewLinkCount">3-link chain</strong></div><div><span>JOINT 01</span><strong id="previewAngle">111.7°</strong></div><div><span>TRUST PDP</span><strong>TOKEN GRANTED</strong></div></div>
+<div class="studio-readouts"><div><span>MODEL</span><strong id="previewLinkCount">3-link chain</strong></div><div><span>JOINT 01</span><strong id="previewAngle">111.7°</strong></div><div><span>SCOPE</span><strong>ILLUSTRATION</strong></div></div>
 <div class="studio-preview-footer"><span>Kinematic preview · <a href="studio/tree-lab.html">run dynamics in Studio ↗</a></span><button id="previewPause" type="button" aria-pressed="false" hidden>Pause preview</button></div>
 </div>
 </section>
-<div class="foundation-strip page-container" aria-label="Core technologies"><span>BUILT ON OPEN FOUNDATIONS</span><div><span>C++17</span><span>WebAssembly</span><span>Python / MuJoCo</span><span>Rust</span><span>Apache 2.0</span></div></div>
+<div class="foundation-strip page-container" aria-label="Core technologies"><span>BUILT ON VERIFIED CONTRACTS</span><div><span>C++17 / Wasm ABI 2</span><span>Assembly v2 (RFC 8785)</span><span>Python / MuJoCo</span><span>Rust Proof Kernel</span><span>Apache 2.0</span></div></div>
 <section class="capabilities-section page-container" id="paradigm-shift" aria-label="SeedCore capabilities">
 <div class="capability-grid" id="explore">
-<a class="capability-card" href="studio/tree-lab.html"><div class="capability-top"><svg viewBox="0 0 36 36" aria-hidden="true"><rect x="3" y="4" width="30" height="22" rx="4" fill="#112437" stroke="#60dce0" stroke-width="1.6"/><path d="M8 21L18 16L28 21L18 25Z" fill="#4ade8022" stroke="#4ade80" stroke-width="1.2"/><path d="M18 20L15 13L22 10" stroke="#facc15" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="20" r="2.2" fill="#60dce0"/><circle cx="15" cy="13" r="2" fill="#38bdf8"/><circle cx="22" cy="10" r="2" fill="#4ade80"/><path d="M12 31h12M18 26v5" stroke="#60dce0" stroke-width="1.6" stroke-linecap="round"/></svg><span class="badge live">AVAILABLE IN BROWSER</span></div><h2>Your lab. Zero install.</h2><p>Explore articulated robot dynamics, orbit the 3D viewport, and inspect the math behind every move.</p><span class="card-link">Open the 3D Studio <span aria-hidden="true">↗</span></span></a>
-<a class="capability-card" href="#architecture"><div class="capability-top"><svg viewBox="0 0 36 36" aria-hidden="true"><rect x="8" y="8" width="20" height="20" rx="4" fill="#132a38" stroke="#60dce0" stroke-width="1.6"/><rect x="12" y="12" width="12" height="12" rx="2" fill="#0b1626" stroke="#4ade80" stroke-width="1.3"/><path d="M14 18h3l1.5-3 2 6 1.5-3h2" stroke="#facc15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 4v4M18 4v4M23 4v4M13 28v4M18 28v4M23 28v4M4 13h4M4 18h4M4 23h4M28 13h4M28 18h4M28 23h4" stroke="#60dce0" stroke-width="1.5" stroke-linecap="round"/></svg><span class="badge">ARCHITECTURE</span></div><h2>Slow brain. Fast spine.</h2><p>Separate high-level planning from deterministic local control. Keep physical execution bounded.</p><span class="card-link">Explore the execution path <span aria-hidden="true">→</span></span></a>
-<a class="capability-card" href="about.html"><div class="capability-top"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 3l12 4.5v9.5c0 7.2-5.5 11.8-12 15-6.5-3.2-12-7.8-12-15V7.5L18 3z" fill="#112638" stroke="#60dce0" stroke-width="1.6"/><path d="M13 17.5l3.5 3.5 7-7.5" stroke="#4ade80" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13" cy="10" r="1.4" fill="#4ade80"/><circle cx="18" cy="10" r="1.4" fill="#4ade80"/><circle cx="23" cy="10" r="1.4" fill="#4ade80"/></svg><span class="badge">TRUST RUNTIME</span></div><h2>Evidence, by design.</h2><p>Scoped capability tokens and action-bound receipts make the trust boundary explicit and inspectable.</p><span class="card-link">Inspect the trust model <span aria-hidden="true">↗</span></span></a>
+<a class="capability-card" href="studio/tree-lab.html"><div class="capability-top"><svg viewBox="0 0 36 36" aria-hidden="true"><rect x="3" y="4" width="30" height="22" rx="4" fill="#112437" stroke="#60dce0" stroke-width="1.6"/><path d="M8 21L18 16L28 21L18 25Z" fill="#4ade8022" stroke="#4ade80" stroke-width="1.2"/><path d="M18 20L15 13L22 10" stroke="#facc15" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="20" r="2.2" fill="#60dce0"/><circle cx="15" cy="13" r="2" fill="#38bdf8"/><circle cx="22" cy="10" r="2" fill="#4ade80"/><path d="M12 31h12M18 26v5" stroke="#60dce0" stroke-width="1.6" stroke-linecap="round"/></svg><span class="badge live">SIM-3 BROWSER PHYSICS</span></div><h2>Your lab. Zero install.</h2><p>Run 1/2/3-link planar dynamics in a 3D browser viewport, inspect mass matrices and Jacobians, and export model state.</p><span class="card-link">Open the 3D Studio <span aria-hidden="true">↗</span></span></a>
+<a class="capability-card" href="develop.html#central-world"><div class="capability-top"><svg viewBox="0 0 36 36" aria-hidden="true"><rect x="8" y="8" width="20" height="20" rx="4" fill="#132a38" stroke="#60dce0" stroke-width="1.6"/><rect x="12" y="12" width="12" height="12" rx="2" fill="#0b1626" stroke="#4ade80" stroke-width="1.3"/><path d="M14 18h3l1.5-3 2 6 1.5-3h2" stroke="#facc15" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13 4v4M18 4v4M23 4v4M13 28v4M18 28v4M23 28v4M4 13h4M4 18h4M4 23h4M28 13h4M28 18h4M28 23h4" stroke="#60dce0" stroke-width="1.5" stroke-linecap="round"/></svg><span class="badge">CENTRAL WORLD &amp; FAST SPINE</span></div><h2>Slow brain. Fast spine.</h2><p>Explore local Mini Studio assembly authoring, 15 mm proxy snapping and numeric placement, plus separate bounded-session rehearsals.</p><span class="card-link">Explore Central World &amp; Lab <span aria-hidden="true">→</span></span></a>
+<a class="capability-card" href="about.html"><div class="capability-top"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 3l12 4.5v9.5c0 7.2-5.5 11.8-12 15-6.5-3.2-12-7.8-12-15V7.5L18 3z" fill="#112638" stroke="#60dce0" stroke-width="1.6"/><path d="M13 17.5l3.5 3.5 7-7.5" stroke="#4ade80" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13" cy="10" r="1.4" fill="#4ade80"/><circle cx="18" cy="10" r="1.4" fill="#4ade80"/><circle cx="23" cy="10" r="1.4" fill="#4ade80"/></svg><span class="badge">TRUST RUNTIME</span></div><h2>Evidence, by design.</h2><p>Single-use capability tokens, revocation fencing, and Python/Rust receipt verifiers make every simulation or bench attempt inspectable.</p><span class="card-link">Inspect the trust model <span aria-hidden="true">↗</span></span></a>
 </div>
 </section>
 <section class="architecture-section section page-container" id="architecture">
 <div class="architecture-copy"><p class="eyebrow">01 / THE EXECUTION BOUNDARY</p><h2>From intention<br>to <em>evidence.</em></h2><p>Intelligence can propose a move. The runtime defines what is allowed, the controller executes within those bounds, and the verifier checks the evidence.</p>
 <ol class="execution-flow">
-<li><span>01</span><div><h3>Plan the intent</h3><p>A host policy proposes a bounded action chunk.</p></div><small>PLAN</small></li>
-<li><span>02</span><div><h3>Authorize the scope</h3><p>The trust gate checks authority, limits, and freshness.</p></div><small>GATE</small></li>
-<li><span>03</span><div><h3>Execute locally</h3><p>The fast spine interpolates motion on the controller.</p></div><small>ACT</small></li>
-<li><span>04</span><div><h3>Verify the evidence</h3><p>Action-bound telemetry becomes an auditable receipt.</p></div><small>PROVE</small></li>
+<li><span>01</span><div><h3>Plan &amp; author</h3><p>Author a canonical <code>seedcore.assembly.v2</code> graph or propose a bounded action chunk.</p></div><small>PLAN</small></li>
+<li><span>02</span><div><h3>Authorize the scope</h3><p>The PDP checks authority, limits, and freshness before issuing a single-use session token.</p></div><small>GATE</small></li>
+<li><span>03</span><div><h3>Execute within bounds</h3><p>Rehearse in host simulation with watchdog fencing. MCU execution remains behind hardware and firmware qualification gates.</p></div><small>ACT</small></li>
+<li><span>04</span><div><h3>Verify the evidence</h3><p>Python and Rust verifiers check action-bound telemetry and quarantine missing or stale receipts.</p></div><small>PROVE</small></li>
 </ol><a class="text-link" href="about.html">Read the architecture <span aria-hidden="true">↗</span></a></div>
 <div class="contract-panel">
 <div class="contract-heading"><span class="signal-dot" aria-hidden="true"></span> THE TRUST CONTRACT <span class="badge">ILLUSTRATIVE</span></div>
 <div class="contract-tabs" role="tablist" aria-label="Illustrative trust contracts"><button id="intent-tab" type="button" role="tab" aria-controls="intent-code" aria-selected="true" data-code-tab="intent">Action intent</button><button id="receipt-tab" type="button" role="tab" aria-controls="receipt-code" aria-selected="false" tabindex="-1" data-code-tab="receipt">Execution receipt</button></div>
-<div id="intent-code" class="code-panel" role="tabpanel" aria-labelledby="intent-tab" tabindex="0"><pre><code><span class="code-comment">// A bounded proposal for physical motion</span>
+<div id="intent-code" class="code-panel" role="tabpanel" aria-labelledby="intent-tab" tabindex="0"><pre><code><span class="code-comment">// A bounded proposal for physical or simulated motion</span>
 <span class="code-purple">const</span> intent = {
-  robot: <span class="code-cyan">"mini-arm"</span>,
-  action: <span class="code-cyan">"joint.move"</span>,
+  profile: <span class="code-cyan">"fast-spine-v1"</span>,
+  assembly_digest: <span class="code-cyan">"sha256:2550d184…"</span>,
+  action: <span class="code-cyan">"joint.chunk"</span>,
   bounds: {
     max_velocity: <span class="code-orange">0.5</span>,
     horizon_ms: <span class="code-orange">500</span>
   },
-  authority: <span class="code-cyan">"scoped-capability"</span>,
+  authority: <span class="code-cyan">"single-use-session-token"</span>,
   evidence: <span class="code-cyan">"action-bound"</span>
 };</code></pre></div>
-<div id="receipt-code" class="code-panel" role="tabpanel" aria-labelledby="receipt-tab" tabindex="0" hidden><pre><code><span class="code-comment">// Evidence tied to the authorized action</span>
+<div id="receipt-code" class="code-panel" role="tabpanel" aria-labelledby="receipt-tab" tabindex="0" hidden><pre><code><span class="code-comment">// Evidence verified by Python &amp; Rust proof kernels</span>
 <span class="code-purple">const</span> receipt = {
   intent_digest: <span class="code-cyan">"sha256:…"</span>,
   capability_digest: <span class="code-cyan">"sha256:…"</span>,
   telemetry: {
-    scope: <span class="code-cyan">"joint.position"</span>,
+    scope: <span class="code-cyan">"simulation_rehearsal"</span>,
     action_bound: <span class="code-orange">true</span>
   },
-  verification: <span class="code-cyan">"required"</span>,
-  signature: <span class="code-cyan">"…"</span>
+  verification: <span class="code-cyan">"verified"</span>,
+  signature: <span class="code-cyan">"ed25519:…"</span>
 };</code></pre></div>
-<div class="contract-boundary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4-4 7-8 9-4-2-8-5-8-9V6zM8 12l3 3 5-6"/></svg><div><strong>Authority before actuation.</strong><p>Conceptual contracts. Explore the source for implementation details and current hardware milestones.</p></div></div>
+<div class="contract-boundary"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l8 3v6c0 4-4 7-8 9-4-2-8-5-8-9V6zM8 12l3 3 5-6"/></svg><div><strong>Authority before actuation.</strong><p>Simulation tokens and proxy assemblies never grant physical hardware authority. Inspect the repository for active G0–G2 gates.</p></div></div>
 <a class="contract-source" href="https://github.com/NeilLi/seedcore">Inspect the open-source runtime <span aria-hidden="true">↗</span></a>
 </div>
 </section>
 <section class="builds-section section page-container">
 <div class="section-heading"><div><p class="eyebrow">02 / SMALL SCALE. REAL ENGINEERING.</p><h2>A foundation for your next build.</h2></div><a class="text-link" href="diy-showcase.html">Explore the build &amp; parts gallery <span aria-hidden="true">↗</span></a></div>
 <div class="reference-builds">
-<!-- Card 1: 3-Link Manipulator (Tactile STS3215 Servo & 3D-Printed Bracket Style) -->
+<!-- Card 1: 3-Link Manipulator & Tabletop Starter (CW-A01 / CW-A02) -->
 <a class="reference-build" href="diy-showcase.html#mini-arm"><div class="build-art arm-art"><svg viewBox="0 0 340 210" aria-hidden="true">
   <!-- Isometric Workbench Mat & Calibration Ring -->
   <path d="M36 168L170 116L304 168L170 204Z" fill="#102133" stroke="#284664" stroke-width="1.5"/>
@@ -167,9 +168,9 @@
   <!-- Parallel Two-Finger Gripper -->
   <circle cx="240" cy="84" r="7" fill="#1f2937" stroke="#60dce0" stroke-width="2"/>
   <path d="M245 80L264 74L268 81M243 89L260 98L266 91" fill="none" stroke="#f97316" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-</svg><span>01 / ARTICULATED MOTION</span></div><div class="build-info"><div><span class="eyebrow">SIMULATION &amp; SERVO CHAIN</span><h3>3-link manipulator</h3></div><span aria-hidden="true">↗</span></div><p>Start with an inspectable chain of serial bus servos, 3D-printed brackets, and model contracts.</p></a>
+</svg><span>01 / SIM-3 &amp; ASSEMBLY V2 STARTER</span></div><div class="build-info"><div><span class="eyebrow">WASM ABI 2 &amp; ASSEMBLY V2</span><h3>3-link &amp; tabletop starter</h3></div><span aria-hidden="true">↗</span></div><p>Run 3-link planar dynamics in the browser and inspect the 5-part <code>seedcore.assembly.v2</code> tabletop starter (<code>0.2.0</code>).</p></a>
 
-<!-- Card 2: Microduck Biped (Realistic Simplified Preview Style) -->
+<!-- Card 2: Microduck Biped (Pinned M0 Profile & 16 ONNX Goldens) -->
 <a class="reference-build" href="diy-showcase.html#microduck"><div class="build-art duck-art"><svg viewBox="0 0 340 210" aria-hidden="true">
   <!-- Isometric Workbench Mat & Glowing Green Calibration Rings -->
   <path d="M36 170L170 120L304 170L170 205Z" fill="#102133" stroke="#284664" stroke-width="1.5"/>
@@ -218,14 +219,14 @@
   <circle cx="188" cy="39.5" r="2.2" fill="#ffffff"/>
   <!-- Warm Orange Duck Bill -->
   <path d="M158 55H194L204 63C204 67 190 70 176 70C162 70 148 67 148 63Z" fill="#f59e0b" stroke="#92400e" stroke-width="1.8" stroke-linejoin="round"/>
-</svg><span>02 / PINNED MODEL PACKAGE</span></div><div class="build-info"><div><span class="eyebrow">MUJOCO / MJCF &amp; 3D PRINT</span><h3>Microduck biped</h3></div><span aria-hidden="true">↗</span></div><p>Inspect the versioned 14-DOF biped package, 3D-printable chassis, and live simulator stance.</p></a>
+</svg><span>02 / M0 SIMULATION PROFILE</span></div><div class="build-info"><div><span class="eyebrow">61/14 PROFILE &amp; 16 ONNX GOLDENS</span><h3>Microduck biped</h3></div><span aria-hidden="true">↗</span></div><p>Pinned 0.1.0 MJCF package, read-only <code>microduck-sim-v1</code> HAL adapter, and 16 upstream-derived observation/ONNX goldens.</p></a>
 
-<!-- Card 3: The Fast Spine (ESP32-S3 Eye Controller + STS3215 Servo + 2S LiPo Pack) -->
+<!-- Card 3: The Fast Spine (Fast-Spine-v1 Sessions & CW-D01 Register) -->
 <a class="reference-build" href="develop.html#blueprint"><div class="build-art board-art"><svg viewBox="0 0 340 210" aria-hidden="true">
   <!-- Isometric Workbench Mat -->
   <path d="M36 168L170 116L304 168L170 204Z" fill="#102133" stroke="#284664" stroke-width="1.5"/>
-  <!-- Status Dot -->
-  <circle cx="312" cy="24" r="5" fill="#4ade80"/>
+  <!-- Status Dot (Amber for open CW-D01 physical qualification) -->
+  <circle cx="312" cy="24" r="5" fill="#f59e0b"/>
   <!-- 1. ESP32-S3 Eye Controller Board (Left-Center Isometric PCB) -->
   <g transform="translate(52, 46)">
     <!-- PCB Base -->
@@ -258,28 +259,28 @@
     <!-- Green Bus Status LED -->
     <circle cx="46" cy="68" r="3" fill="#4ade80"/>
   </g>
-  <!-- 3. DIY 2S LiPo Battery Pack (Bottom Center-Right) -->
+  <!-- 3. Regulated Rail / Power Candidate Block (Bottom Center-Right) -->
   <g transform="translate(152, 126)">
     <rect x="0" y="6" width="58" height="28" rx="6" fill="#1f2937" stroke="#475569" stroke-width="2"/>
     <rect x="6" y="10" width="21" height="20" rx="3" fill="#f97316"/>
     <rect x="31" y="10" width="21" height="20" rx="3" fill="#f97316"/>
     <rect x="22" y="2" width="14" height="6" rx="1.5" fill="#facc15"/>
   </g>
-</svg><span>03 / DETERMINISTIC CONTROL</span></div><div class="build-info"><div><span class="eyebrow">ESP32-S3 / STS3215 / 2S LIPO</span><h3>The fast spine</h3></div><span aria-hidden="true">↗</span></div><p>Explore the simplified maker hardware kit: ESP32-S3 controller, serial bus servos, and WebSerial bridge.</p></a>
-</div><p class="illustration-note">Simplified hardware &amp; model illustrations · Inspect each reference for BOM specs and CAD files.</p>
+</svg><span>03 / FAST-SPINE-V1 &amp; CW-D01</span></div><div class="build-info"><div><span class="eyebrow">SIMULATION SESSIONS &amp; CW-D01</span><h3>The fast spine</h3></div><span aria-hidden="true">↗</span></div><p>Bounded <code>fast-spine-v1</code> simulation sessions, split-screen rehearsal, and the <code>M0 / CW-D01</code> hardware candidate inventory.</p></a>
+</div><p class="illustration-note">Simulation &amp; proxy authoring candidates are delivered locally · Hardware qualification (<code>CW-D01</code>, <code>G1/G2</code>) remains open.</p>
 </section>
 <section class="stack-section page-container" id="tech-stack"><div><p class="eyebrow">03 / UNDER THE HOOD</p><h2>Engineered across every layer.</h2></div><div class="stack-grid">
-<a href="develop.html"><span>01 / SIMULATE</span><h3>C++ / Wasm</h3><p>Analytical dynamics.<br>Browser-native execution.</p><b aria-hidden="true">↗</b></a>
-<a href="develop.html#workbench"><span>02 / INSPECT</span><h3>Python / MuJoCo</h3><p>Native workbench.<br>Pinned model packages.</p><b aria-hidden="true">↗</b></a>
-<a href="develop.html#blueprint"><span>03 / CONTROL</span><h3>Embedded MCU</h3><p>Bounded action chunks.<br>Local interpolation.</p><b aria-hidden="true">↗</b></a>
-<a href="about.html"><span>04 / VERIFY</span><h3>Rust / Cryptography</h3><p>Scoped authority.<br>Action-bound evidence.</p><b aria-hidden="true">↗</b></a>
+<a href="develop.html"><span>01 / SIMULATE</span><h3>C++ / Wasm ABI 2</h3><p>78/78 deterministic tests.<br>1/2/3-link planar dynamics.</p><b aria-hidden="true">↗</b></a>
+<a href="develop.html#central-world"><span>02 / AUTHOR</span><h3>Central World v2</h3><p>117 Python + 71 Node tests.<br>CW-A02/A03 local authoring.</p><b aria-hidden="true">↗</b></a>
+<a href="develop.html#blueprint"><span>03 / REHEARSE</span><h3>Fast Spine v1</h3><p>Bounded session rehearsal.<br>CW-D01 source inventory.</p><b aria-hidden="true">↗</b></a>
+<a href="about.html"><span>04 / VERIFY</span><h3>Rust / Python</h3><p>Simulation token &amp; receipt<br>proof verification.</p><b aria-hidden="true">↗</b></a>
 </div></section>
-<section class="start-section page-container" id="consumer-guide"><div><p class="eyebrow">YOUR NEXT EXPERIMENT STARTS HERE</p><h2>Open a browser.<br><em>Explore the possibilities.</em></h2><p>Start with the simulation. Inspect a model, run its dynamics, and take the next step toward your own build.</p></div><div class="start-actions"><a class="btn btn-primary" href="studio/tree-lab.html">Launch 3D Studio <span aria-hidden="true">↗</span></a><a class="text-link" href="contact.html">Talk to the team <span aria-hidden="true">→</span></a></div></section>
+<section class="start-section page-container" id="consumer-guide"><div><p class="eyebrow">YOUR NEXT EXPERIMENT STARTS HERE</p><h2>Open a browser.<br><em>Explore the possibilities.</em></h2><p>Start with the simulation. Inspect a model, run its dynamics, and follow the Central World and Microduck qualification gates.</p></div><div class="start-actions"><a class="btn btn-primary" href="studio/tree-lab.html">Launch 3D Studio <span aria-hidden="true">↗</span></a><a class="text-link" href="contact.html">Talk to the team <span aria-hidden="true">→</span></a></div></section>
 </main>
 <footer class="site-footer"><div class="page-container"><div class="footer-top">
-<div><a class="footer-wordmark" href="index.html">SeedCore<span aria-hidden="true">✳</span></a><p>The operating foundation for mini-robotics.<br>Intelligent motion. Verifiable trust.</p><a class="footer-github" href="https://github.com/NeilLi/seedcore">Built in the open ↗</a></div>
-<div><p class="eyebrow">EXPLORE</p><a href="develop.html">Robot Lab &amp; Tech Stack</a><a href="diy-showcase.html">Build Gallery</a><a href="trading.html">Exchange</a><a href="activities.html">Community Activities</a></div>
-<div><p class="eyebrow">BUILD</p><a href="studio/tree-lab.html">3D Tree Studio</a><a href="studio/index.html">2D Planar Lessons</a><a href="develop.html#blueprint">Maker Blueprint</a><a href="resources/index.html">Technical Resources</a></div>
+<div><a class="footer-wordmark" href="index.html">SeedCore<span aria-hidden="true">✳</span></a><p>The open trust runtime for physical AI.<br>Bounded authority. Verifiable evidence.</p><a class="footer-github" href="https://github.com/NeilLi/seedcore">Built in the open ↗</a></div>
+<div><p class="eyebrow">EXPLORE</p><a href="develop.html">Robot Lab &amp; Central World</a><a href="diy-showcase.html">Build Gallery</a><a href="trading.html">Exchange</a><a href="activities.html">Community Activities</a></div>
+<div><p class="eyebrow">BUILD</p><a href="studio/tree-lab.html">3D Tree Studio</a><a href="studio/index.html">2D Planar Lessons</a><a href="develop.html#blueprint">Fast Spine &amp; CW-D01</a><a href="resources/index.html">Technical Resources</a></div>
 <div><p class="eyebrow">SEEDCORE</p><a href="about.html">Architecture &amp; Trust</a><a href="https://github.com/NeilLi/seedcore">GitHub Repository</a><a href="contact.html">Contact</a><a href="sitemap.html">Site Map</a></div>
 </div><div class="footer-bottom"><span>© 2026 SeedCore Project · Apache-2.0</span><div><a href="privacy-policy.html">Privacy</a><a href="terms-of-service.html">Terms</a><span><span class="dot" aria-hidden="true"></span> PHYSICAL AI, VERIFIED.</span></div></div></div></footer>
 </body>

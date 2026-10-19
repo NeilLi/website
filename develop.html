@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Robot Lab, Tech Stacks &amp; Developer Workbench · SeedCore</title>
-<meta name="description" content="Explore the SIM-3 3D Kinematic Tree Studio, zero-allocation C++/Wasm physics engine, $150 Fast Spine maker blueprint, and pinned Microduck MuJoCo packages.">
+<title>Robot Lab, Central World &amp; Developer Workbench · SeedCore</title>
+<meta name="description" content="Explore SIM-3 3D Kinematic Tree Studio, Central World CW-A01–A03 assembly authoring, simulation-first Fast Spine session rehearsal, and the M0/CW-D01 source register.">
 <meta name="theme-color" content="#070e1b">
 <link rel="icon" href="assets/seedcore-mark.svg" type="image/svg+xml">
 <link rel="canonical" href="https://seedcore.ai/develop.html">
-<meta property="og:title" content="Robot Lab, Tech Stacks &amp; Developer Workbench · SeedCore">
-<meta property="og:description" content="Explore the SIM-3 3D Kinematic Tree Studio, zero-allocation C++/Wasm physics engine, $150 Fast Spine maker blueprint, and pinned Microduck MuJoCo packages.">
+<meta property="og:title" content="Robot Lab, Central World &amp; Developer Workbench · SeedCore">
+<meta property="og:description" content="Explore SIM-3 3D Kinematic Tree Studio, Central World CW-A01–A03 assembly authoring, simulation-first Fast Spine session rehearsal, and the M0/CW-D01 source register.">
 <meta property="og:type" content="website">
 
-<link rel="stylesheet" href="css/robotics-central.css?v=20261016a">
-<script src="js/robotics-central.js?v=20261016a" defer></script>
+<link rel="stylesheet" href="css/robotics-central.css?v=20261019b">
+<script src="js/robotics-central.js?v=20261019a" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -39,24 +39,24 @@
 <main id="main">
 <!-- Intro Section -->
 <section class="page-intro page-container">
-<p class="eyebrow">01 / DEVELOPER WORKBENCH &amp; SIM-3</p>
-<h1>From browser physics<br>to <em>real micro-torque.</em></h1>
-<p class="lead">Explore the newly qualified SIM-3 3D Kinematic Tree Studio, inspect analytical equations of motion in WebAssembly, build the $150 Fast Spine microcontroller, and verify physical AI execution.</p>
+<p class="eyebrow">01 / DEVELOPER WORKBENCH · SIM-3 &amp; CENTRAL WORLD</p>
+<h1>From browser physics<br>to <em>verified assemblies.</em></h1>
+<p class="lead">Explore the delivered SIM-3 3D Kinematic Tree Studio, the Central World <code>seedcore.assembly.v2</code> &amp; <code>CW-A02/A03</code> local Mini Studio authoring slice, bounded <code>fast-spine-v1</code> simulation rehearsal, and the <code>M0 / CW-D01</code> hardware candidate inventory.</p>
 </section>
 
 <!-- Split Hero for SIM-3 3D Studio -->
 <section class="page-container split-section">
 <div class="content-card feature-card">
-<span class="badge live">SIM-3 QUALIFIED &amp; LIVE</span>
+<span class="badge live">SIM-3 LIVE · PLANAR SIMULATION</span>
 <h2>3D Kinematic Tree Studio</h2>
-<p>An interactive, zero-dependency 3D browser workbench powered by our analytical C++ dynamics engine compiled to WebAssembly (ABI 2). Inspect multi-link articulated chains with live matrix readouts.</p>
+<p>An interactive, zero-dependency 3D browser workbench powered by our analytical C++ dynamics engine compiled to WebAssembly (ABI 2). Inspect planar 1-, 2-, and 3-link articulated chains in a 3D orbit view with live matrix readouts.</p>
 
 <ul class="check-list">
-  <li><strong>1-, 2-, and 3-Link Dynamics:</strong> Nonlinear pendulum, double pendulum, and 3-DOF articulated robot arm</li>
+  <li><strong>1-, 2-, and 3-Link Planar Dynamics:</strong> Nonlinear pendulum, double pendulum, and 3-DOF articulated robot arm</li>
   <li><strong>Interactive 3D Orbit Viewport:</strong> Zero-dependency perspective projection with drag-to-orbit yaw/pitch and scroll zoom</li>
   <li><strong>Real-Time Analytical Inspectors:</strong> Live Mass Matrix M(q), Coriolis vector, gravity vector g(q) = ∇U, and End-Effector Jacobian J(q)</li>
-  <li><strong>Mechanical Energy Tracking:</strong> Kinetic (K), Potential (U), and Total (E) conserved within 1e-4 drift</li>
-  <li><strong>Governed Contracts:</strong> Model schema <code>seedcore.mini-sim.tree-model.v1</code> with canonical SHA-256 digests and JSON export</li>
+  <li><strong>Mechanical Energy Tracking:</strong> Inspect kinetic (K), potential (U), and total (E) energy as motors and damping change the system</li>
+  <li><strong>Versioned Model Contracts:</strong> Model schema <code>seedcore.mini-sim.tree-model.v1</code> with canonical SHA-256 digests and JSON export</li>
 </ul>
 
 <div class="draft-actions" style="margin-top:20px; display:flex; gap:12px; flex-wrap:wrap;">
@@ -66,73 +66,107 @@
 </div>
 
 <aside class="content-card">
-<p class="eyebrow">QUALIFICATION EVIDENCE</p>
-<h3>78/78 Deterministic Invariants</h3>
-<p>SIM-1, SIM-2, and SIM-3 are fully verified across native C++ (CMake/CTest) and locked TypeScript/Node.js test runners:</p>
+<p class="eyebrow">OCTOBER 2026 QUALIFICATION EVIDENCE</p>
+<h3>Verified Software Baselines</h3>
+<p>Every delivered simulation and authoring slice is backed by reproducible build-from-source test suites:</p>
 <ul class="check-list">
-  <li>Exact numerical parity with SIM-2 (&lt; 1e-12 error on 2-link)</li>
-  <li>Mass matrix symmetry M = Mᵀ and Sylvester positive-definiteness</li>
-  <li>Jacobian finite differences match within 1e-6</li>
-  <li>Viscous damping mechanical dissipation</li>
-  <li>Strict schema validation and invalid parameter rejection</li>
+  <li><strong>SIM-1–SIM-3 Kernel:</strong> 78/78 Node.js tests, 12 native planar invariant groups, 6 native tree groups, and 12 Wasm invariants</li>
+  <li><strong>CW1 Component Catalog:</strong> 12 draft <code>.sc-part.json</code> records, box-proxy GLBs, and read-only viewer (107 passing tests)</li>
+  <li><strong>CW-A01 Assembly v2:</strong> 117 Python tests and 71 Node conformance tests with live Python/JS canonical RFC 8785 byte parity</li>
+  <li><strong>CW-A02/A03 Authoring &amp; Placement:</strong> 88 TypeScript tests, 14 FastAPI boundary tests, and 18 Chrome browser exercise groups</li>
 </ul>
-<a class="text-link" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/mini_robot_simulator_implementation_plan.md">Read the SIM-3 qualification report ↗</a>
+<a class="text-link" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/current_next_steps.md">Read the active execution queue ↗</a>
 </aside>
 </section>
 
-<!-- Section: The Mini-Robotics Developer Blueprint ($150 BOM & Fast Spine) -->
-<section class="section page-container" id="blueprint">
+<!-- Section: Central World Component & Assembly Authoring (CW1, CW-A01 v2, CW-A02) -->
+<section class="section page-container" id="central-world">
 <div class="section-heading">
 <div>
-<p class="eyebrow">PRACTICAL HARDWARE ARCHITECTURE</p>
-<h2>The $150 Fast Spine Maker Blueprint</h2>
+<p class="eyebrow">CENTRAL WORLD · PHASE 1 &amp; PHASE 2 AUTHORING</p>
+<h2>Canonical Component Catalog &amp; Mini Studio (<code>CW-A02/A03</code>)</h2>
 </div>
-<p>Mini-robots do not need $3,000 industrial SoCs. Build an agile, safe-by-physics physical AI embodiment with off-the-shelf maker electronics.</p>
+<p>Offline proxy authoring with byte-pinned catalog references, cross-language canonical digests, and immutable revision history.</p>
 </div>
 
 <div class="three-grid">
 <article class="content-card">
-  <span class="badge live">$150 BILL OF MATERIALS</span>
-  <h3>Consumer Maker Hardware</h3>
-  <p><strong>Microcontroller:</strong> ESP32-S3 or Raspberry Pi RP2040 ($6).<br>
-  <strong>Actuators:</strong> 4–6x Feetech STS3215 magnetic encoder serial bus servos ($60–$80).<br>
-  <strong>Power:</strong> 2S LiPo (7.4V) or 5V USB-C PD ($15).<br>
-  <strong>Chassis:</strong> 3D-printed PETG / PLA / TPU ($10).<br>
-  <strong>Sensors:</strong> Stereo ESP32-CAM or VL53L1X ToF Hat ($12).</p>
+  <span class="badge live">CW1 DELIVERED · 107 TESTS</span>
+  <h3>Component Registry (<code>v1</code>)</h3>
+  <p>Strict <code>.sc-part.json</code> schema (<code>packages/component-registry/</code>) with 12 draft/proxy records across MCU, serial bus servo, sensor hat, power, and bracket families, paired with frozen box-proxy GLB meshes and a read-only viewer.</p>
+  <p class="small"><strong>Boundary:</strong> Draft/proxy records carry <code>qualification: "unqualified"</code> and <code>execution_authority: "none"</code>. Exact supplier drawings and electrical ratings remain tracked in <code>CW-D01</code>.</p>
   <a class="text-link" href="diy-showcase.html#parts-gallery">Inspect the Parts Gallery ↗</a>
 </article>
 
 <article class="content-card">
-  <span class="badge live">FAST SPINE FIRMWARE</span>
-  <h3>200–500 Hz Spline Interpolator</h3>
-  <p>The edge MCU fast spine runs a deterministic hardware timer interrupt. It receives receding-horizon action chunks (30–50 waypoints) from the host brain over UART/WebSerial.</p>
-  <p>Evaluates smooth cubic Hermite spline trajectories locally and drives servos over 1 Mbps half-duplex UART bus with zero communication jitter.</p>
-  <p class="small">Includes hardware watchdog: brings motors to rest if packets cease for &gt; 100ms.</p>
+  <span class="badge live">CW-A01 V2 PASSED · 117 PY + 71 NODE</span>
+  <h3>Assembly v2 Contract</h3>
+  <p>Identified by <code>seedcore.assembly.v2</code> and canonical profile <code>seedcore.jcs-safe-integers.v1</code> (RFC 8785 + safe integers). Enforces exact catalog file-byte SHA-256 pins, rooted tree topology, <code>opposed_z_rx_pi</code> mating rest poses, and explicit proxy <code>actuator_outputs</code>.</p>
+  <p class="small"><strong>Starter Reference:</strong> 5-part <code>tabletop-starter.sc-assembly.json</code> (<code>0.2.0</code>, digest <code>2550d184…</code>) with verified non-overlapping Z rest heights.</p>
+  <a class="text-link" href="resources/index.html#assembly-contract">Read Assembly v2 Summary →</a>
 </article>
 
 <article class="content-card">
-  <span class="badge live">ZERO-INSTALL WEBSERIAL</span>
-  <h3>Browser Direct-to-MCU Bridge</h3>
-  <p>Using the W3C WebSerial API, any browser running on a Chromebook, Mac, or Windows PC can connect directly to the robot's USB-CDC port without installing drivers, ROS 2, or Linux.</p>
-  <p>Deploy trained neural policies, send action chunks, inspect live proprioception, and verify cryptographic receipts directly in the web browser.</p>
-  <a class="text-link" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/mini_robot_developer_blueprint.md">Read the Developer Blueprint ↗</a>
+  <span class="badge live">CW-A02/A03 · LOCAL PROXY AUTHORING</span>
+  <h3>Immutable Store &amp; Proxy Placement</h3>
+  <p>Offline authoring shell (<code>ts/apps/mini-studio</code> &amp; <code>ts/packages/robot-canvas</code>) with strict raw-JSON v2 import (rejecting duplicate decoded keys and legacy v1 drafts), Three.js rest-pose box-proxy preview (<code>three@0.181.1</code>), and build-time standalone Ajv validation under a strict no-<code>unsafe-eval</code> CSP.</p>
+  <p class="small"><strong>Immutable History (<code>CW-ASM-02</code>):</strong> Deep-frozen revisions (32-entry / 2 MiB cap), deterministic undo/redo, authority-epoch invalidation (<code>admission: null</code>), and generation-ticket fencing against stale or failed async asset loads.</p>
+  <p class="small"><strong>Placement (<code>CW-SNAP-01</code>):</strong> 15 mm port capture with exact opposed-Z mating, non-committing ghost preview, keyboard/numeric placement, and subtree reparenting. The current combined suite records 88 TS tests, 14 API tests, and 18 browser exercise groups. This editor runs locally from the SeedCore repo; the public 3D lab is a separate simulator.</p>
+  <a class="text-link" href="resources/index.html#assembly-authoring">Read Authoring &amp; Placement Summary →</a>
 </article>
 </div>
 </section>
 
-<!-- Section: End-Consumer Quickstart & Hardware Wiring -->
+<!-- Section: Fast Spine Protocol, Simulation-First Rehearsal & M0/CW-D01 Register -->
+<section class="section page-container" id="blueprint">
+<div class="section-heading">
+<div>
+<p class="eyebrow">FAST SPINE PROTOCOL &amp; M0 / CW-D01 SOURCE REGISTER</p>
+<h2>Simulation-First Rehearsal &amp; Hardware Qualification Boundary</h2>
+</div>
+<p>Rehearse bounded sessions and verify receipts offline today while physical board, harness, and power-rail qualification proceeds through explicit gates.</p>
+</div>
+
+<div class="three-grid">
+<article class="content-card">
+  <span class="badge live">SIMULATION-FIRST DELIVERED</span>
+  <h3>Bounded <code>fast-spine-v1</code> Sessions</h3>
+  <p>Frozen <code>fast-spine-v1</code> wire schemas, single-use session token claim/refresh/revocation, authenticated framing, independent host watchdog, and a localhost split-screen bounded-session rehearsal.</p>
+  <p>Python and Rust verification kernels validate trusted simulation tokens and session receipts, rejecting expired, replayed, or out-of-scope requests.</p>
+  <a class="text-link" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/simulation_first_acceptance.md">Read Simulation-First Acceptance ↗</a>
+</article>
+
+<article class="content-card">
+  <span class="badge">OCT 19 M0 / CW-D01 REGISTER</span>
+  <h3>Candidate Bench Inventory</h3>
+  <p><strong>Controller Candidate:</strong> <code>ESP32-S3-DevKitC-1-N8R8</code> (<code>WROOM-1-N8R8</code>; v1.0 guide maps USB to GPIO19/20 and notes octal-memory GPIO35–37 restrictions; $12 recurring volume BOM target).<br>
+  <strong>Servo Candidate:</strong> <code>Feetech STS3215</code> half-duplex TTL bus actuator (spec A/0 lists 4–7.4 V input with 6 V and 7.4 V operating columns).<br>
+  <strong>Power Rails:</strong> Regulated servo and MCU rails evaluated separately.</p>
+  <a class="text-link" href="resources/index.html#hardware-register">Inspect M0 / CW-D01 Summary →</a>
+</article>
+
+<article class="content-card">
+  <span class="badge">OPEN HARDWARE GATES (CW-D01 / G1 / G2)</span>
+  <h3>Required Before Physical Actuation</h3>
+  <p><strong>No hardware is connected or qualified (<code>physical_acceptance: false</code>).</strong> In the reviewed Feetech A/0 specification (<code>sha256:eeac0fb6…</code>), the page 4 pin table and page 8 schematic use differing connector numbering and supply labels.</p>
+  <p class="small">Connector orientation/polarity, regulated servo rail setpoints, BEC/fuse derating, USB backfeed isolation, and one-servo → three-servo stopping measurements remain open before physical release.</p>
+</article>
+</div>
+</section>
+
+<!-- Section: Architecture & Target Bench Topology Diagram -->
 <section class="section page-container" id="quickstart">
 <div class="section-heading">
 <div>
-<p class="eyebrow">BEGINNER &amp; MAKER QUICKSTART</p>
-<h2>Zero-Soldering Desktop Connection</h2>
+<p class="eyebrow">TARGET FAST SPINE TOPOLOGY &amp; REHEARSAL FLOW</p>
+<h2>From Browser Rehearsal to Target Bench Topology</h2>
 </div>
-<p class="lead">Building your first desktop robot shouldn't require electrical engineering. Here is how the simplified hardware connects on your workbench.</p>
+<p class="lead">How the delivered simulation-first session rehearsal and <code>CW-A02/A03</code> local design workflow map onto the target <code>ESP32-S3</code> + <code>STS3215</code> bench architecture.</p>
 </div>
 
-<!-- Upgraded Realistic & Simplified Isometric Hardware Wiring Diagram (Inspired by SeedCore Preview) -->
+<!-- Upgraded Isometric Hardware & Session Rehearsal Diagram -->
 <div class="consumer-diagram-wrapper">
-<svg viewBox="0 0 860 250" class="consumer-diagram-svg" aria-label="Simplified realistic desktop hardware wiring and WebSerial connection diagram">
+<svg viewBox="0 0 860 250" class="consumer-diagram-svg" aria-label="Target Fast Spine bench topology and simulation-first session rehearsal diagram">
   <defs>
     <linearGradient id="usbHubGrad" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0%" stop-color="#86efac"/>
@@ -148,79 +182,79 @@
   <rect x="8" y="8" width="844" height="234" rx="12" fill="#0b1626" stroke="#263e57" stroke-width="2"/>
   <path d="M24 44H836M24 88H836M24 132H836M24 176H836M140 20V230M280 20V230M420 20V230M560 20V230M700 20V230" stroke="#152940" stroke-width="1"/>
 
-  <!-- 1. Left Panel: FLASH ROBOT (WEBSERIAL USB) Badge (Directly modeled on preview bottom-right) -->
+  <!-- 1. Left Panel: MINI STUDIO & SESSION REHEARSAL -->
   <g transform="translate(26, 26)" filter="url(#cardDrop)">
     <rect x="0" y="0" width="188" height="154" rx="10" fill="#112236" stroke="#314e6b" stroke-width="1.8"/>
-    <!-- Glowing Green Circular USB Emblem -->
+    <!-- Glowing Green Circular Session / Bridge Emblem -->
     <circle cx="52" cy="64" r="34" fill="#1e293b" stroke="#475569" stroke-width="3"/>
     <circle cx="52" cy="64" r="27" fill="url(#usbHubGrad)" stroke="#bbf7d0" stroke-width="1.5"/>
-    <!-- USB Trident Icon inside Green Button -->
+    <!-- USB Trident Icon -->
     <path d="M35 64H67M46 64L53 54H60M49 64L55 74H61" fill="none" stroke="#062e1e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="35" cy="64" r="3.5" fill="#062e1e"/>
     <circle cx="61" cy="54" r="2.5" fill="#062e1e"/>
     <rect x="59" y="71.5" width="5" height="5" fill="#062e1e"/>
     <path d="M65 61L70 64L65 67Z" fill="#062e1e"/>
-    <!-- Labels & Mini Action Pills -->
-    <text x="96" y="42" font-family="sans-serif" font-size="11" fill="#edf4fa" font-weight="bold">FLASH ROBOT</text>
-    <text x="96" y="56" font-family="monospace" font-size="8" fill="#60dce0">(WEBSERIAL USB)</text>
-    <rect x="94" y="66" width="82" height="18" rx="4" fill="#19324a" stroke="#38bdf8" stroke-width="1"/>
-    <text x="135" y="78" font-family="monospace" font-size="7.5" fill="#bae6fd" text-anchor="middle">⬇ Chassis (.3MF)</text>
-    <rect x="94" y="90" width="82" height="18" rx="4" fill="#19324a" stroke="#4ade80" stroke-width="1"/>
-    <text x="135" y="102" font-family="monospace" font-size="7.5" fill="#bbf7d0" text-anchor="middle">⬇ Wiring (.SVG)</text>
-    <!-- Token Status Footer -->
+    <!-- Labels & Artifact Pills -->
+    <text x="94" y="42" font-family="sans-serif" font-size="10.5" fill="#edf4fa" font-weight="bold">STUDIO &amp; BRIDGE</text>
+    <text x="94" y="55" font-family="monospace" font-size="7.5" fill="#60dce0">CW-A02 / FAST-SPINE-V1</text>
+    <rect x="92" y="65" width="84" height="18" rx="4" fill="#19324a" stroke="#38bdf8" stroke-width="1"/>
+    <text x="134" y="77" font-family="monospace" font-size="7.2" fill="#bae6fd" text-anchor="middle">assembly.v2 JSON</text>
+    <rect x="92" y="89" width="84" height="18" rx="4" fill="#19324a" stroke="#4ade80" stroke-width="1"/>
+    <text x="134" y="101" font-family="monospace" font-size="7.2" fill="#bbf7d0" text-anchor="middle">Session Receipt</text>
+    <!-- Scope Status Footer -->
     <rect x="12" y="120" width="164" height="22" rx="4" fill="#0b1726" stroke="#233b53" stroke-width="1"/>
     <circle cx="24" cy="131" r="3.5" fill="#4ade80"/>
-    <text x="34" y="134" font-family="monospace" font-size="8" fill="#86efac">ExecutionToken: GRANTED</text>
+    <text x="34" y="134" font-family="monospace" font-size="7.5" fill="#86efac">Sim Rehearsal: VERIFIED</text>
   </g>
-  <text x="120" y="204" font-family="sans-serif" font-size="11" fill="#edf4fa" font-weight="bold" text-anchor="middle">Step 1: Browser WebSerial</text>
-  <text x="120" y="220" font-family="monospace" font-size="9" fill="#9baec2" text-anchor="middle">Zero install · 1 Mbps USB-CDC</text>
+  <text x="120" y="204" font-family="sans-serif" font-size="11" fill="#edf4fa" font-weight="bold" text-anchor="middle">1. Author &amp; Rehearse (Delivered)</text>
+  <text x="120" y="220" font-family="monospace" font-size="9" fill="#9baec2" text-anchor="middle">Offline authoring / session rehearsal</text>
 
-  <!-- USB-C Braided Cable -->
+  <!-- Framed Link -->
   <path d="M214 96H268" stroke="#38bdf8" stroke-width="5" stroke-linecap="round"/>
   <path d="M214 96H268" stroke="#bae6fd" stroke-width="2" stroke-dasharray="4 4" stroke-linecap="round"/>
-  <rect x="223" y="75" width="38" height="15" rx="4" fill="#132a3e" stroke="#38bdf8" stroke-width="1"/>
-  <text x="242" y="85" font-family="monospace" font-size="7.5" fill="#7dd3fc" text-anchor="middle">USB-C</text>
+  <rect x="219" y="75" width="46" height="15" rx="4" fill="#132a3e" stroke="#38bdf8" stroke-width="1"/>
+  <text x="242" y="85" font-family="monospace" font-size="7" fill="#7dd3fc" text-anchor="middle">USB / Framing</text>
 
-  <!-- 2. Center-Left: ESP32-S3 Eye Controller & 2S LiPo Pack -->
+  <!-- 2. Center-Left: ESP32-S3 Candidate & Regulated Rail Inventory (CW-D01) -->
   <g transform="translate(268, 26)" filter="url(#cardDrop)">
     <rect x="0" y="0" width="168" height="154" rx="10" fill="#112236" stroke="#314e6b" stroke-width="1.8"/>
-    <text x="14" y="22" font-family="monospace" font-size="8.5" fill="#4ade80" font-weight="bold">ESP32-S3 EYE CONTROLLER</text>
-    <circle cx="152" cy="18" r="4" fill="#4ade80"/>
-    <!-- Isometric ESP32-S3 PCB with Dual Camera Lenses -->
+    <text x="12" y="22" font-family="monospace" font-size="8" fill="#fde047" font-weight="bold">ESP32-S3 CANDIDATE (CW-D01)</text>
+    <circle cx="154" cy="18" r="4" fill="#f59e0b"/>
+    <!-- Isometric ESP32-S3 PCB -->
     <path d="M22 68L82 40L142 68L82 96Z" fill="#0f5132" stroke="#4ade80" stroke-width="1.8" stroke-linejoin="round"/>
     <path d="M22 68V76L82 104L142 76V68" fill="#062e1e" stroke="#15803d" stroke-width="1.5"/>
     <path d="M36 66L78 46M90 86L130 66" stroke="#facc15" stroke-width="3" stroke-linecap="round" stroke-dasharray="2 5"/>
-    <!-- Stereo Camera Eyes -->
+    <!-- Dual Camera / Module Icons -->
     <ellipse cx="68" cy="64" rx="12" ry="8.5" fill="#1e293b" stroke="#94a3b8" stroke-width="1.8"/>
     <ellipse cx="68" cy="64" rx="6" ry="4.5" fill="#020617"/>
     <circle cx="66" cy="62" r="1.8" fill="#38bdf8"/>
     <ellipse cx="96" cy="55" rx="12" ry="8.5" fill="#1e293b" stroke="#94a3b8" stroke-width="1.8"/>
     <ellipse cx="96" cy="55" rx="6" ry="4.5" fill="#020617"/>
     <circle cx="94" cy="53" r="1.8" fill="#38bdf8"/>
-    <!-- DIY 2S LiPo Battery Pack Mini Module -->
-    <rect x="20" y="114" width="64" height="26" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
-    <rect x="25" y="118" width="24" height="18" rx="3" fill="#f97316"/>
-    <rect x="53" y="118" width="24" height="18" rx="3" fill="#f97316"/>
-    <text x="94" y="126" font-family="monospace" font-size="8" fill="#fde047">2S LiPo OK</text>
-    <text x="94" y="138" font-family="monospace" font-size="7.5" fill="#9baec2">7.4V Bus Power</text>
+    <!-- Regulated Rail / Power Candidate Block -->
+    <rect x="16" y="114" width="64" height="26" rx="5" fill="#1e293b" stroke="#64748b" stroke-width="1.5"/>
+    <rect x="21" y="118" width="24" height="18" rx="3" fill="#f97316"/>
+    <rect x="49" y="118" width="24" height="18" rx="3" fill="#f97316"/>
+    <text x="86" y="125" font-family="monospace" font-size="7.5" fill="#fde047">4–7.4V Spec A/0</text>
+    <text x="86" y="137" font-family="monospace" font-size="7" fill="#9baec2">Rail Gate: OPEN</text>
   </g>
-  <text x="352" y="204" font-family="sans-serif" font-size="11" fill="#edf4fa" font-weight="bold" text-anchor="middle">Step 2: Fast Spine MCU</text>
-  <text x="352" y="220" font-family="monospace" font-size="9" fill="#9baec2" text-anchor="middle">200–500 Hz spline + watchdog</text>
+  <text x="352" y="204" font-family="sans-serif" font-size="11" fill="#edf4fa" font-weight="bold" text-anchor="middle">2. Candidate MCU &amp; Rail (<code>CW-D01</code>)</text>
+  <text x="352" y="220" font-family="monospace" font-size="9" fill="#9baec2" text-anchor="middle">DevKitC-1-N8R8 · Pin/rail review open</text>
 
-  <!-- 3-Wire TTL UART Bus Harness 1 -->
+  <!-- 3-Wire Half-Duplex TTL Bus Harness -->
   <g transform="translate(436, 92)">
     <line x1="0" y1="0" x2="36" y2="0" stroke="#ef4444" stroke-width="2.5"/>
     <line x1="0" y1="5" x2="36" y2="5" stroke="#facc15" stroke-width="2.5"/>
     <line x1="0" y1="10" x2="36" y2="10" stroke="#38bdf8" stroke-width="2.5"/>
   </g>
 
-  <!-- 3. Right Panel: Daisy-Chained Feetech STS3215 Servos (ID 1, ID 2, ID 3) -->
+  <!-- 3. Right Panel: Target 1-Servo -> 3-Servo Bench Progression (STS3215 TTL) -->
   <g transform="translate(472, 26)" filter="url(#cardDrop)">
     <rect x="0" y="0" width="360" height="154" rx="10" fill="#112236" stroke="#314e6b" stroke-width="1.8"/>
-    <text x="16" y="22" font-family="monospace" font-size="8.5" fill="#60dce0" font-weight="bold">DAISY-CHAINED FEETECH STS3215 SERIAL BUS SERVOS (TTL UART)</text>
-    <circle cx="342" cy="18" r="4" fill="#4ade80"/>
+    <text x="16" y="22" font-family="monospace" font-size="8.2" fill="#60dce0" font-weight="bold">TARGET STS3215 HALF-DUPLEX TTL BUS (QUALIFY 1 SERVO → 3 SERVOS)</text>
+    <circle cx="342" cy="18" r="4" fill="#f59e0b"/>
 
-    <!-- STS3215 Servo #1 (Base / Hip) -->
+    <!-- STS3215 Servo #1 (Base / 1-Servo Gate) -->
     <g transform="translate(22, 38)">
       <rect x="8" y="16" width="64" height="68" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
       <rect x="0" y="34" width="80" height="10" rx="2" fill="#334155" stroke="#475569" stroke-width="1.5"/>
@@ -228,7 +262,7 @@
       <rect x="20" y="4" width="40" height="16" rx="5" fill="#facc15" stroke="#854d0e" stroke-width="1.8"/>
       <circle cx="40" cy="12" r="5" fill="#f59e0b" stroke="#0f172a" stroke-width="1.5"/>
       <text x="40" y="64" font-family="monospace" font-size="8" fill="#edf4fa" text-anchor="middle" font-weight="bold">STS3215 #1</text>
-      <text x="40" y="76" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="middle">ID:01 · Base</text>
+      <text x="40" y="76" font-family="monospace" font-size="7" fill="#4ade80" text-anchor="middle">First Bench Gate</text>
     </g>
 
     <!-- 3-Wire Jumper 1->2 -->
@@ -238,7 +272,7 @@
       <line x1="0" y1="10" x2="32" y2="10" stroke="#38bdf8" stroke-width="2.5"/>
     </g>
 
-    <!-- STS3215 Servo #2 (Shoulder / Knee) -->
+    <!-- STS3215 Servo #2 -->
     <g transform="translate(140, 38)">
       <rect x="8" y="16" width="64" height="68" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
       <rect x="0" y="34" width="80" height="10" rx="2" fill="#334155" stroke="#475569" stroke-width="1.5"/>
@@ -246,7 +280,7 @@
       <rect x="20" y="4" width="40" height="16" rx="5" fill="#38bdf8" stroke="#0369a1" stroke-width="1.8"/>
       <circle cx="40" cy="12" r="5" fill="#f59e0b" stroke="#0f172a" stroke-width="1.5"/>
       <text x="40" y="64" font-family="monospace" font-size="8" fill="#edf4fa" text-anchor="middle" font-weight="bold">STS3215 #2</text>
-      <text x="40" y="76" font-family="monospace" font-size="7" fill="#38bdf8" text-anchor="middle">ID:02 · Link</text>
+      <text x="40" y="76" font-family="monospace" font-size="7" fill="#38bdf8" text-anchor="middle">After 1-Servo Gate</text>
     </g>
 
     <!-- 3-Wire Jumper 2->3 -->
@@ -256,7 +290,7 @@
       <line x1="0" y1="10" x2="32" y2="10" stroke="#38bdf8" stroke-width="2.5"/>
     </g>
 
-    <!-- STS3215 Servo #3 (Wrist / Ankle + Gripper) -->
+    <!-- STS3215 Servo #3 -->
     <g transform="translate(258, 38)">
       <rect x="8" y="16" width="64" height="68" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="2"/>
       <rect x="0" y="34" width="80" height="10" rx="2" fill="#334155" stroke="#475569" stroke-width="1.5"/>
@@ -265,141 +299,148 @@
       <path d="M30 4L24 -6M50 4L56 -6" stroke="#f97316" stroke-width="3.5" stroke-linecap="round"/>
       <circle cx="40" cy="12" r="5" fill="#f59e0b" stroke="#0f172a" stroke-width="1.5"/>
       <text x="40" y="64" font-family="monospace" font-size="8" fill="#edf4fa" text-anchor="middle" font-weight="bold">STS3215 #3</text>
-      <text x="40" y="76" font-family="monospace" font-size="7" fill="#f97316" text-anchor="middle">ID:03 · Effector</text>
+      <text x="40" y="76" font-family="monospace" font-size="7" fill="#f97316" text-anchor="middle">3-DOF Fixture</text>
     </g>
 
-    <text x="180" y="140" font-family="monospace" font-size="8" fill="#9baec2" text-anchor="middle">12-bit Magnetic Encoders · 3-Pin Snap Connectors · Torque &amp; Velocity Boundary Enforced</text>
+    <text x="180" y="140" font-family="monospace" font-size="7.8" fill="#9baec2" text-anchor="middle">Spec A/0 Connector Pinout &amp; Regulated Rail Reconciliation Required Before Physical Power (<code>CW-D01</code>)</text>
   </g>
-  <text x="652" y="204" font-family="sans-serif" font-size="11" fill="#edf4fa" font-weight="bold" text-anchor="middle">Step 3: Snap-Plug Bus Servos</text>
-  <text x="652" y="220" font-family="monospace" font-size="9" fill="#9baec2" text-anchor="middle">Zero soldering · Chains up to 253 actuators on 1 cable</text>
+  <text x="652" y="204" font-family="sans-serif" font-size="11" fill="#edf4fa" font-weight="bold" text-anchor="middle">3. Staged Bench Qualification (<code>CW-F01/F02</code>)</text>
+  <text x="652" y="220" font-family="monospace" font-size="9" fill="#9baec2" text-anchor="middle">Qualify 1 servo before 3 · Measure stop latency</text>
 </svg>
 </div>
 
-<!-- Step by Step Quickstart Details -->
+<!-- Step by Step Rehearsal & Qualification Details -->
 <div class="three-grid">
 <article class="content-card">
-  <span class="badge live">STEP 1: SNAP &amp; PLUG</span>
-  <h3>Zero Soldering Wiring</h3>
-  <p>Each Feetech STS3215 bus servo features two identical 3-pin snap sockets. Plug the first cable from your ESP32 board to Servo 1, then daisy-chain from Servo 1 to Servo 2, and Servo 2 to Servo 3. Total wiring time: under 3 minutes.</p>
+  <span class="badge live">DELIVERED: OFFLINE AUTHORING</span>
+  <h3>CW-A01 v2 &amp; CW-A02 Store</h3>
+  <p>Run <code>node tools/robotics/verify-assembly.cjs</code> and <code>node tools/robotics/verify-authoring.cjs --browser</code> or launch the local Mini Studio service on <code>http://127.0.0.1:8767</code> to inspect the 5-part <code>tabletop-starter.sc-assembly.json</code> (<code>0.2.0</code>) with byte-pinned meshes.</p>
 </article>
 
 <article class="content-card">
-  <span class="badge live">STEP 2: ONE-CLICK CONNECT</span>
-  <h3>Browser WebSerial Pairing</h3>
-  <p>Plug the ESP32 into your computer via USB-C. Open <a href="studio/tree-lab.html">3D Tree Studio</a> in Chrome, Edge, or Opera. Click "Connect USB" and pick your device in the standard browser popup. No drivers or baud rate configuration needed.</p>
+  <span class="badge live">DELIVERED: SESSION REHEARSAL</span>
+  <h3>Split-Screen Bounded Sessions</h3>
+  <p>Exercise the localhost split-screen rehearsal where an out-of-envelope proposal is denied by the PDP, or an active <code>fast-spine-v1</code> simulation session is revoked mid-attempt and verified by the Python and Rust receipt kernels.</p>
 </article>
 
 <article class="content-card">
-  <span class="badge live">STEP 3: SLIDERS &amp; TEACH MODE</span>
-  <h3>Immediate Responsive Motion</h3>
-  <p>Move the joint sliders on your screen—the physical servos track each angle in real time. Switch on "Teach Mode" to gently guide the arm by hand; the browser records your exact motion path for automated playback.</p>
+  <span class="badge">OPEN: HARDWARE QUALIFICATION</span>
+  <h3>CW-D01 &amp; Staged Servo Gates</h3>
+  <p>Before powering physical hardware, reconcile the <code>STS3215</code> A/0 connector pin numbering and 4–7.4 V rail ratings against the actual harness, complete <code>CW-F01/CW-F02</code> firmware/NVS qualification, and verify one-servo stopping before three-servo progression.</p>
 </article>
 </div>
 </section>
 
-<!-- Section: MuJoCo Native Workbench & Microduck Ingestion -->
+<!-- Section: MuJoCo Native Workbench & Microduck M0/M1 Ingestion -->
 <section class="section page-container" id="workbench">
 <div class="section-heading">
 <div>
 <p class="eyebrow">PHYSICAL AI REFERENCE FOUNDATION</p>
-<h2>Native MuJoCo Workbench &amp; Model Packages</h2>
+<h2>Native MuJoCo Workbench &amp; Microduck M0 Profile</h2>
 </div>
-<p>Bridging simulated digital twins to physical mini-robot embodiments.</p>
+<p>Pinned simulation-first Microduck artifacts (<code>microduck-sim-v1</code>) and remaining native M1–M4 gates.</p>
 </div>
 
 <div class="three-grid">
 <article class="content-card">
-  <span class="badge live">MODEL PACKAGE INGESTION</span>
-  <h3>Pinned Microduck 0.1.0</h3>
-  <p>Versioned MJCF package with SHA-256 manifest: 38 STL meshes, 14 actuators, total mass 0.737 kg. Validated against upstream Onshape CAD geometry.</p>
-  <p>Automated tests verify body tree hierarchy, joint limits, hinge ranges, and forward kinematics reproducibility.</p>
-  <a class="text-link" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/model_package_ingestion.md">Inspect Model Package ↗</a>
+  <span class="badge live">DELIVERED: M0 SIMULATION PROFILE</span>
+  <h3>Pinned Microduck 0.1.0 &amp; Goldens</h3>
+  <p>Versioned MJCF package (<code>packages/models/microduck/0.1.0/manifest.json</code>), read-only HAL adapter (<code>microduck-sim-v1.json</code>: 61 observations, 14 policy actions, 15 physical servo channels), and <strong>16 upstream-derived observation/ONNX (<code>alpha_walking.onnx</code>) artifact goldens</strong>.</p>
+  <p class="small">Pinned commits verified offline via <code>scripts/robotics/review_m0_pins.py</code> (recorded workbench baseline: 64 passed, 24 skipped; pin inventory is a separate check).</p>
+  <a class="text-link" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/simulation_first_acceptance.md">Inspect Simulation-First Record ↗</a>
 </article>
 
 <article class="content-card">
-  <span class="badge live">NATIVE FOUNDATION</span>
-  <h3>MuJoCo Workbench &amp; Tools</h3>
-  <p>Draft, run, and compare bounded simulations natively. Each experiment records joint state, simulated sensors, contacts, and model/recipe cryptographic identities.</p>
-  <p>Provides agentic tools for autonomous policy inspection and parameter tuning before hardware deployment.</p>
-  <a class="text-link" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/mujoco_development_workbench.md">Run Native Workbench ↗</a>
+  <span class="badge">CONDITIONAL CANDIDATE: MJSWAN 0.11.9</span>
+  <h3>Browser MuJoCo Assessment</h3>
+  <p>Completed source assessment of <code>mjswan 0.11.9</code> as a conditional <code>CW-S02</code> / <code>CW-S03</code> candidate. Identifies MuJoCo version alignment (<code>3.11.0</code> vs SeedCore <code>3.15.0</code>), <code>mjlab</code> exporter differences (<code>1.6.0</code> vs <code>1.3.0</code>), and required worker state-ownership, per-control veto, and telemetry seams.</p>
+  <a class="text-link" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/mjswan_integration_assessment.md">Read mjswan Assessment ↗</a>
 </article>
 
 <article class="content-card">
-  <span class="badge">NEXT PHYSICAL MILESTONE</span>
-  <h3>M0/M1 Simulation Driver</h3>
-  <p>Current active engineering milestone: formalize the 61-dim observation vector (48 state/history + 13 commands), 14-dim action vector, home poses, and zero-drift startup verification.</p>
-  <p>Directly paves the way for M2 (governed velocity tokens) and M3 (action-bound audit receipts).</p>
-  <a class="text-link" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/microduck_integration_plan.md">Follow Integration Plan ↗</a>
+  <span class="badge">OPEN: NATIVE M1–M4 GATES</span>
+  <h3>Independent Parity &amp; Live Authority</h3>
+  <p>Independent training-checkpoint outputs, runtime/body/policy compatibility, live native <code>M2</code> velocity/stop sessions, action-bound hardware signer provenance (<code>M3</code>), and supervised physical Microduck acceptance (<code>M4</code>) remain open.</p>
+  <a class="text-link" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/microduck_integration_plan.md">Follow Microduck Integration Plan ↗</a>
 </article>
 </div>
 </section>
 
-<!-- Roadmap Section -->
+<!-- Roadmap Section: Central World & Simulator Qualification Gates -->
 <section class="section page-container">
 <div class="section-heading">
 <div>
-<p class="eyebrow">SIMULATOR EVOLUTION ROADMAP</p>
-<h2>Measurable Qualification Gates</h2>
+<p class="eyebrow">ACTIVE ENGINEERING QUEUE</p>
+<h2>Central World &amp; Simulator Qualification Gates</h2>
 </div>
-<p>Each milestone is gated by deterministic mathematical invariants and reproducible test fixtures.</p>
+<p>Each work package is gated by deterministic fixtures, explicit scope labels, and retained verification artifacts.</p>
 </div>
 
 <div class="roadmap">
 <article class="roadmap-row">
-  <span class="mono">SIM-1</span>
+  <span class="mono">SIM-1–3</span>
   <div>
-    <h3>Worker &amp; Model Contracts</h3>
-    <p>WebWorker isolation, transferable ArrayBuffers, immutable model digests, and reproducible lesson traces.</p>
+    <h3>Planar &amp; 3D Kinematic Tree Studio (Wasm ABI 1 &amp; ABI 2)</h3>
+    <p>1-, 2-, and 3-link planar chains in a 3D orbit viewport, live M(q)/J(q) inspectors, resumable checkpoints, and <strong>78/78 Node.js tests + 30 native/Wasm invariant groups passing</strong>.</p>
   </div>
-  <span class="badge live">Delivered &amp; Qualified</span>
+  <span class="badge live">Delivered (Simulation)</span>
 </article>
 
 <article class="roadmap-row">
-  <span class="mono">SIM-2</span>
+  <span class="mono">CW1</span>
   <div>
-    <h3>Owned C++ / Wasm Core (ABI 1)</h3>
-    <p>Zero-allocation C++ two-link dynamics kernel, dual native/Wasm build, JS/native trace equivalence (&lt; 1e-12 error), and resumable checkpoints.</p>
+    <h3>Central World Component Catalog Foundation</h3>
+    <p>Strict <code>.sc-part.json</code> v1 schema, 12 draft/proxy component records, box-proxy GLB meshes, read-only part viewer, and <strong>107 passing registry/model tests</strong>.</p>
   </div>
-  <span class="badge live">Delivered &amp; Qualified</span>
+  <span class="badge live">Delivered (Proxy Scope)</span>
 </article>
 
 <article class="roadmap-row">
-  <span class="mono">SIM-3</span>
+  <span class="mono">CW-A01</span>
   <div>
-    <h3>Multi-Link Tree Dynamics &amp; 3D Studio (ABI 2)</h3>
-    <p>1-, 2-, and 3-link serial chains, Cramer cofactor matrix inversion, skew-symmetric Coriolis vector, 3D perspective projection with orbit controls, live M(q)/J(q) inspectors, <strong>78/78 tests passing</strong>.</p>
+    <h3>Assembly v2 Authoring Contract (<code>seedcore.assembly.v2</code>)</h3>
+    <p>RFC 8785 <code>seedcore.jcs-safe-integers.v1</code> cross-language canonical bytes, exact catalog byte pins, <code>opposed_z_rx_pi</code> mating poses, explicit proxy <code>actuator_outputs</code>, and <strong>117 Python + 71 Node conformance tests passing</strong>.</p>
   </div>
-  <span class="badge live">Delivered &amp; Qualified</span>
+  <span class="badge live">Software Exit Passed</span>
 </article>
 
 <article class="roadmap-row">
-  <span class="mono">SIM-4</span>
+  <span class="mono">CW-A02</span>
   <div>
-    <h3>Contacts &amp; Floating Bodies</h3>
-    <p>Qualify rigid contacts, friction cones, joint stops, floating base dynamics, and simulated IMU sensors.</p>
+    <h3>Offline Mini Studio Shell &amp; Immutable Revision Store (<code>CW-ASM-02</code>)</h3>
+    <p>Strict duplicate-key JSON rejection, immutable 32-entry / 2 MiB revision history, deterministic undo/redo, stale async asset-load fencing, Three.js rest-pose preview, and <strong>58 TS tests, 13 API tests, and 12 browser exercise groups at the CW-A02 handoff</strong>.</p>
   </div>
-  <span class="badge">Planned</span>
+  <span class="badge live">Local Slice Passed</span>
 </article>
 
 <article class="roadmap-row">
-  <span class="mono">SIM-5</span>
+  <span class="mono">CW-A03</span>
   <div>
-    <h3>Independent Simulation Batches</h3>
-    <p>Headless multi-instance parallel stepping, memory bounds, and Gymnasium/Python reinforcement learning wrappers.</p>
+    <h3>Proxy Snapping &amp; Numeric Placement</h3>
+    <p>15 mm candidate capture, exact mating transforms, ghost previews, keyboard/numeric placement, subtree reparenting, and atomic undo/redo (<code>CW-SNAP-01</code>). The combined authoring suite records 88 TS tests, 14 API tests, and 18 browser exercise groups.</p>
   </div>
-  <span class="badge">Planned</span>
+  <span class="badge live">Local Proxy Slice Passed</span>
 </article>
 
 <article class="roadmap-row">
-  <span class="mono">SIM-6</span>
+  <span class="mono">CW-A04</span>
   <div>
-    <h3>Governed SeedCore Simulator Bridge</h3>
-    <p>Full integration with SeedCore capability tokens, denial cases, and closed-loop audit receipts.</p>
+    <h3>Pure DRC Worker &amp; Unknown-Aware BOM</h3>
+    <p>Next: UART/I2C/GPIO/rail findings bound to the exact assembly and electrical-plan digest. Physical harness and rail qualification remain open in <code>CW-D01</code> for 26 Oct–1 Nov.</p>
   </div>
-  <span class="badge">Planned</span>
+  <span class="badge">Next Active Package</span>
+</article>
+
+<article class="roadmap-row">
+  <span class="mono">CW-S / G / L</span>
+  <div>
+    <h3>Restricted MJCF Compiler, Browser MuJoCo, Scoped Replay &amp; Alpha Review</h3>
+    <p><code>CW-S01–S04</code> assembly-to-MJCF and Robot Moments gesture timeline, <code>CW-G01–G02</code> live admission/replay, <code>CW-E01</code> Build Pack exporter, conditional <code>CW-F01/F02</code> firmware lane, and January authoring/simulation alpha review.</p>
+  </div>
+  <span class="badge">Planned / Gated</span>
 </article>
 </div>
-<p class="source-note">Source: <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/mini_robot_simulator_implementation_plan.md">SeedCore Simulator Implementation Plan</a>. Verified across Node.js, CMake/CTest, and Python pytest.</p>
+<p class="source-note">Sources: <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/central_world_remaining_delivery_schedule.md">Central World Remaining Delivery Schedule</a> and <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/central_world_acceptance_matrix.md">Central World Acceptance Matrix</a> (Updated October 19, 2026).</p>
 </section>
 
 <!-- CTA -->
@@ -430,7 +471,7 @@
   <ul>
     <li><a href="studio/tree-lab.html">3D Tree Studio (SIM-3)</a></li>
     <li><a href="studio/index.html">2D Planar Lessons</a></li>
-    <li><a href="develop.html">Tech Stack &amp; Blueprint</a></li>
+    <li><a href="develop.html#central-world">Central World (CW-A02/A03)</a></li>
   </ul>
 </div>
 <div>
@@ -439,7 +480,7 @@
     <li><a href="diy-showcase.html#microduck">Microduck Biped</a></li>
     <li><a href="diy-showcase.html#reachy">Reachy Mini</a></li>
     <li><a href="diy-showcase.html#mini-arm">3-Link Manipulator</a></li>
-    <li><a href="diy-showcase.html#parts-gallery">Parts Gallery</a></li>
+    <li><a href="diy-showcase.html#parts-gallery">Parts Gallery (CW1)</a></li>
   </ul>
 </div>
 <div>

@@ -3,17 +3,17 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Build Gallery · SeedCore Mini Robotics</title>
-<meta name="description" content="Discover Microduck biped, 3-link Wasm manipulator, SO-100 maker arm, Reachy Mini, and the standardized Parts Gallery with original project links and integration status.">
+<title>Build Gallery &amp; Central World Catalog · SeedCore Mini Robotics</title>
+<meta name="description" content="Explore the Microduck M0 simulation profile, 3-link Wasm manipulator, Central World tabletop-starter.sc-assembly.json v0.2.0, and the 12 draft .sc-part.json component catalog.">
 <meta name="theme-color" content="#070e1b">
 <link rel="icon" href="assets/seedcore-mark.svg" type="image/svg+xml">
 <link rel="canonical" href="https://seedcore.ai/diy-showcase.html">
-<meta property="og:title" content="Build Gallery · SeedCore Mini Robotics">
-<meta property="og:description" content="Discover Microduck biped, 3-link Wasm manipulator, SO-100 maker arm, Reachy Mini, and standardized maker components.">
+<meta property="og:title" content="Build Gallery &amp; Central World Catalog · SeedCore Mini Robotics">
+<meta property="og:description" content="Explore Microduck biped, 3-link Wasm manipulator, SO-100 arm, Reachy Mini, and Central World component registry drafts.">
 <meta property="og:type" content="website">
 
-<link rel="stylesheet" href="css/robotics-central.css?v=20261016a">
-<script src="js/robotics-central.js?v=20261016a" defer></script>
+<link rel="stylesheet" href="css/robotics-central.css?v=20261019b">
+<script src="js/robotics-central.js?v=20261019a" defer></script>
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -38,21 +38,21 @@
 
 <main id="main">
 <section class="page-intro page-container">
-<p class="eyebrow">02 / BUILD GALLERY &amp; REFERENCE EMBODIMENTS</p>
+<p class="eyebrow">02 / BUILD GALLERY &amp; CENTRAL WORLD COMPONENT REGISTRY</p>
 <h1>Meet your next<br><em>mini embodiment.</em></h1>
-<p class="lead">Explore small physical and simulated robots, inspect standardized maker components, and follow the original open-source builders. Safe-by-physics, micro-torque, and built for exploration.</p>
+<p class="lead">Explore small physical and simulated reference robots, inspect the Central World <code>.sc-part.json</code> draft catalog and <code>seedcore.assembly.v2</code> starter, and see exact qualification boundaries between delivered simulation/authoring software and open hardware gates.</p>
 </section>
 
 <section class="page-container">
 <div class="consumer-callout-banner" style="margin-top: 0;">
 <div class="consumer-callout-text">
-  <h3>Beginner &amp; Consumer Guide: Choose Your Desk Embodiment</h3>
-  <p>Looking for a weekend family build, an interactive STEM lesson, or a physical body for your AI? Every project below uses lightweight 3D printed parts, safe 2S LiPo or 5V USB power, and connects directly to your web browser with zero software installations.</p>
+  <h3>Simulation-First Today · Transparent Hardware Qualification</h3>
+  <p>Every embodiment and component below separates delivered software evidence (<code>SIM-3</code> Wasm dynamics, <code>CW-A01 v2</code> / <code>CW-A02/A03</code> assembly authoring, and <code>M0</code> read-only simulation goldens) from open physical hardware gates (<code>CW-D01</code> source drawings, regulated rail verification, and <code>G1/G2</code> stopping evidence).</p>
 </div>
 <div style="display: flex; gap: 10px; flex-wrap: wrap;">
   <span class="consumer-step-meta">🛡️ Safe-by-Physics</span>
-  <span class="consumer-step-meta">🔌 WebSerial USB-C</span>
-  <span class="consumer-step-meta">⚡ Zero-Install Browser</span>
+  <span class="consumer-step-meta">📦 Assembly v2 (<code>0.2.0</code>)</span>
+  <span class="consumer-step-meta">⚡ Zero-Install Wasm</span>
 </div>
 </div>
 
@@ -128,19 +128,19 @@
   <!-- Warm Orange Duck Bill -->
   <path d="M168 83H216L228 93C228 99 210 103 192 103C174 103 156 99 156 93Z" fill="#f59e0b" stroke="#92400e" stroke-width="2" stroke-linejoin="round"/>
 </svg>
-<span class="art-note">Pinned MJCF · 14x STS3215 Bus</span>
+<span class="art-note">Pinned MJCF 0.1.0 · 16 ONNX Goldens</span>
 </div>
 <div class="robot-copy">
-  <span class="badge live">Advanced Maker Project</span>
+  <span class="badge live">Native Reference Profile (<code>M0</code>)</span>
   <h2>Microduck Biped</h2>
   <ul class="pill-list">
-    <li>Difficulty: Advanced Maker</li>
-    <li>Build Time: ~5-6 Hours</li>
-    <li>Est. Cost: ~$180 BOM</li>
-    <li>14 Bus Servos</li>
+    <li>61 Obs / 14 Actions</li>
+    <li>15 Physical Servo Channels</li>
+    <li>0.737 kg · 38 Meshes</li>
+    <li>16 ONNX Goldens</li>
   </ul>
-  <p>An open-source bipedal robot selected as SeedCore’s primary reference embodiment. Compact 0.737 kg body, 14 degrees of freedom, and 38 3D-printable parts.</p>
-  <p class="small"><strong>Consumer Quickstart:</strong> 3D-print parts in PETG/PLA, assemble leg linkages with M2/M3 screws, and connect to SeedCore's native MuJoCo workbench to verify zero-drift initial stance before powering hardware.</p>
+  <p>SeedCore’s primary native reference embodiment (<code>packages/models/microduck/0.1.0</code>). Delivered simulation-first slice includes the read-only <code>microduck-sim-v1</code> HAL adapter and 16 upstream-derived observation/ONNX (<code>alpha_walking.onnx</code>) replay goldens.</p>
+  <p class="small"><strong>Qualification Status:</strong> Pinned runtime (<code>2703e09…</code>) and RL (<code>cb70b79…</code>) commits verified locally. Independent training-checkpoint parity (<code>M1</code>) and physical governed motion (<code>M2–M4</code>) remain open.</p>
   <a class="text-link" href="https://github.com/pollen-robotics/microduck">Upstream project repository ↗</a>
 </div>
 </article>
@@ -187,21 +187,21 @@
 <span class="art-note">SIM-3 3D Viewport · Wasm ABI 2</span>
 </div>
 <div class="robot-copy">
-  <span class="badge live">Instant Free Simulation</span>
+  <span class="badge live">78/78 Tests Passing</span>
   <h2>3-Link Articulated Manipulator</h2>
   <ul class="pill-list">
-    <li>Difficulty: All Ages (Zero Assembly)</li>
+    <li>1/2/3-Link Planar Chains</li>
     <li>Setup Time: Instant (0 Min)</li>
-    <li>Cost: $0 (Free)</li>
-    <li>Kid Safe: 100%</li>
+    <li>Wasm ABI 2 (13,242 Bytes)</li>
+    <li>Live M(q) &amp; J(q)</li>
   </ul>
-  <p>Interactive 3-DOF revolute serial chain running in the browser on our zero-allocation C++/Wasm analytical dynamics kernel (ABI 2). Full 3D perspective orbit controls and live matrix inspectors.</p>
-  <p class="small"><strong>Consumer Quickstart:</strong> Open the link below in Chrome or Safari. Drag joint angle sliders to command the 3D arm, orbit the camera with your mouse, and inspect live mechanical energy conservation in real time.</p>
+  <p>Interactive 1-, 2-, and 3-DOF revolute serial chains running in the browser on our zero-allocation C++/Wasm analytical dynamics kernel (ABI 2). Full 3D perspective orbit controls and live matrix inspectors.</p>
+  <p class="small"><strong>Browser Quickstart:</strong> Open the link below in Chrome or Safari. Drag joint angle sliders to command the arm, orbit the camera, and export state snapshots.</p>
   <a class="text-link" href="studio/tree-lab.html">Launch 3D Tree Studio ↗</a>
 </div>
 </article>
 
-<!-- SO-100 Maker Arm -->
+<!-- Tabletop Starter & SO-100 Maker Arm -->
 <article class="robot-card" id="so-100" data-category="manipulator">
 <div class="robot-visual sage">
 <svg class="robot-art" viewBox="0 0 360 300" aria-hidden="true">
@@ -228,20 +228,20 @@
   <!-- Parallel Gripper Jaws -->
   <path d="M275 120L298 110L302 118M275 132L296 144L302 136" fill="none" stroke="#fde047" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
-<span class="art-note">$150 BOM · 5x STS3215 Bus</span>
+<span class="art-note">CW-A01/A02 Starter · Fast Spine Fixture</span>
 </div>
 <div class="robot-copy">
-  <span class="badge live">Best Beginner / Family Build</span>
-  <h2>SO-100 / Tabletop Arm</h2>
+  <span class="badge live">CW-A02/A03 Proxy Starter</span>
+  <h2>Tabletop Starter / SO-100 Arm</h2>
   <ul class="pill-list">
-    <li>Difficulty: Beginner Maker</li>
-    <li>Build Time: ~90 Minutes</li>
-    <li>Est. Cost: ~$150 BOM</li>
-    <li>Tools: 2mm Hex Key</li>
+    <li>5-Part Starter (<code>0.2.0</code>)</li>
+    <li>Digest: <code>2550d184…</code></li>
+    <li>117 Py + 71 Node Tests</li>
+    <li>1 → 3 Servo Bench Gate</li>
   </ul>
-  <p>The popular 3D-printed leader-follower robotic arm driven by low-cost Feetech STS3215 magnetic encoder serial bus servos. Ideal for desktop teleoperation and ACT training.</p>
-  <p class="small"><strong>Consumer Quickstart:</strong> 3D-print 6 arm brackets, screw in 5 bus servos with the included hex key, daisy-chain the 3-pin snap cables, and plug into your laptop with USB-C. No soldering or Linux required.</p>
-  <a class="text-link" href="develop.html#blueprint">Read the Fast Spine Blueprint ↗</a>
+  <p>In Central World (<code>CW-A01 v2</code> &amp; <code>CW-A02/A03</code>), the 5-part <code>tabletop-starter.sc-assembly.json</code> serves as the canonical authoring reference, while a 1–3 DOF <code>STS3215</code> arm is the proposed bounded Fast Spine bench fixture.</p>
+  <p class="small"><strong>Qualification Status:</strong> Offline <code>CW-A02/A03</code> Mini Studio authoring and placement and localhost <code>fast-spine-v1</code> session rehearsal are delivered. Physical bench progression (1 servo → 3 servos) awaits <code>CW-D01</code> and <code>G1</code> gates.</p>
+  <a class="text-link" href="develop.html#central-world">Explore Central World &amp; Fast Spine ↗</a>
 </div>
 </article>
 
@@ -277,43 +277,43 @@
   <circle cx="204" cy="115" r="7.5" fill="#020617"/>
   <circle cx="201" cy="112" r="3" fill="#4ade80"/>
 </svg>
-<span class="art-note">Companion Reference · 3-DOF Neck</span>
+<span class="art-note">Companion Reference · Body-Specific Envelope</span>
 </div>
 <div class="robot-copy">
-  <span class="badge">Desktop AI Companion</span>
+  <span class="badge">Companion Reference</span>
   <h2>Reachy Mini</h2>
   <ul class="pill-list">
-    <li>Difficulty: Intermediate</li>
-    <li>Build Time: ~2-3 Hours</li>
-    <li>Focus: Voice Companion</li>
-    <li>Kid Safe: 100%</li>
+    <li>Multi-Joint Companion</li>
+    <li>Upstream SDK</li>
+    <li>Body-Specific Vectors</li>
+    <li>Supervised interaction reference</li>
   </ul>
   <p>An expressive desktop companion robot with its own upstream SDK. SeedCore retains earlier Reachy integration work as a multi-joint companion reference alongside Microduck.</p>
-  <p class="small"><strong>Consumer Quickstart:</strong> Mount the 3-DOF pan-tilt neck mechanism and webcam. Connect to your voice assistant of choice to synchronize real-time nods, head-tilts, and expressive eye animations with audio responses.</p>
+  <p class="small"><strong>Architecture Boundary:</strong> Uses body-specific observation/action vectors under SeedCore's common evidence envelope rather than reusing Microduck's 61/14 mapping.</p>
   <a class="text-link" href="https://huggingface.co/docs/reachy_mini/index">Official Reachy docs ↗</a>
 </div>
 </article>
 </div>
 
-<p class="source-note">These are reference projects and models, not commercial kits. Illustrations and specifications are open-source reference engineering. Pinned models are located in <code>packages/models/</code>.</p>
+<p class="source-note">These are open-source reference projects and simulation/proxy models, not commercial kits. Pinned models live in <code>packages/models/</code> and draft component definitions live in <code>packages/component-registry/</code>.</p>
 </section>
 
-<!-- Standardized Maker Parts Gallery (Inspired by SeedCore Mini Components Studio Preview) -->
+<!-- Standardized Maker Parts Gallery (Central World Component Registry & M0/CW-D01 Register) -->
 <section class="section page-container" id="parts-gallery">
 <div class="section-heading">
 <div>
-  <p class="eyebrow">03 / MINI COMPONENTS STUDIO · PARTS GALLERY</p>
-  <h2>Standardized maker components.</h2>
+  <p class="eyebrow">03 / CENTRAL WORLD COMPONENT REGISTRY (<code>CW1</code> &amp; <code>CW-D01</code>)</p>
+  <h2>Draft <code>.sc-part.json</code> catalog &amp; bench candidates.</h2>
 </div>
-<p>Real off-the-shelf electronics and 3D-printed brackets shared across Microduck, SO-100, and the $150 Fast Spine blueprint.</p>
+<p>12 byte-pinned draft component records (<code>c16b805</code>) power the <code>CW-A01 v2</code> / <code>CW-A02/A03</code> tabletop starter, while exact supplier drawings and rail ratings are tracked in the <code>M0 / CW-D01</code> register.</p>
 </div>
 
 <div class="parts-gallery-grid">
-  <!-- Part 1: Microduck Biped Chassis -->
+  <!-- Part 1: Microduck Biped Chassis / Proxy Brackets -->
   <article class="part-card">
     <div class="part-card-top">
-      <span class="part-tag">3D PRINT (.3MF / .STL)</span>
-      <span class="part-dot amber" title="3D Printable CAD Package"></span>
+      <span class="part-tag">PROXY MOUNT V1 (<code>CW-A01 V2</code>)</span>
+      <span class="part-dot amber" title="Draft Proxy Mesh · CAD Export Planned in CW-E01"></span>
     </div>
     <div class="part-art">
       <svg viewBox="0 0 180 130" aria-hidden="true">
@@ -331,16 +331,16 @@
         <ellipse cx="90" cy="50" rx="5" ry="3" fill="#0f172a"/>
       </svg>
     </div>
-    <h3>Microduck Biped Chassis</h3>
-    <p>Lightweight PETG/PLA structural torso and hip bracket with M2/M3 brass heat-set insert pockets.</p>
-    <div class="part-meta"><span>Weight: ~42g</span><span>Est: $4 Filament</span></div>
+    <h3>Base &amp; Bracket Proxies</h3>
+    <p>Byte-pinned box-proxy GLBs with <code>opposed_z_rx_pi</code> rest transforms (corrected Z = 0, 0.011 m heights in <code>tabletop-starter.sc-assembly.json</code>).</p>
+    <div class="part-meta"><span>Standard: proxy_mount_v1</span><span>Status: Draft Proxy</span></div>
   </article>
 
   <!-- Part 2: Feetech STS3215 Servo -->
   <article class="part-card">
     <div class="part-card-top">
-      <span class="part-tag">1 MBPS TTL UART BUS</span>
-      <span class="part-dot green" title="Supported in Fast Spine HAL"></span>
+      <span class="part-tag">TTL HALF-DUPLEX (<code>STS3215 A/0</code>)</span>
+      <span class="part-dot amber" title="Spec A/0 Inventoried · Connector &amp; Rail Reconciliation Open"></span>
     </div>
     <div class="part-art">
       <svg viewBox="0 0 180 130" aria-hidden="true">
@@ -360,15 +360,15 @@
       </svg>
     </div>
     <h3>Feetech STS3215 Servo</h3>
-    <p>12-bit magnetic encoder smart serial bus actuator with daisy-chain 3-pin UART sockets and overload clutch.</p>
-    <div class="part-meta"><span>Torque: 30 kg·cm</span><span>Est: ~$15 / unit</span></div>
+    <p>Spec A/0 (<code>sha256:eeac0fb6…</code>) identifies TTL half-duplex and 4–7.4 V input (6 V / 7.4 V columns). Page 4 vs. page 8 pin numbering requires physical harness reconciliation.</p>
+    <div class="part-meta"><span>Proxy: actuator_outputs</span><span>CW-D01: Pin/Rail Open</span></div>
   </article>
 
-  <!-- Part 3: ESP32-S3 Eye Controller -->
+  <!-- Part 3: ESP32-S3-DevKitC-1-N8R8 Controller -->
   <article class="part-card">
     <div class="part-card-top">
-      <span class="part-tag">FAST SPINE MCU</span>
-      <span class="part-dot green" title="200-500 Hz Spline Firmware"></span>
+      <span class="part-tag">ESP32-S3-DEVKITC-1-N8R8</span>
+      <span class="part-dot amber" title="Reference Guide v1.0 Inventoried · PCB Revision &amp; GPIO Ownership Open"></span>
     </div>
     <div class="part-art">
       <svg viewBox="0 0 180 130" aria-hidden="true">
@@ -387,16 +387,16 @@
         <circle cx="103" cy="52" r="2.2" fill="#38bdf8"/>
       </svg>
     </div>
-    <h3>ESP32-S3 Eye Controller</h3>
-    <p>Dual-core microcontroller running the 200–500 Hz cubic spline interpolator, WebSerial USB bridge, and stereo camera input.</p>
-    <div class="part-meta"><span>Bus: WebSerial / UART</span><span>Est: $6–$14</span></div>
+    <h3>ESP32-S3 Controller Candidate</h3>
+    <p>Ordering variant <code>WROOM-1-N8R8</code> identified in <code>M0 / CW-D01</code> (USB on GPIO19/20; octal PSRAM restricts GPIO35–37). Actual PCB revision and transceiver schematic remain open.</p>
+    <div class="part-meta"><span>Target BOM: $12 (Vol)</span><span>CW-D01: GPIO Open</span></div>
   </article>
 
-  <!-- Part 4: Biped Leg Link Assembly (Highlighted Card like attached preview) -->
+  <!-- Part 4: Biped Leg Link & Tabletop Assembly (Highlighted Card) -->
   <article class="part-card featured">
     <div class="part-card-top">
-      <span class="part-tag">ACTIVE KINEMATIC LINK</span>
-      <span class="part-dot green" title="Pinned MJCF Verified"></span>
+      <span class="part-tag">VERIFIED SIMULATION / PROXY</span>
+      <span class="part-dot green" title="CW-A01 v2 &amp; M0 MJCF Verified Locally"></span>
     </div>
     <div class="part-art">
       <svg viewBox="0 0 180 130" aria-hidden="true">
@@ -415,16 +415,16 @@
         <circle cx="118" cy="64" r="7" fill="#1e293b" stroke="#facc15" stroke-width="2"/>
       </svg>
     </div>
-    <h3>Biped Leg Link Assembly</h3>
-    <p>Pre-calibrated femur, tibia, and webbed foot linkage geometry matched to SeedCore’s pinned MJCF inertial tensors.</p>
-    <div class="part-meta"><span>DOF: 6-DOF Pair</span><span>MJCF: 0.1.0 Pinned</span></div>
+    <h3>Pinned Kinematic Assemblies</h3>
+    <p>The 5-part <code>tabletop-starter.sc-assembly.json</code> (<code>0.2.0</code>) has Python/TypeScript canonical-byte parity. The separate Microduck 0.1.0 MJCF package has pinned asset integrity checks.</p>
+    <div class="part-meta"><span>CW-A01: 117 Python + 71 Node tests</span><span>CW-A02/A03: local proxy authoring</span></div>
   </article>
 
-  <!-- Part 5: ToF Sensor Hat -->
+  <!-- Part 5: ToF / Sensor Hat Proxy -->
   <article class="part-card">
     <div class="part-card-top">
-      <span class="part-tag">I2C RANGEFINDER</span>
-      <span class="part-dot green" title="Supported Telemetry Scope"></span>
+      <span class="part-tag">I2C / UART NET PROPOSALS</span>
+      <span class="part-dot green" title="Validated in Assembly v2 Electrical Net Schema"></span>
     </div>
     <div class="part-art">
       <svg viewBox="0 0 180 130" aria-hidden="true">
@@ -441,16 +441,16 @@
         <rect x="64" y="82" width="22" height="10" rx="2" fill="#facc15" stroke="#854d0e" stroke-width="1.5"/>
       </svg>
     </div>
-    <h3>ToF Sensor Hat</h3>
-    <p>Laser Time-of-Flight distance and micro-terrain proximity shield over 400 kHz I2C for local collision bounding.</p>
-    <div class="part-meta"><span>Range: 40–4000 mm</span><span>Bus: I2C 3.3V</span></div>
+    <h3>Sensor Hat &amp; Bus Nets</h3>
+    <p>Assembly v2 validates signal nets (<code>TTL_UART_BUS</code>, <code>I2C</code>, <code>PWM</code>) and interface roles, including at most one controller on TTL UART / I2C nets. Full I2C address &amp; pull-up DRC arrives in <code>CW-A04</code>.</p>
+    <div class="part-meta"><span>Z Rest: 0.060 m</span><span>DRC: Planned CW-A04</span></div>
   </article>
 
-  <!-- Part 6: DIY 2S LiPo Battery Pack -->
+  <!-- Part 6: Regulated Power & Rail Proposals -->
   <article class="part-card">
     <div class="part-card-top">
-      <span class="part-tag">7.4V SAFE DESK POWER</span>
-      <span class="part-dot amber" title="2S LiPo / 18650 Pack"></span>
+      <span class="part-tag">POWER_RAIL &amp; BEC GATE</span>
+      <span class="part-dot amber" title="Nominal 2S Insufficient Without Regulated Rail Qualification"></span>
     </div>
     <div class="part-art">
       <svg viewBox="0 0 180 130" aria-hidden="true">
@@ -464,12 +464,12 @@
         <rect x="90" y="48" width="32" height="40" rx="6" fill="#f97316" stroke="#9a3412" stroke-width="1.5"/>
         <!-- Top Balance / XT30 Connector -->
         <rect x="76" y="34" width="24" height="10" rx="3" fill="#facc15" stroke="#854d0e" stroke-width="1.5"/>
-        <text x="88" y="72" font-family="monospace" font-size="9" fill="#0f172a" font-weight="bold" text-anchor="middle">2S 7.4V</text>
+        <text x="88" y="72" font-family="monospace" font-size="8.5" fill="#0f172a" font-weight="bold" text-anchor="middle">RAIL GATE</text>
       </svg>
     </div>
-    <h3>DIY 2S LiPo Battery Pack</h3>
-    <p>Dual-cell 7.4V 18650 / LiPo pack with integrated BMS over-current cut-off for untethered biped and arm experiments.</p>
-    <div class="part-meta"><span>Power: 2S LiPo OK</span><span>Est: $12–$15</span></div>
+    <h3>Power &amp; Ground Rail Proposals</h3>
+    <p>Assembly v2 enforces explicit <code>POWER_RAIL</code> source/sink pin bindings. Per <code>M0 / CW-D01</code>, a nominal 2S description does not approve direct unverified servo supply; BEC/fuse ratings stay open.</p>
+    <div class="part-meta"><span>Spec A/0: 4–7.4 V</span><span>CW-D01: Rail Open</span></div>
   </article>
 </div>
 </section>
@@ -479,7 +479,7 @@
 <div>
   <p class="eyebrow">CONTRIBUTE AN EMBODIMENT</p>
   <h2>Have a mini-robot or custom maker arm?</h2>
-  <p>Whether you are building a quadruped, a 5-DOF desktop arm, or an educational wheeled bot, SeedCore's trust tokens and Fast Spine C++ interpolator can govern your physical movements.</p>
+  <p>Whether you are authoring a proxy assembly in Mini Studio or testing bounded simulation sessions, SeedCore's open contracts and verification kernels are built for reproducible engineering.</p>
 </div>
 <a class="btn btn-primary" href="contact.html?interest=build">Share your build ↗</a>
 </div>
@@ -501,7 +501,7 @@
   <ul>
     <li><a href="studio/tree-lab.html">3D Tree Studio (SIM-3)</a></li>
     <li><a href="studio/index.html">2D Planar Lessons</a></li>
-    <li><a href="develop.html">Tech Stack &amp; Blueprint</a></li>
+    <li><a href="develop.html#central-world">Central World (CW-A02/A03)</a></li>
   </ul>
 </div>
 <div>
@@ -510,7 +510,7 @@
     <li><a href="diy-showcase.html#microduck">Microduck Biped</a></li>
     <li><a href="diy-showcase.html#reachy">Reachy Mini</a></li>
     <li><a href="diy-showcase.html#mini-arm">3-Link Manipulator</a></li>
-    <li><a href="diy-showcase.html#parts-gallery">Parts Gallery</a></li>
+    <li><a href="diy-showcase.html#parts-gallery">Parts Gallery (CW1)</a></li>
   </ul>
 </div>
 <div>

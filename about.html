@@ -6,7 +6,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Our Direction &amp; Trust Runtime · SeedCore</title>
-<meta name="description" content="SeedCore is the verifiable trust runtime and operating foundation for physical AI and safe-by-physics mini robotics.">
+<meta name="description" content="SeedCore is the open trust runtime for physical AI: browser-first robot experiments, Central World assembly contracts, bounded execution authority, and verifiable action evidence.">
 
 <meta name="theme-color" content="#070e1b">
 <link rel="icon" href="assets/seedcore-mark.svg" type="image/svg+xml">
@@ -14,11 +14,11 @@
 <link rel="canonical" href="https://seedcore.ai/about.html">
 
 <meta property="og:title" content="Our Direction &amp; Trust Runtime · SeedCore">
-<meta property="og:description" content="SeedCore is the verifiable trust runtime and operating foundation for physical AI and safe-by-physics mini robotics.">
+<meta property="og:description" content="SeedCore is the open trust runtime for physical AI: browser-first robot experiments, bounded execution authority, and verifiable action evidence.">
 <meta property="og:type" content="website">
 
-<link rel="stylesheet" href="css/robotics-central.css?v=20261014b">
-<script src="js/robotics-central.js?v=20261014b" defer>
+<link rel="stylesheet" href="css/robotics-central.css?v=20261019b">
+<script src="js/robotics-central.js?v=20261019a" defer>
 </script>
 
 </head>
@@ -45,7 +45,7 @@
 <section class="page-intro page-container">
 <p class="eyebrow">OUR DIRECTION &amp; PHILOSOPHY</p>
 <h1>Safe by physics.<br><em>Governed by proof.</em></h1>
-<p class="lead">Mini Robotics Central is SeedCore’s public proving ground. Beneath the open simulations and maker blueprints sits our fundamental engineering goal: a verifiable trust runtime and operating foundation for physical AI.</p>
+<p class="lead">SeedCore is the open trust runtime for affordable physical AI: browser-first robot experiments, canonical Central World assembly authoring, bounded execution authority, and verifiable action evidence.</p>
 </section>
 
 <!-- The Physical Paradigm Shift -->
@@ -53,11 +53,11 @@
 <article class="content-card">
 <span class="badge">THE PHYSICAL PARADIGM SHIFT</span>
 <h3>Why mini-robotics changes everything.</h3>
-<p>Industrial robots weigh hundreds of kilograms and swing kilowatt actuators. If an autonomous model errs by an inch, steel frames bend and humans are injured—which is why industrial robots are locked behind hard physical cages. Mini-robotics under 1&nbsp;kg is inherently <strong>safe-by-physics</strong>. Low mass, minimal inertia, and compliant joint limits ensure that physical contact is harmless to humans. This enables fearless personal prototyping on any desk.</p>
+<p>Small robot bodies make compact, supervised experiments practical. Lower mass can reduce collision energy, but actuator torque, pinch points, speed, power rails, and the workspace still need evaluation. SeedCore starts with simulation and explicit limits; physical safety requires measured qualification of each build.</p>
 <ul class="pill-list">
-  <li>Sub-1kg Payloads</li>
-  <li>Harmless Collisions</li>
-  <li>Personal Desk Safe</li>
+  <li>Small Robot Bodies</li>
+  <li>Bounded Motion</li>
+  <li>Supervised Bench Checks</li>
   <li>Rapid Iteration</li>
 </ul>
 </article>
@@ -65,12 +65,12 @@
 <article class="content-card">
 <span class="badge">THE BEHAVIORAL CHALLENGE</span>
 <h3>Why trust requires cryptographic proof.</h3>
-<p>Physical safety does not eliminate autonomy risks. As AI agents and vision-language models take real-world actions, they interact with personal workspaces, sensitive objects, and network services. Without a strict trust boundary, runaway planner loops, actuator over-torquing, or privacy breaches can cause damage. Because physical cages are absent, <strong>behavioral governance must be mathematical</strong>—enforced via capability tokens, local watchdog revocation, and immutable evidence trails.</p>
+<p>AI agents and vision-language models propose actions that affect workspaces, hardware, and network services. SeedCore makes permission and evidence explicit through single-use session tokens, revocation fencing, watchdog bounds, and tamper-evident receipts. The delivered rehearsal exercises these controls in host simulation; a token or verified receipt does not establish physical safety.</p>
 <ul class="pill-list">
-  <li>ActionIntent Gateway</li>
-  <li>Scoped Capability Tokens</li>
-  <li>Sub-ms Watchdog Revocation</li>
-  <li>Content-Addressed Audit Log</li>
+  <li>Single-Use Session Tokens</li>
+  <li>Revocation Fencing</li>
+  <li>Authority Epoch Invalidation</li>
+  <li>Python &amp; Rust Receipt Verifiers</li>
 </ul>
 </article>
 </section>
@@ -80,38 +80,38 @@
 <div class="section-heading">
 <div>
 <p class="eyebrow">THE TRUST LIFECYCLE</p>
-<h2>From high-level intent to verifiable motion.</h2>
-<p class="lead">How SeedCore admits, bounds, and proves physical actions across the slow brain and fast spine.</p>
+<h2>From canonical assembly &amp; intent to verifiable evidence.</h2>
+<p class="lead">How SeedCore separates offline proxy authoring, policy admission, bounded session execution, and receipt verification.</p>
 </div>
 </div>
 
 <div class="trust-diagram">
 <div>
-  <span>01 / PROPOSE</span>
-  <h3>Planner / VLM</h3>
-  <p>Proposes a high-level <code>ActionIntent</code> with target coordinates, speed limits, bounding box, and bounded Time-to-Live (TTL).</p>
+  <span>01 / AUTHOR &amp; PROPOSE</span>
+  <h3>Mini Studio &amp; Planner</h3>
+  <p>Authors a canonical <code>seedcore.assembly.v2</code> graph (<code>CW-A01–A03</code>) or proposes a bounded <code>ActionIntent</code> chunk with velocity, angle, and horizon limits.</p>
 </div>
 <b aria-hidden="true">→</b>
 <div>
   <span>02 / ADMIT</span>
   <h3>SeedCore Trust Runtime</h3>
-  <p>Validates capability tokens, policy invariants, and safety boundaries. Signs an ephemeral execution lease via the Rust proof kernel.</p>
+  <p>The session rehearsal checks authority, profile bounds, and freshness before issuing a single-use token. Separately, the offline authoring store increments <code>authorityEpoch</code> on content changes and keeps admission null; live assembly admission is a later integration gate.</p>
 </div>
 <b aria-hidden="true">→</b>
 <div>
-  <span>03 / GOVERN</span>
-  <h3>Embedded Fast Spine</h3>
-  <p>Microcontroller executes 200–500&nbsp;Hz spline interpolation. Local hardware watchdog trips and kills torque within milliseconds if bounds are exceeded.</p>
+  <span>03 / REHEARSE &amp; GOVERN</span>
+  <h3>Fast Spine Boundary</h3>
+  <p>Executes bounded <code>fast-spine-v1</code> simulation sessions (or target MCU interpolation once <code>CW-D01/G1</code> pass) with independent watchdog fencing.</p>
 </div>
 <b aria-hidden="true">→</b>
 <div>
-  <span>04 / EXPLAIN</span>
-  <h3>Evidence &amp; Forensic Log</h3>
-  <p>Captures correlated sensor telemetry, signed tokens, and observed outcome into tamper-evident receipts for complete post-execution auditability.</p>
+  <span>04 / VERIFY</span>
+  <h3>Python &amp; Rust Kernels</h3>
+  <p>Validates session tokens, signer provenance, and action-bound receipts, quarantining missing, stale, or conflicting telemetry.</p>
 </div>
 </div>
 
-<p class="source-note">A valid token cannot override physical hardware limits or watchdog kill switches. Captured evidence explains what was attempted and measured; it guarantees auditability without relying on opaque cloud black-boxes.</p>
+<p class="source-note">Authoring revisions and simulation rehearsals never grant physical hardware authority (<code>physical_acceptance: false</code>). Captured hardware evidence requires an enrolled device signer (<code>G2</code>).</p>
 </section>
 
 <!-- The Multi-Layer Tech Stack -->
@@ -120,45 +120,45 @@
 <div>
 <p class="eyebrow">THE OPERATING FOUNDATION</p>
 <h2>SeedCore multi-layer technology stack.</h2>
-<p class="lead">Every layer is designed for zero unverified dependencies, maximum determinism, and open mathematical verifiability.</p>
+<p class="lead">Every layer is designed for deterministic reproducibility, explicit scope labels, and open mathematical verifiability.</p>
 </div>
 </div>
 
 <div class="tech-stack-grid">
   <article class="tech-card">
-    <span class="tech-tag">C++17 Dynamics Kernel</span>
-    <h3>Zero-Allocation Physics</h3>
-    <p>Analytically derived Lagrange equations of motion ($M(q)\ddot{q} + C(q, \dot{q})\dot{q} + g(q) = \tau$). Zero dynamic memory allocations during simulation ticks ensure deterministic execution across native desktop and WebAssembly.</p>
+    <span class="tech-tag">C++17 &amp; Wasm ABI 1 / ABI 2</span>
+    <h3>Zero-Allocation Planar Dynamics</h3>
+    <p>Analytically derived Lagrange dynamics with mass, Coriolis, gravity, and torque terms compiled to 13,242-byte dual-ABI WebAssembly. Powers 2D lessons (<code>SIM-1/2</code>) and the 1/2/3-link 3D Tree Studio (<code>SIM-3</code>, 78/78 tests passing).</p>
   </article>
 
   <article class="tech-card">
-    <span class="tech-tag">WebAssembly ABI 1 &amp; ABI 2</span>
-    <h3>Deterministic Browser Studio</h3>
-    <p>Zero-install client-side physics engines compiled with clang/llvm. ABI 1 powers 2D educational planar lessons; ABI 2 drives the 3D kinematic tree studio with full 64-bit precision and memory-mapped state buffers.</p>
+    <span class="tech-tag">Central World v1 / v2</span>
+    <h3>Component Registry &amp; Assembly v2</h3>
+    <p>12 byte-pinned <code>.sc-part.json</code> draft records (<code>CW1</code>, 107 tests) and the <code>seedcore.assembly.v2</code> contract (<code>CW-A01 v2</code>, 117 Python + 71 Node tests) with RFC 8785 <code>seedcore.jcs-safe-integers.v1</code> cross-language canonical bytes.</p>
   </article>
 
   <article class="tech-card">
-    <span class="tech-tag">TypeScript Schema Contracts</span>
-    <h3>Typed Simulation Contracts</h3>
-    <p>Formal type declarations (<code>sim-contracts.js</code> and <code>sim-contracts.d.ts</code>) defining joint telemetry, state snapshots, control frames, and WebSerial wire protocols with strict input validation.</p>
+    <span class="tech-tag">Mini Studio (<code>CW-A02/A03</code>)</span>
+    <h3>Immutable Store &amp; Proxy Placement</h3>
+    <p>Offline authoring shell (<code>ts/apps/mini-studio</code> &amp; <code>ts/packages/robot-canvas</code>) with duplicate-key JSON rejection, 32-entry / 2 MiB frozen revision store, deterministic undo/redo, stale-load fencing, and Three.js box-proxy preview, plus 15 mm candidate snapping, ghost previews, numeric placement, and subtree reparenting (88 TS tests, 14 API tests, 18 browser groups across CW-A02/A03).</p>
   </article>
 
   <article class="tech-card">
-    <span class="tech-tag">MuJoCo Native Workbench</span>
-    <h3>Model Ingestion &amp; Verification</h3>
-    <p>Native robotics workbench with pinned Microduck 0.1.0 MJCF package ingestion. Automated SHA-256 integrity verification, 61/14 tensor layout mapping, and cross-simulation sanity validation.</p>
+    <span class="tech-tag">MuJoCo &amp; Microduck <code>M0</code></span>
+    <h3>Pinned Model &amp; 16 ONNX Goldens</h3>
+    <p>Pinned Microduck 0.1.0 MJCF package (64 Python tests passed, 24 skipped in the recorded workbench baseline), read-only <code>microduck-sim-v1</code> HAL adapter (61 obs / 14 actions / 15 channels), and 16 upstream-derived observation/ONNX (<code>alpha_walking.onnx</code>) replay goldens.</p>
   </article>
 
   <article class="tech-card">
-    <span class="tech-tag">Hardware Abstraction (HAL)</span>
-    <h3>$150 Fast Spine Blueprint</h3>
-    <p>Microcontroller firmware running on ESP32/RP2040 communicating with Feetech/Dynamixel bus servos. High-frequency spline interpolation (200–500&nbsp;Hz) with hardware watchdog fail-safes.</p>
+    <span class="tech-tag">Fast Spine v1 &amp; <code>CW-D01</code></span>
+    <h3>Bounded Sessions &amp; Source Register</h3>
+    <p>Delivered <code>fast-spine-v1</code> wire schemas, localhost split-screen bounded-session rehearsal, firmware packet preparer, and the Oct 19 <code>M0 / CW-D01</code> candidate register (<code>ESP32-S3-DevKitC-1-N8R8</code> &amp; <code>STS3215</code> spec A/0).</p>
   </article>
 
   <article class="tech-card">
-    <span class="tech-tag">Rust Verification Kernel</span>
-    <h3>Cryptographic Proofs &amp; Audit</h3>
-    <p>High-assurance proof verifier producing tamper-evident receipts for action intents, telemetry traces, and policy conformance. Powers deterministic forensic replay and accountability.</p>
+    <span class="tech-tag">Rust &amp; Python Verifiers</span>
+    <h3>Cryptographic Receipt Verification</h3>
+    <p>Token, signature, session receipt, and replay verification across Python and the Rust proof kernel (<code>ee00f9c</code>). Rejects expired, forged, replayed, revoked, and out-of-scope attempts.</p>
   </article>
 </div>
 </section>
@@ -167,40 +167,40 @@
 <section class="page-container section">
 <div class="section-heading">
 <div>
-<p class="eyebrow">TRANSPARENT ROADMAP</p>
+<p class="eyebrow">TRANSPARENT ROADMAP &amp; RELEASE GATES (<code>G0–G5</code>)</p>
 <h2>Grounded in evidence. Clear on boundaries.</h2>
-<p class="lead">We distinguish between what is delivered and tested in code today versus what is actively under development.</p>
+<p class="lead">We strictly distinguish delivered software/simulation candidates from open hardware, firmware, and physical stopping gates.</p>
 </div>
 </div>
 
 <div class="three-grid">
 <article class="content-card">
-<span class="badge live">DELIVERED &amp; QUALIFIED</span>
-<h3>Simulation &amp; Studio Artifacts</h3>
-<p><strong>SIM-1 &amp; SIM-2:</strong> 2D Planar arm dynamics with state checkpointing and JSON exports.<br>
-<strong>SIM-3:</strong> 3D Kinematic tree studio with 78/78 tests passing, live $M(q)$ and $\mathbf{J}(q)$ matrix inspection.<br>
-<strong>M0:</strong> Pinned Microduck 0.1.0 model package ingestion and native MuJoCo validation in the SeedCore repository.</p>
+<span class="badge live">DELIVERED SOFTWARE &amp; SIMULATION</span>
+<h3>SIM-1–3, CW1, CW-A01–A03 &amp; Rehearsal</h3>
+<p><strong>SIM-1–SIM-3:</strong> 2D planar lab and 3D Tree Studio (78 Node + 30 native/Wasm invariant groups).<br>
+<strong>Central World <code>CW1</code> &amp; <code>CW-A01–A03</code>:</strong> 12 draft <code>.sc-part.json</code> parts, <code>seedcore.assembly.v2</code> contract (117 Python + 71 Node tests), and offline immutable authoring with proxy snapping and numeric placement (88 TS tests, 14 API tests, 18 browser groups).<br>
+<strong>Simulation-First <code>M0</code>:</strong> Read-only Microduck profile, 16 ONNX goldens, split-screen <code>fast-spine-v1</code> rehearsal, and Python/Rust receipt checks.</p>
 <a class="btn btn-text" href="develop.html">Explore Robot Lab ↗</a>
 </article>
 
 <article class="content-card">
-<span class="badge">ACTIVE DEVELOPMENT</span>
-<h3>Hardware Bridge &amp; Watchdogs</h3>
-<p><strong>M1 Watchdog Bridge:</strong> Fast spine microcontroller firmware bridging WebSerial and smart bus servos with local heartbeats.<br>
-<strong>M2 Scoped Tokens:</strong> End-to-end ActionIntent verification, local policy enforcement, and sub-millisecond emergency stop on physical hardware.</p>
-<a class="btn btn-text" href="https://github.com/NeilLi/seedcore">Inspect GitHub commits ↗</a>
+<span class="badge">ACTIVE QUEUE (<code>CW-A04</code> &amp; <code>CW-D01</code>)</span>
+<h3>DRC &amp; Hardware Qualification</h3>
+<p><strong>CW-A04 next:</strong> A pure DRC/net worker and unknown-aware BOM (<code>CW-DRC-01–03</code>), following the delivered CW-A03 proxy placement slice.<br>
+<strong>M0 / CW-D01 &amp; M1–M2:</strong> Reconcile <code>STS3215</code> A/0 page 4 vs. page 8 connector numbering and 4–7.4 V rail ratings during the 26 Oct–1 Nov qualification window, close independent Microduck training parity (<code>M1</code>), and advance live native <code>M2</code> sessions.</p>
+<a class="btn btn-text" href="https://github.com/NeilLi/seedcore/blob/main/docs/development/current_next_steps.md">Inspect Active Queue ↗</a>
 </article>
 
 <article class="content-card">
-<span class="badge">FUTURE HORIZON</span>
-<h3>Autonomous Physical AI Fleet</h3>
-<p><strong>M3 Closed-Loop VLM:</strong> Receding-horizon action chunking with vision feedback.<br>
-<strong>M4 Skill Commons:</strong> Verified skills exchange, multi-robot coordination, and decentralized behavioral proofs across open hardware builders.</p>
-<a class="btn btn-text" href="contact.html?interest=exchange">Shape the Exchange ↗</a>
+<span class="badge">GATED PHASES (<code>CW-S/G/L</code> &amp; <code>G1–G5</code>)</span>
+<h3>Browser MuJoCo, Firmware &amp; Pilots</h3>
+<p><strong>CW-S01–S04:</strong> Restricted assembly-to-MJCF compiler, browser MuJoCo worker (<code>mjswan 0.11.9</code> conditional assessment complete), and Robot Moments gestures.<br>
+<strong>CW-G/E/F/L &amp; G1–G5:</strong> Live admission/replay, Build Pack exporter, conditional <code>CW-F01/F02</code> ESP32-S3 NVS/firmware qualification (1 servo → 3 servos), and January authoring/simulation alpha review.</p>
+<a class="btn btn-text" href="resources/index.html">Read Source Notes ↗</a>
 </article>
 </div>
 
-<p class="source-note">Grounded in SeedCore’s <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/physical_ai_strategy.md">physical AI strategy</a> and <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/mini_robot_simulator_implementation_plan.md">mini robot implementation plan</a>. Updated October 2026.</p>
+<p class="source-note">Grounded in SeedCore’s <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/strategy/seedcore_physical_ai_execution_plan_2026_2028.md">18-month execution plan (Q4 2026–Q1 2028)</a>, <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/central_world_remaining_delivery_schedule.md">Central World delivery schedule</a>, and <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/simulation_first_acceptance.md">simulation-first acceptance record</a>. Updated October 19, 2026.</p>
 </section>
 
 <!-- Action Callout -->
@@ -208,8 +208,8 @@
 <div class="join-panel">
 <div>
 <p class="eyebrow">JOIN THE EXPERIMENT</p>
-<h2>Build something useful with us.</h2>
-<p>Whether you are designing a desktop robot, training a vision-language action model, or testing safe-by-physics control algorithms, our open-source tools and trust runtime are built for you.</p>
+<h2>Build something verifiable with us.</h2>
+<p>Whether you are authoring a proxy assembly, testing safe-by-physics control contracts, or reviewing hardware qualification gates, our open-source tools and trust runtime are built for you.</p>
 </div>
 <a class="btn btn-primary" href="contact.html?interest=solution">Tell us your idea <span aria-hidden="true">↗</span></a>
 </div>

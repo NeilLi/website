@@ -3,6 +3,7 @@ const { chromium } = require('playwright');
 const base = (process.env.SITE_URL || 'http://127.0.0.1:4173').replace(/\/$/, '');
 (async()=>{
  const browser=await chromium.launch({headless:true,channel:process.env.BROWSER_CHANNEL || "chrome"});
+ try {
  const page=await browser.newPage({viewport:{width:1440,height:1100},deviceScaleFactor:1});
  const errors=[]; const failures=[];
  page.on('pageerror',e=>errors.push(e.message));
@@ -10,7 +11,8 @@ const base = (process.env.SITE_URL || 'http://127.0.0.1:4173').replace(/\/$/, ''
  await page.goto(base+'/',{waitUntil:'networkidle'});
  if(await page.getByRole('button',{name:/Menu/}).isVisible())throw new Error('Mobile menu visible on desktop');
  await page.screenshot({path:'/tmp/seedcore-home-desktop.png',fullPage:true});
- for(const route of ['index.html','develop.html','diy-showcase.html','trading.html','activities.html','about.html','contact.html','sitemap.html','resources/','privacy-policy.html','terms-of-service.html','studio/index.html']){
+ const routes=['index.html','develop.html','diy-showcase.html','trading.html','activities.html','about.html','contact.html','sitemap.html','resources/','privacy-policy.html','terms-of-service.html','studio/index.html','studio/tree-lab.html'];
+ for(const route of routes){
   await page.goto(base+'/'+route);
   for(const width of [1440,768,390,320]){
    await page.setViewportSize({width,height:900});
@@ -19,6 +21,12 @@ const base = (process.env.SITE_URL || 'http://127.0.0.1:4173').replace(/\/$/, ''
   }
  }
  await page.goto(base+'/');
+ await page.getByRole('tab',{name:'Execution receipt',exact:true}).click();
+ if(!await page.locator('#receipt-code').isVisible()||await page.locator('#intent-code').isVisible())throw new Error('Receipt tab did not switch panels');
+ await page.keyboard.press('Home');
+ if(!await page.locator('#intent-code').isVisible()||await page.locator('#receipt-code').isVisible())throw new Error('Keyboard contract navigation failed');
+ await page.getByRole('button',{name:'2-link',exact:true}).click();
+ if(await page.locator('#previewLinkCount').textContent()!=='2-link chain')throw new Error('Preview model switch failed');
  await page.setViewportSize({width:390,height:844});
  await page.screenshot({path:'/tmp/seedcore-home-mobile.png',fullPage:true});
  const toggle=page.getByRole('button',{name:/Menu/});
@@ -39,6 +47,8 @@ const base = (process.env.SITE_URL || 'http://127.0.0.1:4173').replace(/\/$/, ''
  await page.evaluate(()=>location.hash='reachy');
  await page.waitForFunction(()=>!document.getElementById('reachy').hidden);
  await page.goto(base+'/contact.html?interest=parts');
+ // Inspect the local draft without opening the tester's external email client.
+ await page.locator('#draft-link').evaluate(link=>link.addEventListener('click',event=>event.preventDefault()));
  if(await page.locator('#interest').inputValue()!=='parts')throw new Error('Prefill failed');
  await page.locator('#name').fill('Test Builder');await page.locator('#email').fill('builder@example.com');
  await page.locator('#message').fill('A small arm & a bounded experiment.');
@@ -69,6 +79,34 @@ const base = (process.env.SITE_URL || 'http://127.0.0.1:4173').replace(/\/$/, ''
  if(!experiment.complete || experiment.samples.length !== 361 || experiment.source !== 'local_research_simulation')throw new Error('Incomplete lab export');
  await page.getByRole('button',{name:'Replay observations'}).click();
  await page.setViewportSize({width:390,height:844});await page.screenshot({path:'/tmp/seedcore-lab-mobile.png',fullPage:true});
+ await page.goto(base+'/studio/tree-lab.html');
+ await page.waitForFunction(()=>!document.getElementById('step').disabled);
+ if(await page.locator('#joint-table-body tr').count()!==3)throw new Error('3D lab default model is not three-link');
+ await page.locator('#step').click();
+ await page.waitForFunction(()=>document.getElementById('time-val').textContent!=='0.00 s');
+ if(await page.locator('#error-message').textContent())throw new Error('3D lab step failed');
+ const treeDownloadPromise=page.waitForEvent('download');
+ await page.locator('#export-json').click();
+ await (await treeDownloadPromise).saveAs('/tmp/seedcore-tree-state.json');
+ const tree=require('/tmp/seedcore-tree-state.json');
+ if(tree.schema!=='seedcore.mini-sim.tree-experiment.v1'||tree.kind!=='state_snapshot'||tree.numLinks!==3||tree.tick!==8||tree.engine.abi!==2||tree.source!=='local_research_simulation')throw new Error('Invalid 3D Wasm state export');
+ await page.locator('#run').click();
+ await page.waitForFunction(()=>document.getElementById('run-status').textContent==='Running');
+ await page.waitForFunction(()=>parseFloat(document.getElementById('time-val').textContent)>0.05);
+ await page.locator('#run').click();
+ if(await page.locator('#run-status').textContent()!=='Paused')throw new Error('3D lab pause failed');
+ for(const [model,links] of [['1-link',1],['2-link',2],['3-link',3]]){
+  await page.locator('#model-select').selectOption(model);
+  if(await page.locator('#time-val').textContent()!=='0.00 s'||await page.locator('#joint-table-body tr').count()!==links)throw new Error('3D model reset failed: '+model);
+  await page.locator('#step').click();
+  if(await page.locator('#time-val').textContent()==='0.00 s')throw new Error('3D model step failed: '+model);
+ }
+ await page.locator('#reset').click();
+ if(await page.locator('#time-val').textContent()!=='0.00 s')throw new Error('3D lab reset failed');
+ await page.setViewportSize({width:1440,height:1000});
+ await page.screenshot({path:'/tmp/seedcore-tree-desktop.png',fullPage:true});
+ await page.setViewportSize({width:390,height:844});
+ await page.screenshot({path:'/tmp/seedcore-tree-mobile.png',fullPage:true});
  const reduced=await browser.newPage({viewport:{width:390,height:844},reducedMotion:'reduce'});
  await reduced.goto(base+'/');
  if(await reduced.locator('#previewPause').textContent()!=='Play preview')throw new Error('Reduced motion ignored');
@@ -78,6 +116,6 @@ const base = (process.env.SITE_URL || 'http://127.0.0.1:4173').replace(/\/$/, ''
  if(!await noJs.getByRole('link',{name:'Build Gallery',exact:true}).first().isVisible())throw new Error('No-JS navigation unavailable');
  await noJs.goto(base+'/contact.html');
  if(!await noJs.getByRole('button',{name:'Prepare email'}).isDisabled())throw new Error('No-JS form can submit contact data');
- console.log('PASS: 12 routes × 4 widths; navigation, filters/deep links, contact draft, lab Wasm run/step/reset/save/resume/replay/export, reduced motion. No browser errors or failed requests.');
- await browser.close();
+ console.log(`PASS: ${routes.length} routes × 4 widths; navigation, contract tabs, preview model, filters/deep links, contact draft, 2D Wasm checkpoint/replay, 3D Wasm run/pause/step/reset/models/export, reduced motion and no-JS fallbacks. No browser errors or failed requests.`);
+ } finally { await browser.close(); }
 })().catch(e=>{console.error(e);process.exit(1)});
