@@ -13,7 +13,7 @@ PUBLIC_FILES = (
     'index.html', 'develop.html', 'diy-showcase.html', 'trading.html',
     'activities.html', 'about.html', 'contact.html', 'sitemap.html', 'sitemap.xml',
     'privacy-policy.html', 'terms-of-service.html', 'resources/index.html',
-    'assets/seedcore-logo.svg', 'assets/seedcore-mark.svg', 'css/robotics-central.css', 'js/robotics-central.js',
+    'images/seedcore-world-001.webp', 'assets/seedcore-logo.svg', 'assets/seedcore-mark.svg', 'css/robotics-central.css', 'js/robotics-central.js',
     # Existing legal pages retain their original styling.
     'css/application-site.css',
     # Vendored browser lab: scripts and worker dependencies must ship together.

@@ -11,7 +11,7 @@
 <meta property="og:title" content="SeedCore · Verifiable Trust for Physical AI">
 <meta property="og:description" content="Small robots. Bounded actions. Verifiable evidence. Explore the SeedCore trust runtime, SIM-3 3D Tree Studio, and Central World assembly contracts.">
 <meta property="og:type" content="website">
-<link rel="stylesheet" href="css/robotics-central.css?v=20261019b">
+<link rel="stylesheet" href="css/robotics-central.css?v=20261102-world">
 <script src="js/robotics-central.js?v=20261019a" defer></script>
 </head>
 <body class="home-page">
@@ -35,7 +35,22 @@
 <div class="hero-actions"><a class="btn btn-primary" href="studio/tree-lab.html">Launch 3D Studio <span aria-hidden="true">↗</span></a><a class="btn btn-secondary" href="develop.html#central-world">Explore Central World <span aria-hidden="true">→</span></a></div>
 <div class="hero-footnote"><span class="dot" aria-hidden="true"></span> SIM-3 Wasm ABI 2 <span class="footnote-divider">/</span> Central World CW-A02/A03 <span class="footnote-divider">/</span> Apache 2.0</div>
 </div>
-<div id="world" class="studio-preview">
+<figure id="world" class="world-hero" aria-labelledby="world-title">
+<div class="world-hero-heading"><span id="world-title">SEEDCORE / WORLD 001</span><span>EXPLORE THE CAMPUS <i aria-hidden="true">↗</i></span></div>
+<div class="world-scene">
+<img src="images/seedcore-world-001.webp" width="1536" height="1024" alt="A finely detailed miniature robotics campus, with a glass robot lab, maker workshop, parts pavilion and garden commons linked by illuminated paths." fetchpriority="high" decoding="async">
+<nav class="world-destinations" aria-label="Explore the SeedCore world">
+<a class="world-destination destination-lab" href="develop.html"><small>01</small><span>Robot Lab</span><b aria-hidden="true">↗</b></a>
+<a class="world-destination destination-build" href="diy-showcase.html"><small>02</small><span>Build Gallery</span><b aria-hidden="true">↗</b></a>
+<a class="world-destination destination-exchange" href="trading.html"><small>03</small><span>Exchange</span><b aria-hidden="true">↗</b></a>
+<a class="world-destination destination-commons" href="activities.html"><small>04</small><span>Commons</span><b aria-hidden="true">↗</b></a>
+</nav>
+</div>
+<figcaption><span>A little world. Lots to discover.</span><span>CONCEPT CAMPUS / 001</span></figcaption>
+</figure>
+</section>
+<div class="foundation-strip page-container" aria-label="Core technologies"><span>BUILT ON VERIFIED CONTRACTS</span><div><span>C++17 / Wasm ABI 2</span><span>Assembly v2 (RFC 8785)</span><span>Python / MuJoCo</span><span>Rust Proof Kernel</span><span>Apache 2.0</span></div></div>
+<section class="section page-container world-preview-section" aria-labelledby="preview-title"><div><p class="eyebrow">INSIDE THE ROBOT LAB</p><h2 id="preview-title">A closer look at motion.</h2><p class="lead">Explore the kinematic arm preview, then open the 3D Studio to run dynamics and inspect a model.</p><a class="text-link" href="studio/tree-lab.html">Open the 3D Studio ↗</a></div><div id="kinematic-preview" class="studio-preview">
 <div class="studio-titlebar"><div class="window-dots" aria-hidden="true"><i></i><i></i><i></i></div><span>seedcore // kinematic-preview</span><span class="studio-version">ILLUSTRATIVE PREVIEW</span></div>
 <div class="studio-toolbar"><span><span class="signal-dot" aria-hidden="true"></span> Kinematic arm preview</span><div class="model-switch" role="group" aria-label="Preview arm model"><button type="button" data-preview-model="2" aria-pressed="false">2-link</button><button type="button" data-preview-model="3" aria-pressed="true">3-link</button></div></div>
 <div class="studio-stage">
@@ -80,9 +95,7 @@
 </div>
 <div class="studio-readouts"><div><span>MODEL</span><strong id="previewLinkCount">3-link chain</strong></div><div><span>JOINT 01</span><strong id="previewAngle">111.7°</strong></div><div><span>SCOPE</span><strong>ILLUSTRATION</strong></div></div>
 <div class="studio-preview-footer"><span>Kinematic preview · <a href="studio/tree-lab.html">run dynamics in Studio ↗</a></span><button id="previewPause" type="button" aria-pressed="false" hidden>Pause preview</button></div>
-</div>
-</section>
-<div class="foundation-strip page-container" aria-label="Core technologies"><span>BUILT ON VERIFIED CONTRACTS</span><div><span>C++17 / Wasm ABI 2</span><span>Assembly v2 (RFC 8785)</span><span>Python / MuJoCo</span><span>Rust Proof Kernel</span><span>Apache 2.0</span></div></div>
+</div></section>
 <section class="capabilities-section page-container" id="paradigm-shift" aria-label="SeedCore capabilities">
 <div class="capability-grid" id="explore">
 <a class="capability-card" href="studio/tree-lab.html"><div class="capability-top"><svg viewBox="0 0 36 36" aria-hidden="true"><rect x="3" y="4" width="30" height="22" rx="4" fill="#112437" stroke="#60dce0" stroke-width="1.6"/><path d="M8 21L18 16L28 21L18 25Z" fill="#4ade8022" stroke="#4ade80" stroke-width="1.2"/><path d="M18 20L15 13L22 10" stroke="#facc15" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><circle cx="18" cy="20" r="2.2" fill="#60dce0"/><circle cx="15" cy="13" r="2" fill="#38bdf8"/><circle cx="22" cy="10" r="2" fill="#4ade80"/><path d="M12 31h12M18 26v5" stroke="#60dce0" stroke-width="1.6" stroke-linecap="round"/></svg><span class="badge live">SIM-3 BROWSER PHYSICS</span></div><h2>Your lab. Zero install.</h2><p>Run 1/2/3-link planar dynamics in a 3D browser viewport, inspect mass matrices and Jacobians, and export model state.</p><span class="card-link">Open the 3D Studio <span aria-hidden="true">↗</span></span></a>
@@ -90,6 +103,14 @@
 <a class="capability-card" href="about.html"><div class="capability-top"><svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 3l12 4.5v9.5c0 7.2-5.5 11.8-12 15-6.5-3.2-12-7.8-12-15V7.5L18 3z" fill="#112638" stroke="#60dce0" stroke-width="1.6"/><path d="M13 17.5l3.5 3.5 7-7.5" stroke="#4ade80" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="13" cy="10" r="1.4" fill="#4ade80"/><circle cx="18" cy="10" r="1.4" fill="#4ade80"/><circle cx="23" cy="10" r="1.4" fill="#4ade80"/></svg><span class="badge">TRUST RUNTIME</span></div><h2>Evidence, by design.</h2><p>Single-use capability tokens, revocation fencing, and Python/Rust receipt verifiers make every simulation or bench attempt inspectable.</p><span class="card-link">Inspect the trust model <span aria-hidden="true">↗</span></span></a>
 </div>
 </section>
+<section class="section page-container" aria-labelledby="current-status">
+<div class="section-heading"><div><p class="eyebrow">SOURCE SNAPSHOT / NOVEMBER 2, 2026</p><h2 id="current-status">From design to verified simulation.</h2></div><p>SeedCore’s local work now spans offline robot authoring, bounded simulation and the first signed simulation evidence foundation.</p></div>
+<div class="three-grid">
+<article class="content-card"><span class="badge live">LOCAL AUTHORING</span><h3>Design and check</h3><p>Build proxy assemblies with immutable history and placement tools, then inspect offline design-rule findings and an unknown-aware bill of materials.</p></article>
+<article class="content-card"><span class="badge live">SYNTHETIC SIMULATION</span><h3>Rehearse within bounds</h3><p>Export supported synthetic models, run a fixed-profile MuJoCo worker and replay bounded gestures. Policy execution remains gated.</p></article>
+<article class="content-card"><span class="badge">EVIDENCE FOUNDATION</span><h3>Inspect the result</h3><p>A local admission adapter and host-signed simulation bundles provide reviewable evidence. Rust parity, production intake and physical qualification remain open.</p><a class="text-link" href="develop.html">Explore the current work ↗</a></article>
+</div></section>
+
 <section class="architecture-section section page-container" id="architecture">
 <div class="architecture-copy"><p class="eyebrow">01 / THE EXECUTION BOUNDARY</p><h2>From intention<br>to <em>evidence.</em></h2><p>Intelligence can propose a move. The runtime defines what is allowed, the controller executes within those bounds, and the verifier checks the evidence.</p>
 <ol class="execution-flow">

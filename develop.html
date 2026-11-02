@@ -41,7 +41,7 @@
 <section class="page-intro page-container">
 <p class="eyebrow">01 / DEVELOPER WORKBENCH · SIM-3 &amp; CENTRAL WORLD</p>
 <h1>From browser physics<br>to <em>verified assemblies.</em></h1>
-<p class="lead">Explore the delivered SIM-3 3D Kinematic Tree Studio, the Central World <code>seedcore.assembly.v2</code> &amp; <code>CW-A02/A03</code> local Mini Studio authoring slice, bounded <code>fast-spine-v1</code> simulation rehearsal, and the <code>M0 / CW-D01</code> hardware candidate inventory.</p>
+<p class="lead">Explore the delivered SIM-3 3D Kinematic Tree Studio, local Central World authoring and DRC, bounded MuJoCo simulation and gestures, a scoped admission adapter, and signed simulation evidence. Physical qualification remains open.</p>
 </section>
 
 <!-- Split Hero for SIM-3 3D Studio -->
@@ -426,21 +426,33 @@
   <span class="mono">CW-A04</span>
   <div>
     <h3>Pure DRC Worker &amp; Unknown-Aware BOM</h3>
-    <p>Next: UART/I2C/GPIO/rail findings bound to the exact assembly and electrical-plan digest. Physical harness and rail qualification remain open in <code>CW-D01</code> for 26 Oct–1 Nov.</p>
+    <p>Offline worker DRC, routing proposals, field-linked findings, 3D mass and inertia calculations, and an unknown-aware BOM complete the local authoring scope. Physical fit and source qualification remain open under <code>CW-D01</code>.</p>
   </div>
-  <span class="badge">Next Active Package</span>
+  <span class="badge live">Local Software Slice Passed</span>
 </article>
 
 <article class="roadmap-row">
-  <span class="mono">CW-S / G / L</span>
-  <div>
-    <h3>Restricted MJCF Compiler, Browser MuJoCo, Scoped Replay &amp; Alpha Review</h3>
-    <p><code>CW-S01–S04</code> assembly-to-MJCF and Robot Moments gesture timeline, <code>CW-G01–G02</code> live admission/replay, <code>CW-E01</code> Build Pack exporter, conditional <code>CW-F01/F02</code> firmware lane, and January authoring/simulation alpha review.</p>
-  </div>
+  <span class="mono">CW-S01–S04</span>
+  <div><h3>From synthetic assembly to bounded simulation</h3><p>The local compiler and Studio handoff export deterministic MJCF for supported synthetic fixtures. A pinned MuJoCo worker has native/browser parity for a fixed profile; offline policy preflight reports both candidates blocked. Bounded gestures and captured replay run within a 120-step / 240 ms synthetic position profile.</p></div>
+  <span class="badge live">Local Simulation Slices</span>
+</article>
+<article class="roadmap-row">
+  <span class="mono">CW-G01</span>
+  <div><h3>Scoped local admission and replay</h3><p>A service-owned synthetic adapter exercises policy admission, configured signing, Rust token verification, durable claims, per-step enforcement and read-only 3D capture replay. Production authenticated intake, deployment and physical endpoints remain gated.</p></div>
+  <span class="badge">Local Adapter Under Review</span>
+</article>
+<article class="roadmap-row">
+  <span class="mono">CW-G02</span>
+  <div><h3>Signed simulation evidence foundation</h3><p>The local Python foundation retains original artifacts, creates host-signed simulation bundles and independently verifies them offline against saved admission and trust context. Rust parity and the Studio/browser verification surface remain next; this is not signed hardware evidence.</p></div>
+  <span class="badge">Foundation Available</span>
+</article>
+<article class="roadmap-row">
+  <span class="mono">CW-E / F / L</span>
+  <div><h3>Build packs, firmware and alpha review</h3><p>Design pack export and the authoring/simulation alpha follow the evidence work. Firmware, hardware provisioning and physical release depend on separately qualified sources and gates.</p></div>
   <span class="badge">Planned / Gated</span>
 </article>
 </div>
-<p class="source-note">Sources: <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/central_world_remaining_delivery_schedule.md">Central World Remaining Delivery Schedule</a> and <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/central_world_acceptance_matrix.md">Central World Acceptance Matrix</a> (Updated October 19, 2026).</p>
+<p class="source-note">Sources: <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/central_world_remaining_delivery_schedule.md">Central World Remaining Delivery Schedule</a> and <a href="https://github.com/NeilLi/seedcore/blob/main/docs/development/robotics/central_world_acceptance_matrix.md">Central World Acceptance Matrix</a> (Updated November 2, 2026).</p>
 </section>
 
 <!-- CTA -->
